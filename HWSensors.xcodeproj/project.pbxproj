@@ -1,0 +1,3918 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12B160961A3F01D8007C7B84 /* Cpuid.c in Sources */ = {isa = PBXBuildFile; fileRef = 12B160901A3F01D8007C7B84 /* Cpuid.c */; };
+		12B160971A3F01D8007C7B84 /* TigerAdditionals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12B160931A3F01D8007C7B84 /* TigerAdditionals.cpp */; };
+		12B160981A3F01D8007C7B84 /* TigerAdditionals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12B160931A3F01D8007C7B84 /* TigerAdditionals.cpp */; };
+		2C7719BC14EA483A0005C3C7 /* SuperIOFamily.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AED9E582125FC23900736A5A /* SuperIOFamily.cpp */; };
+		A521BB6222F0B331005A5C2B /* ACPIMonitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB5D22F0B331005A5C2B /* ACPIMonitor.cpp */; };
+		A521BC0522F0BA50005A5C2B /* SMIMonitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBE322F0B39D005A5C2B /* SMIMonitor.cpp */; };
+		A521BC0622F0BA87005A5C2B /* Cpuid.c in Sources */ = {isa = PBXBuildFile; fileRef = 12B160901A3F01D8007C7B84 /* Cpuid.c */; };
+		A521BC0722F0BA8C005A5C2B /* TigerAdditionals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12B160931A3F01D8007C7B84 /* TigerAdditionals.cpp */; };
+		A521BC0822F0BA96005A5C2B /* AmdCPUMonitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB6822F0B351005A5C2B /* AmdCPUMonitor.cpp */; };
+		A521BC0922F0BAB7005A5C2B /* IntelCPUMonitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB6F22F0B351005A5C2B /* IntelCPUMonitor.cpp */; };
+		A521BC4722F0BB36005A5C2B /* ATICard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBD522F0B38F005A5C2B /* ATICard.cpp */; };
+		A521BC4822F0BB60005A5C2B /* Radeon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBD822F0B38F005A5C2B /* Radeon.cpp */; };
+		A521BC4922F0BB9D005A5C2B /* adt7473.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBB822F0B38F005A5C2B /* adt7473.cpp */; };
+		A521BC4A22F0BB9D005A5C2B /* backend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBB922F0B38F005A5C2B /* backend.cpp */; };
+		A521BC4B22F0BB9D005A5C2B /* backend.h in Sources */ = {isa = PBXBuildFile; fileRef = A521BBBA22F0B38F005A5C2B /* backend.h */; };
+		A521BC4C22F0BB9D005A5C2B /* bios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBBB22F0B38F005A5C2B /* bios.cpp */; };
+		A521BC4D22F0BB9D005A5C2B /* error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBBC22F0B38F005A5C2B /* error.cpp */; };
+		A521BC4E22F0BB9D005A5C2B /* f75375.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBBD22F0B38F005A5C2B /* f75375.cpp */; };
+		A521BC4F22F0BB9D005A5C2B /* f75375.h in Sources */ = {isa = PBXBuildFile; fileRef = A521BBBE22F0B38F005A5C2B /* f75375.h */; };
+		A521BC5022F0BB9D005A5C2B /* i2c.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBBF22F0B38F005A5C2B /* i2c.cpp */; };
+		A521BC5122F0BB9D005A5C2B /* i2c.h in Sources */ = {isa = PBXBuildFile; fileRef = A521BBC022F0B38F005A5C2B /* i2c.h */; };
+		A521BC5222F0BB9D005A5C2B /* info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBC122F0B38F005A5C2B /* info.cpp */; };
+		A521BC5322F0BB9D005A5C2B /* libc_wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBC222F0B38F005A5C2B /* libc_wrapper.cpp */; };
+		A521BC5422F0BB9D005A5C2B /* lm99.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBC322F0B38F005A5C2B /* lm99.cpp */; };
+		A521BC5522F0BB9D005A5C2B /* nv40.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBC422F0B38F005A5C2B /* nv40.cpp */; };
+		A521BC5622F0BB9D005A5C2B /* nv50.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBC522F0B38F005A5C2B /* nv50.cpp */; };
+		A521BC5722F0BB9D005A5C2B /* nvclock.h in Sources */ = {isa = PBXBuildFile; fileRef = A521BBC622F0B38F005A5C2B /* nvclock.h */; };
+		A521BC5822F0BB9D005A5C2B /* nvreg.h in Sources */ = {isa = PBXBuildFile; fileRef = A521BBC722F0B38F005A5C2B /* nvreg.h */; };
+		A521BC5922F0BB9D005A5C2B /* overclock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBC822F0B38F005A5C2B /* overclock.cpp */; };
+		A521BC5A22F0BB9D005A5C2B /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBC922F0B38F005A5C2B /* utils.cpp */; };
+		A521BC5B22F0BB9D005A5C2B /* w83781d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBCA22F0B38F005A5C2B /* w83781d.cpp */; };
+		A521BC5C22F0BB9D005A5C2B /* w83l785r.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBCB22F0B38F005A5C2B /* w83l785r.cpp */; };
+		A521BC5D22F0BB9D005A5C2B /* xf86i2c.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBCC22F0B38F005A5C2B /* xf86i2c.cpp */; };
+		A521BC5E22F0BB9D005A5C2B /* xf86i2c.h in Sources */ = {isa = PBXBuildFile; fileRef = A521BBCD22F0B38F005A5C2B /* xf86i2c.h */; };
+		A521BC5F22F0BB9D005A5C2B /* xfree.h in Sources */ = {isa = PBXBuildFile; fileRef = A521BBCE22F0B38F005A5C2B /* xfree.h */; };
+		A521BC6022F0BBB5005A5C2B /* NVClockX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBD122F0B38F005A5C2B /* NVClockX.cpp */; };
+		A521BC6122F0BBD3005A5C2B /* X3100-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = A521BBB122F0B38F005A5C2B /* X3100-Info.plist */; };
+		A521BC6222F0BBD3005A5C2B /* X3100-pre106-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = A521BBB222F0B38F005A5C2B /* X3100-pre106-Info.plist */; };
+		A521BC6322F0BBD3005A5C2B /* X3100.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBB322F0B38F005A5C2B /* X3100.cpp */; };
+		A521BC6422F0BBD3005A5C2B /* X3100.h in Sources */ = {isa = PBXBuildFile; fileRef = A521BBB422F0B38F005A5C2B /* X3100.h */; };
+		A521BC6522F0BBF0005A5C2B /* InfoPlist.strings in Sources */ = {isa = PBXBuildFile; fileRef = A521BBEC22F0B3AB005A5C2B /* InfoPlist.strings */; };
+		A521BC6622F0BBF0005A5C2B /* ITEIT87x-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = A521BBEE22F0B3AC005A5C2B /* ITEIT87x-Info.plist */; };
+		A521BC6722F0BBF0005A5C2B /* ITEIT87x-Prefix.pch in Sources */ = {isa = PBXBuildFile; fileRef = A521BBEF22F0B3AC005A5C2B /* ITEIT87x-Prefix.pch */; };
+		A521BC6822F0BBF0005A5C2B /* ITEIT87x.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBF022F0B3AC005A5C2B /* ITEIT87x.cpp */; };
+		A521BC6922F0BBF0005A5C2B /* ITEIT87x.h in Sources */ = {isa = PBXBuildFile; fileRef = A521BBF122F0B3AC005A5C2B /* ITEIT87x.h */; };
+		A521BC6C22F0BC2C005A5C2B /* WinbondW836x-Prefix.pch in Sources */ = {isa = PBXBuildFile; fileRef = A521BC0022F0B3AC005A5C2B /* WinbondW836x-Prefix.pch */; };
+		A521BC6D22F0BC2C005A5C2B /* WinbondW836x.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BC0122F0B3AC005A5C2B /* WinbondW836x.cpp */; };
+		A522F6761F706E0F005F81B8 /* VoodooBattery.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A55E169A1F7041CF0049A107 /* VoodooBattery.cpp */; };
+		A522F6771F706E50005F81B8 /* Support.h in Headers */ = {isa = PBXBuildFile; fileRef = A55E16991F7041CF0049A107 /* Support.h */; };
+		A522F6781F706E52005F81B8 /* VoodooBattery.h in Headers */ = {isa = PBXBuildFile; fileRef = A55E169B1F7041CF0049A107 /* VoodooBattery.h */; };
+		A522F6791F706E57005F81B8 /* definitions.h in Headers */ = {isa = PBXBuildFile; fileRef = 12B160921A3F01D8007C7B84 /* definitions.h */; };
+		A560DDC823030EB000C1F44D /* adt7473.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB7322F0B38F005A5C2B /* adt7473.cpp */; };
+		A560DDC923030EB000C1F44D /* f75375.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB7422F0B38F005A5C2B /* f75375.cpp */; };
+		A560DDCA23030EB000C1F44D /* GeForceSensors-Prefix.pch in Sources */ = {isa = PBXBuildFile; fileRef = A521BB7722F0B38F005A5C2B /* GeForceSensors-Prefix.pch */; };
+		A560DDCB23030EB000C1F44D /* GeforceSensors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB7822F0B38F005A5C2B /* GeforceSensors.cpp */; };
+		A560DDCC23030EB000C1F44D /* gm100.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB7A22F0B38F005A5C2B /* gm100.cpp */; };
+		A560DDCD23030EB000C1F44D /* gp100.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB7C22F0B38F005A5C2B /* gp100.cpp */; };
+		A560DDCE23030EB000C1F44D /* i2c_algo_bit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB7E22F0B38F005A5C2B /* i2c_algo_bit.cpp */; };
+		A560DDCF23030EB000C1F44D /* i2c_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB8022F0B38F005A5C2B /* i2c_base.cpp */; };
+		A560DDD023030EB000C1F44D /* lm99.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB8422F0B38F005A5C2B /* lm99.cpp */; };
+		A560DDD123030EB000C1F44D /* nouveau.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB8522F0B38F005A5C2B /* nouveau.cpp */; };
+		A560DDD223030EB000C1F44D /* nouveau_bios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB8722F0B38F005A5C2B /* nouveau_bios.cpp */; };
+		A560DDD323030EB000C1F44D /* nouveau_gpio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB8A22F0B38F005A5C2B /* nouveau_gpio.cpp */; };
+		A560DDD423030EB000C1F44D /* nouveau_i2c._base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB8C22F0B38F005A5C2B /* nouveau_i2c._base.cpp */; };
+		A560DDD523030EB000C1F44D /* nouveau_i2c_aux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB8E22F0B38F005A5C2B /* nouveau_i2c_aux.cpp */; };
+		A560DDD623030EB000C1F44D /* nouveau_i2c_bit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB8F22F0B38F005A5C2B /* nouveau_i2c_bit.cpp */; };
+		A560DDD723030EB000C1F44D /* nouveau_therm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB9022F0B38F005A5C2B /* nouveau_therm.cpp */; };
+		A560DDD823030EB000C1F44D /* nouveau_volt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB9222F0B38F005A5C2B /* nouveau_volt.cpp */; };
+		A560DDD923030EB000C1F44D /* nouveau_xpio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB9422F0B38F005A5C2B /* nouveau_xpio.cpp */; };
+		A560DDDA23030EB000C1F44D /* nv10.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB9622F0B38F005A5C2B /* nv10.cpp */; };
+		A560DDDB23030EB000C1F44D /* nv40.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB9822F0B38F005A5C2B /* nv40.cpp */; };
+		A560DDDC23030EB000C1F44D /* nv50.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB9A22F0B38F005A5C2B /* nv50.cpp */; };
+		A560DDDD23030EB000C1F44D /* nv84.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB9C22F0B38F005A5C2B /* nv84.cpp */; };
+		A560DDDE23030EB000C1F44D /* nva3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB9E22F0B38F005A5C2B /* nva3.cpp */; };
+		A560DDDF23030EB000C1F44D /* nvc0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBA022F0B38F005A5C2B /* nvc0.cpp */; };
+		A560DDE023030EB000C1F44D /* nvclock_i2c.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBA222F0B38F005A5C2B /* nvclock_i2c.cpp */; };
+		A560DDE123030EB000C1F44D /* nvd0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBA422F0B38F005A5C2B /* nvd0.cpp */; };
+		A560DDE223030EB000C1F44D /* nve0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBA622F0B38F005A5C2B /* nve0.cpp */; };
+		A560DDE323030EB000C1F44D /* vga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBA922F0B38F005A5C2B /* vga.cpp */; };
+		A560DDE423030EB000C1F44D /* w83781d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBAB22F0B38F005A5C2B /* w83781d.cpp */; };
+		A560DDE523030EB000C1F44D /* w83l785r.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBAC22F0B38F005A5C2B /* w83l785r.cpp */; };
+		A560DDE623030EB000C1F44D /* xf86i2c.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBAD22F0B38F005A5C2B /* xf86i2c.cpp */; };
+		A560DDE723030EB000C1F44D /* xfree.h in Sources */ = {isa = PBXBuildFile; fileRef = A521BBAF22F0B38F005A5C2B /* xfree.h */; };
+		A560DDE823030F8500C1F44D /* F718x.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBE922F0B3AB005A5C2B /* F718x.cpp */; };
+		A560DDE923030FAE00C1F44D /* PC8739x.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBF522F0B3AC005A5C2B /* PC8739x.cpp */; };
+		AEF4C81712602F2600297B2B /* FakeSMCDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AEF4C80E12602F2600297B2B /* FakeSMCDevice.cpp */; };
+		AEF4C81812602F2600297B2B /* FakeSMCKey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AEF4C81012602F2600297B2B /* FakeSMCKey.cpp */; };
+		AEF4C81C12602F2600297B2B /* FakeSMC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AEF4C81512602F2600297B2B /* FakeSMC.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1267DE4B18BC8EBB00D833A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1267DE2018BC8D9A00D833A4;
+			remoteInfo = AmdCPUMonitor;
+		};
+		128160D316D628A40012840B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 122024FC16D3A8BF003769F4;
+			remoteInfo = GeforceSensor;
+		};
+		1D1CAAB913657034003878D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12CB0F4512C0888E00068B06;
+			remoteInfo = IntelCPUMonitor;
+		};
+		1D1CAABB1365703A003878D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE840E52128D8544006532CB;
+			remoteInfo = ACPIMonitor;
+		};
+		1D1CAABD1365703C003878D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE5BA5771268D94A00EA6AB9;
+			remoteInfo = NVClockX;
+		};
+		1D1CAABF1365703F003878D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12D78B1D12BFDCFD002C61EA;
+			remoteInfo = RadeonMonitor;
+		};
+		1D1CAAC113657041003878D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12CBB17D12BDEA9F00157341;
+			remoteInfo = X3100;
+		};
+		1D1CAAC313657046003878D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE00C7BC126A24960068E69A;
+			remoteInfo = PC8739x;
+		};
+		1D1CAAC513657046003878D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE00C784126A1F440068E69A;
+			remoteInfo = F718x;
+		};
+		1D1CAAC713657046003878D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE212C6912678D3500145048;
+			remoteInfo = W836x;
+		};
+		1D1CAAC913657046003878D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AED9E18D125FBEF400736A5A;
+			remoteInfo = IT87x;
+		};
+		953D9A9D2058753300C570B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A55E16861F7041A50049A107;
+			remoteInfo = VoodooBatterySMC;
+		};
+		A521BC0322F0B7F5005A5C2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12AB85BA1920F14200ACDEA5;
+			remoteInfo = SMIMonitor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		122024FD16D3A8BF003769F4 /* GeforceSensor.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeforceSensor.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		1226620B1A66964B009296EF /* DIMMSensor.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DIMMSensor.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		124E606616C818AD004D3FE0 /* HWInfo.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HWInfo.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		124E606916C818AD004D3FE0 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = System/Library/Frameworks/Kernel.framework; sourceTree = SDKROOT; };
+		1260E3F116C3DBA2006515EB /* IntelCPUMonitor.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntelCPUMonitor.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		1260E42316C3DC3A006515EB /* Andigilog.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Andigilog.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		1267DE2118BC8D9A00D833A4 /* AmdCPUMonitor.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmdCPUMonitor.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		12A665A118DB055E00CF7D7E /* ADT7470.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADT7470.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		12AB85BB1920F14200ACDEA5 /* SMIMonitor.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMIMonitor.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		12B160901A3F01D8007C7B84 /* Cpuid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Cpuid.c; path = utils/Cpuid.c; sourceTree = "<group>"; };
+		12B160911A3F01D8007C7B84 /* cpuid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpuid.h; path = utils/cpuid.h; sourceTree = "<group>"; };
+		12B160921A3F01D8007C7B84 /* definitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = definitions.h; path = utils/definitions.h; sourceTree = "<group>"; };
+		12B160931A3F01D8007C7B84 /* TigerAdditionals.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TigerAdditionals.cpp; path = utils/TigerAdditionals.cpp; sourceTree = "<group>"; };
+		12B160941A3F01D8007C7B84 /* TigerAdditionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TigerAdditionals.h; path = utils/TigerAdditionals.h; sourceTree = "<group>"; };
+		12B161971A3F0874007C7B84 /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = utils.h; path = utils/utils.h; sourceTree = "<group>"; };
+		12CB0F3A12C087D400068B06 /* IntelCPUMonitor.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntelCPUMonitor.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		12CBB17E12BDEA9F00157341 /* X3100.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = X3100.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		12D78B1E12BFDCFD002C61EA /* RadeonMonitor.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadeonMonitor.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		A521BB5B22F0B331005A5C2B /* ACPIMonitor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ACPIMonitor-Info.plist"; sourceTree = "<group>"; };
+		A521BB5C22F0B331005A5C2B /* ACPIMonitor-pre106-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ACPIMonitor-pre106-Info.plist"; sourceTree = "<group>"; };
+		A521BB5D22F0B331005A5C2B /* ACPIMonitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ACPIMonitor.cpp; sourceTree = "<group>"; };
+		A521BB5E22F0B331005A5C2B /* ACPIMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPIMonitor.h; sourceTree = "<group>"; };
+		A521BB5F22F0B331005A5C2B /* SSDT-Monitor.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-Monitor.dsl"; sourceTree = "<group>"; };
+		A521BB6622F0B351005A5C2B /* AmdCPUMonitor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AmdCPUMonitor-Info.plist"; sourceTree = "<group>"; };
+		A521BB6722F0B351005A5C2B /* AmdCPUMonitor-pre106-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AmdCPUMonitor-pre106-Info.plist"; sourceTree = "<group>"; };
+		A521BB6822F0B351005A5C2B /* AmdCPUMonitor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AmdCPUMonitor.cpp; sourceTree = "<group>"; };
+		A521BB6922F0B351005A5C2B /* AmdCPUMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmdCPUMonitor.h; sourceTree = "<group>"; };
+		A521BB6B22F0B351005A5C2B /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A521BB6D22F0B351005A5C2B /* IntelCPUMonitor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IntelCPUMonitor-Info.plist"; sourceTree = "<group>"; };
+		A521BB6E22F0B351005A5C2B /* IntelCPUMonitor-pre106-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IntelCPUMonitor-pre106-Info.plist"; sourceTree = "<group>"; };
+		A521BB6F22F0B351005A5C2B /* IntelCPUMonitor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IntelCPUMonitor.cpp; sourceTree = "<group>"; };
+		A521BB7022F0B351005A5C2B /* IntelCPUMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntelCPUMonitor.h; sourceTree = "<group>"; };
+		A521BB7322F0B38F005A5C2B /* adt7473.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = adt7473.cpp; sourceTree = "<group>"; };
+		A521BB7422F0B38F005A5C2B /* f75375.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = f75375.cpp; sourceTree = "<group>"; };
+		A521BB7522F0B38F005A5C2B /* f75375.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = f75375.h; sourceTree = "<group>"; };
+		A521BB7622F0B38F005A5C2B /* GeForceSensors-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeForceSensors-Info.plist"; sourceTree = "<group>"; };
+		A521BB7722F0B38F005A5C2B /* GeForceSensors-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeForceSensors-Prefix.pch"; sourceTree = "<group>"; };
+		A521BB7822F0B38F005A5C2B /* GeforceSensors.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GeforceSensors.cpp; sourceTree = "<group>"; };
+		A521BB7922F0B38F005A5C2B /* GeforceSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeforceSensors.h; sourceTree = "<group>"; };
+		A521BB7A22F0B38F005A5C2B /* gm100.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gm100.cpp; sourceTree = "<group>"; };
+		A521BB7B22F0B38F005A5C2B /* gm100.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gm100.h; sourceTree = "<group>"; };
+		A521BB7C22F0B38F005A5C2B /* gp100.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gp100.cpp; sourceTree = "<group>"; };
+		A521BB7D22F0B38F005A5C2B /* gp100.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gp100.h; sourceTree = "<group>"; };
+		A521BB7E22F0B38F005A5C2B /* i2c_algo_bit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = i2c_algo_bit.cpp; sourceTree = "<group>"; };
+		A521BB7F22F0B38F005A5C2B /* i2c_algo_bit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = i2c_algo_bit.h; sourceTree = "<group>"; };
+		A521BB8022F0B38F005A5C2B /* i2c_base.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = i2c_base.cpp; sourceTree = "<group>"; };
+		A521BB8122F0B38F005A5C2B /* i2c_base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = i2c_base.h; sourceTree = "<group>"; };
+		A521BB8222F0B38F005A5C2B /* linux_definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = linux_definitions.h; sourceTree = "<group>"; };
+		A521BB8322F0B38F005A5C2B /* list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
+		A521BB8422F0B38F005A5C2B /* lm99.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lm99.cpp; sourceTree = "<group>"; };
+		A521BB8522F0B38F005A5C2B /* nouveau.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nouveau.cpp; sourceTree = "<group>"; };
+		A521BB8622F0B38F005A5C2B /* nouveau.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nouveau.h; sourceTree = "<group>"; };
+		A521BB8722F0B38F005A5C2B /* nouveau_bios.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nouveau_bios.cpp; sourceTree = "<group>"; };
+		A521BB8822F0B38F005A5C2B /* nouveau_bios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nouveau_bios.h; sourceTree = "<group>"; };
+		A521BB8922F0B38F005A5C2B /* nouveau_definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nouveau_definitions.h; sourceTree = "<group>"; };
+		A521BB8A22F0B38F005A5C2B /* nouveau_gpio.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nouveau_gpio.cpp; sourceTree = "<group>"; };
+		A521BB8B22F0B38F005A5C2B /* nouveau_gpio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nouveau_gpio.h; sourceTree = "<group>"; };
+		A521BB8C22F0B38F005A5C2B /* nouveau_i2c._base.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nouveau_i2c._base.cpp; sourceTree = "<group>"; };
+		A521BB8D22F0B38F005A5C2B /* nouveau_i2c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nouveau_i2c.h; sourceTree = "<group>"; };
+		A521BB8E22F0B38F005A5C2B /* nouveau_i2c_aux.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nouveau_i2c_aux.cpp; sourceTree = "<group>"; };
+		A521BB8F22F0B38F005A5C2B /* nouveau_i2c_bit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nouveau_i2c_bit.cpp; sourceTree = "<group>"; };
+		A521BB9022F0B38F005A5C2B /* nouveau_therm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nouveau_therm.cpp; sourceTree = "<group>"; };
+		A521BB9122F0B38F005A5C2B /* nouveau_therm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nouveau_therm.h; sourceTree = "<group>"; };
+		A521BB9222F0B38F005A5C2B /* nouveau_volt.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nouveau_volt.cpp; sourceTree = "<group>"; };
+		A521BB9322F0B38F005A5C2B /* nouveau_volt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nouveau_volt.h; sourceTree = "<group>"; };
+		A521BB9422F0B38F005A5C2B /* nouveau_xpio.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nouveau_xpio.cpp; sourceTree = "<group>"; };
+		A521BB9522F0B38F005A5C2B /* nouveau_xpio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nouveau_xpio.h; sourceTree = "<group>"; };
+		A521BB9622F0B38F005A5C2B /* nv10.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nv10.cpp; sourceTree = "<group>"; };
+		A521BB9722F0B38F005A5C2B /* nv10.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nv10.h; sourceTree = "<group>"; };
+		A521BB9822F0B38F005A5C2B /* nv40.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nv40.cpp; sourceTree = "<group>"; };
+		A521BB9922F0B38F005A5C2B /* nv40.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nv40.h; sourceTree = "<group>"; };
+		A521BB9A22F0B38F005A5C2B /* nv50.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nv50.cpp; sourceTree = "<group>"; };
+		A521BB9B22F0B38F005A5C2B /* nv50.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nv50.h; sourceTree = "<group>"; };
+		A521BB9C22F0B38F005A5C2B /* nv84.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nv84.cpp; sourceTree = "<group>"; };
+		A521BB9D22F0B38F005A5C2B /* nv84.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nv84.h; sourceTree = "<group>"; };
+		A521BB9E22F0B38F005A5C2B /* nva3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nva3.cpp; sourceTree = "<group>"; };
+		A521BB9F22F0B38F005A5C2B /* nva3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nva3.h; sourceTree = "<group>"; };
+		A521BBA022F0B38F005A5C2B /* nvc0.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nvc0.cpp; sourceTree = "<group>"; };
+		A521BBA122F0B38F005A5C2B /* nvc0.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nvc0.h; sourceTree = "<group>"; };
+		A521BBA222F0B38F005A5C2B /* nvclock_i2c.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nvclock_i2c.cpp; sourceTree = "<group>"; };
+		A521BBA322F0B38F005A5C2B /* nvclock_i2c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nvclock_i2c.h; sourceTree = "<group>"; };
+		A521BBA422F0B38F005A5C2B /* nvd0.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nvd0.cpp; sourceTree = "<group>"; };
+		A521BBA522F0B38F005A5C2B /* nvd0.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nvd0.h; sourceTree = "<group>"; };
+		A521BBA622F0B38F005A5C2B /* nve0.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nve0.cpp; sourceTree = "<group>"; };
+		A521BBA722F0B38F005A5C2B /* nve0.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nve0.h; sourceTree = "<group>"; };
+		A521BBA822F0B38F005A5C2B /* timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = timer.h; sourceTree = "<group>"; };
+		A521BBA922F0B38F005A5C2B /* vga.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vga.cpp; sourceTree = "<group>"; };
+		A521BBAA22F0B38F005A5C2B /* vga.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vga.h; sourceTree = "<group>"; };
+		A521BBAB22F0B38F005A5C2B /* w83781d.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = w83781d.cpp; sourceTree = "<group>"; };
+		A521BBAC22F0B38F005A5C2B /* w83l785r.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = w83l785r.cpp; sourceTree = "<group>"; };
+		A521BBAD22F0B38F005A5C2B /* xf86i2c.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = xf86i2c.cpp; sourceTree = "<group>"; };
+		A521BBAE22F0B38F005A5C2B /* xf86i2c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xf86i2c.h; sourceTree = "<group>"; };
+		A521BBAF22F0B38F005A5C2B /* xfree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xfree.h; sourceTree = "<group>"; };
+		A521BBB122F0B38F005A5C2B /* X3100-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "X3100-Info.plist"; sourceTree = "<group>"; };
+		A521BBB222F0B38F005A5C2B /* X3100-pre106-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "X3100-pre106-Info.plist"; sourceTree = "<group>"; };
+		A521BBB322F0B38F005A5C2B /* X3100.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = X3100.cpp; sourceTree = "<group>"; };
+		A521BBB422F0B38F005A5C2B /* X3100.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = X3100.h; sourceTree = "<group>"; };
+		A521BBB622F0B38F005A5C2B /* gpl.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = gpl.txt; sourceTree = "<group>"; };
+		A521BBB822F0B38F005A5C2B /* adt7473.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = adt7473.cpp; sourceTree = "<group>"; };
+		A521BBB922F0B38F005A5C2B /* backend.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = backend.cpp; sourceTree = "<group>"; };
+		A521BBBA22F0B38F005A5C2B /* backend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = backend.h; sourceTree = "<group>"; };
+		A521BBBB22F0B38F005A5C2B /* bios.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bios.cpp; sourceTree = "<group>"; };
+		A521BBBC22F0B38F005A5C2B /* error.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = error.cpp; sourceTree = "<group>"; };
+		A521BBBD22F0B38F005A5C2B /* f75375.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = f75375.cpp; sourceTree = "<group>"; };
+		A521BBBE22F0B38F005A5C2B /* f75375.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = f75375.h; sourceTree = "<group>"; };
+		A521BBBF22F0B38F005A5C2B /* i2c.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = i2c.cpp; sourceTree = "<group>"; };
+		A521BBC022F0B38F005A5C2B /* i2c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = i2c.h; sourceTree = "<group>"; };
+		A521BBC122F0B38F005A5C2B /* info.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = info.cpp; sourceTree = "<group>"; };
+		A521BBC222F0B38F005A5C2B /* libc_wrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = libc_wrapper.cpp; sourceTree = "<group>"; };
+		A521BBC322F0B38F005A5C2B /* lm99.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lm99.cpp; sourceTree = "<group>"; };
+		A521BBC422F0B38F005A5C2B /* nv40.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nv40.cpp; sourceTree = "<group>"; };
+		A521BBC522F0B38F005A5C2B /* nv50.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nv50.cpp; sourceTree = "<group>"; };
+		A521BBC622F0B38F005A5C2B /* nvclock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nvclock.h; sourceTree = "<group>"; };
+		A521BBC722F0B38F005A5C2B /* nvreg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nvreg.h; sourceTree = "<group>"; };
+		A521BBC822F0B38F005A5C2B /* overclock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = overclock.cpp; sourceTree = "<group>"; };
+		A521BBC922F0B38F005A5C2B /* utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utils.cpp; sourceTree = "<group>"; };
+		A521BBCA22F0B38F005A5C2B /* w83781d.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = w83781d.cpp; sourceTree = "<group>"; };
+		A521BBCB22F0B38F005A5C2B /* w83l785r.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = w83l785r.cpp; sourceTree = "<group>"; };
+		A521BBCC22F0B38F005A5C2B /* xf86i2c.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = xf86i2c.cpp; sourceTree = "<group>"; };
+		A521BBCD22F0B38F005A5C2B /* xf86i2c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xf86i2c.h; sourceTree = "<group>"; };
+		A521BBCE22F0B38F005A5C2B /* xfree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xfree.h; sourceTree = "<group>"; };
+		A521BBCF22F0B38F005A5C2B /* NVClockX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NVClockX-Info.plist"; sourceTree = "<group>"; };
+		A521BBD022F0B38F005A5C2B /* NVClockX-pre106-info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NVClockX-pre106-info.plist"; sourceTree = "<group>"; };
+		A521BBD122F0B38F005A5C2B /* NVClockX.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NVClockX.cpp; sourceTree = "<group>"; };
+		A521BBD222F0B38F005A5C2B /* NVClockX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVClockX.h; sourceTree = "<group>"; };
+		A521BBD422F0B38F005A5C2B /* ATI_Device_ID_List_Jun_2010.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ATI_Device_ID_List_Jun_2010.txt; sourceTree = "<group>"; };
+		A521BBD522F0B38F005A5C2B /* ATICard.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ATICard.cpp; sourceTree = "<group>"; };
+		A521BBD622F0B38F005A5C2B /* ATICard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATICard.h; sourceTree = "<group>"; };
+		A521BBD722F0B38F005A5C2B /* atombios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = atombios.h; sourceTree = "<group>"; };
+		A521BBD822F0B38F005A5C2B /* Radeon.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Radeon.cpp; sourceTree = "<group>"; };
+		A521BBD922F0B38F005A5C2B /* Radeon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Radeon.h; sourceTree = "<group>"; };
+		A521BBDA22F0B38F005A5C2B /* radeon_chipinfo_gen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = radeon_chipinfo_gen.h; sourceTree = "<group>"; };
+		A521BBDB22F0B38F005A5C2B /* radeon_chipsets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = radeon_chipsets.h; sourceTree = "<group>"; };
+		A521BBDC22F0B38F005A5C2B /* RadeonMonitor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RadeonMonitor-Info.plist"; sourceTree = "<group>"; };
+		A521BBDD22F0B38F005A5C2B /* RadeonMonitor-pre106-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RadeonMonitor-pre106-Info.plist"; sourceTree = "<group>"; };
+		A521BBE022F0B39D005A5C2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A521BBE122F0B39D005A5C2B /* SMIMonitor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SMIMonitor-Info.plist"; sourceTree = "<group>"; };
+		A521BBE222F0B39D005A5C2B /* SMIMonitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMIMonitor-Prefix.pch"; sourceTree = "<group>"; };
+		A521BBE322F0B39D005A5C2B /* SMIMonitor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SMIMonitor.cpp; sourceTree = "<group>"; };
+		A521BBE422F0B39D005A5C2B /* SMIMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMIMonitor.h; sourceTree = "<group>"; };
+		A521BBE722F0B3AB005A5C2B /* F718x-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "F718x-Info.plist"; sourceTree = "<group>"; };
+		A521BBE822F0B3AB005A5C2B /* F718x-pre106-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "F718x-pre106-Info.plist"; sourceTree = "<group>"; };
+		A521BBE922F0B3AB005A5C2B /* F718x.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = F718x.cpp; sourceTree = "<group>"; };
+		A521BBEA22F0B3AB005A5C2B /* F718x.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = F718x.h; sourceTree = "<group>"; };
+		A521BBED22F0B3AB005A5C2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A521BBEE22F0B3AC005A5C2B /* ITEIT87x-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ITEIT87x-Info.plist"; sourceTree = "<group>"; };
+		A521BBEF22F0B3AC005A5C2B /* ITEIT87x-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ITEIT87x-Prefix.pch"; sourceTree = "<group>"; };
+		A521BBF022F0B3AC005A5C2B /* ITEIT87x.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ITEIT87x.cpp; sourceTree = "<group>"; };
+		A521BBF122F0B3AC005A5C2B /* ITEIT87x.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITEIT87x.h; sourceTree = "<group>"; };
+		A521BBF322F0B3AC005A5C2B /* PC8739x-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PC8739x-Info.plist"; sourceTree = "<group>"; };
+		A521BBF422F0B3AC005A5C2B /* PC8739x-pre106-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PC8739x-pre106-Info.plist"; sourceTree = "<group>"; };
+		A521BBF522F0B3AC005A5C2B /* PC8739x.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PC8739x.cpp; sourceTree = "<group>"; };
+		A521BBF622F0B3AC005A5C2B /* PC8739x.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PC8739x.h; sourceTree = "<group>"; };
+		A521BBF822F0B3AC005A5C2B /* SuperIOFamily-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SuperIOFamily-Info.plist"; sourceTree = "<group>"; };
+		A521BBF922F0B3AC005A5C2B /* SuperIOFamily-pre106-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SuperIOFamily-pre106-Info.plist"; sourceTree = "<group>"; };
+		A521BBFA22F0B3AC005A5C2B /* SuperIOFamily.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SuperIOFamily.cpp; sourceTree = "<group>"; };
+		A521BBFB22F0B3AC005A5C2B /* SuperIOFamily.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperIOFamily.h; sourceTree = "<group>"; };
+		A521BBFE22F0B3AC005A5C2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A521BBFF22F0B3AC005A5C2B /* WinbondW836x-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WinbondW836x-Info.plist"; sourceTree = "<group>"; };
+		A521BC0022F0B3AC005A5C2B /* WinbondW836x-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WinbondW836x-Prefix.pch"; sourceTree = "<group>"; };
+		A521BC0122F0B3AC005A5C2B /* WinbondW836x.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WinbondW836x.cpp; sourceTree = "<group>"; };
+		A521BC0222F0B3AC005A5C2B /* WinbondW836x.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WinbondW836x.h; sourceTree = "<group>"; };
+		A55E16871F7041A50049A107 /* VoodooBatterySMC.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoodooBatterySMC.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		A55E16961F7041CF0049A107 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A55E16981F7041CF0049A107 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A55E16991F7041CF0049A107 /* Support.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Support.h; sourceTree = "<group>"; };
+		A55E169A1F7041CF0049A107 /* VoodooBattery.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VoodooBattery.cpp; sourceTree = "<group>"; };
+		A55E169B1F7041CF0049A107 /* VoodooBattery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoodooBattery.h; sourceTree = "<group>"; };
+		AE00C785126A1F440068E69A /* F718x.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = F718x.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE00C7BD126A24960068E69A /* PC8739x.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PC8739x.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE212C6A12678D3500145048 /* W836x.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = W836x.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE5BA5781268D94A00EA6AB9 /* NVClockX.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NVClockX.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE840E53128D8544006532CB /* ACPIMonitor.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACPIMonitor.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED9E18E125FBEF400736A5A /* ITEIT87x.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ITEIT87x.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED9E581125FC23900736A5A /* SuperIOFamily.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuperIOFamily.h; path = plugins/SuperIOSensors/SuperIOFamily/SuperIOFamily.h; sourceTree = SOURCE_ROOT; };
+		AED9E582125FC23900736A5A /* SuperIOFamily.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SuperIOFamily.cpp; path = plugins/SuperIOSensors/SuperIOFamily/SuperIOFamily.cpp; sourceTree = SOURCE_ROOT; };
+		AEF4C80412602EE700297B2B /* FakeSMC.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FakeSMC.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEF4C80E12602F2600297B2B /* FakeSMCDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FakeSMCDevice.cpp; path = fakesmc/FakeSMCDevice.cpp; sourceTree = SOURCE_ROOT; };
+		AEF4C80F12602F2600297B2B /* FakeSMCDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FakeSMCDevice.h; path = fakesmc/FakeSMCDevice.h; sourceTree = SOURCE_ROOT; };
+		AEF4C81012602F2600297B2B /* FakeSMCKey.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FakeSMCKey.cpp; path = fakesmc/FakeSMCKey.cpp; sourceTree = SOURCE_ROOT; };
+		AEF4C81112602F2600297B2B /* FakeSMCKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FakeSMCKey.h; path = fakesmc/FakeSMCKey.h; sourceTree = SOURCE_ROOT; };
+		AEF4C81212602F2600297B2B /* FakeSMC-pre106-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "FakeSMC-pre106-info.plist"; path = "fakesmc/FakeSMC-pre106-info.plist"; sourceTree = SOURCE_ROOT; };
+		AEF4C81312602F2600297B2B /* FakeSMC-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "FakeSMC-Info.plist"; path = "fakesmc/FakeSMC-Info.plist"; sourceTree = SOURCE_ROOT; };
+		AEF4C81512602F2600297B2B /* FakeSMC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FakeSMC.cpp; path = fakesmc/FakeSMC.cpp; sourceTree = SOURCE_ROOT; };
+		AEF4C81612602F2600297B2B /* FakeSMC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FakeSMC.h; path = fakesmc/FakeSMC.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		122024FB16D3A8BF003769F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		122662061A66964B009296EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		124E606116C818AD004D3FE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1260E42116C3DC3A006515EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1267DE1F18BC8D9A00D833A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12A6659F18DB055E00CF7D7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12AB85B61920F14200ACDEA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12CB0F4412C0888E00068B06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12CBB17C12BDEA9F00157341 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12D78B1C12BFDCFD002C61EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A55E16831F7041A50049A107 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE00C783126A1F440068E69A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE00C7BB126A24960068E69A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE212C6812678D3500145048 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE5BA5761268D94A00EA6AB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE840E51128D8544006532CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED9E18C125FBEF400736A5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF4C80212602EE700297B2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		124E606716C818AD004D3FE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				124E606816C818AD004D3FE0 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		124E606816C818AD004D3FE0 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				124E606916C818AD004D3FE0 /* Kernel.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		A521BB5A22F0B331005A5C2B /* ACPIMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				A521BB5B22F0B331005A5C2B /* ACPIMonitor-Info.plist */,
+				A521BB5C22F0B331005A5C2B /* ACPIMonitor-pre106-Info.plist */,
+				A521BB5D22F0B331005A5C2B /* ACPIMonitor.cpp */,
+				A521BB5E22F0B331005A5C2B /* ACPIMonitor.h */,
+				A521BB5F22F0B331005A5C2B /* SSDT-Monitor.dsl */,
+			);
+			name = ACPIMonitor;
+			path = plugins/ACPIMonitor;
+			sourceTree = "<group>";
+		};
+		A521BB6422F0B351005A5C2B /* CPUSensors */ = {
+			isa = PBXGroup;
+			children = (
+				A521BB6522F0B351005A5C2B /* AmdCPUMonitor */,
+				A521BB6C22F0B351005A5C2B /* IntelCPUMonitor */,
+			);
+			name = CPUSensors;
+			path = plugins/CPUSensors;
+			sourceTree = "<group>";
+		};
+		A521BB6522F0B351005A5C2B /* AmdCPUMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				A521BB6622F0B351005A5C2B /* AmdCPUMonitor-Info.plist */,
+				A521BB6722F0B351005A5C2B /* AmdCPUMonitor-pre106-Info.plist */,
+				A521BB6822F0B351005A5C2B /* AmdCPUMonitor.cpp */,
+				A521BB6922F0B351005A5C2B /* AmdCPUMonitor.h */,
+				A521BB6A22F0B351005A5C2B /* InfoPlist.strings */,
+			);
+			path = AmdCPUMonitor;
+			sourceTree = "<group>";
+		};
+		A521BB6C22F0B351005A5C2B /* IntelCPUMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				A521BB6D22F0B351005A5C2B /* IntelCPUMonitor-Info.plist */,
+				A521BB6E22F0B351005A5C2B /* IntelCPUMonitor-pre106-Info.plist */,
+				A521BB6F22F0B351005A5C2B /* IntelCPUMonitor.cpp */,
+				A521BB7022F0B351005A5C2B /* IntelCPUMonitor.h */,
+			);
+			path = IntelCPUMonitor;
+			sourceTree = "<group>";
+		};
+		A521BB7122F0B38F005A5C2B /* GPUSensors */ = {
+			isa = PBXGroup;
+			children = (
+				A521BB7222F0B38F005A5C2B /* GeforceSensors */,
+				A521BBB022F0B38F005A5C2B /* IntelX3100 */,
+				A521BBB522F0B38F005A5C2B /* NVClockX */,
+				A521BBD322F0B38F005A5C2B /* RadeonMonitor */,
+			);
+			name = GPUSensors;
+			path = plugins/GPUSensors;
+			sourceTree = "<group>";
+		};
+		A521BB7222F0B38F005A5C2B /* GeforceSensors */ = {
+			isa = PBXGroup;
+			children = (
+				A521BB7322F0B38F005A5C2B /* adt7473.cpp */,
+				A521BB7422F0B38F005A5C2B /* f75375.cpp */,
+				A521BB7522F0B38F005A5C2B /* f75375.h */,
+				A521BB7622F0B38F005A5C2B /* GeForceSensors-Info.plist */,
+				A521BB7722F0B38F005A5C2B /* GeForceSensors-Prefix.pch */,
+				A521BB7822F0B38F005A5C2B /* GeforceSensors.cpp */,
+				A521BB7922F0B38F005A5C2B /* GeforceSensors.h */,
+				A521BB7A22F0B38F005A5C2B /* gm100.cpp */,
+				A521BB7B22F0B38F005A5C2B /* gm100.h */,
+				A521BB7C22F0B38F005A5C2B /* gp100.cpp */,
+				A521BB7D22F0B38F005A5C2B /* gp100.h */,
+				A521BB7E22F0B38F005A5C2B /* i2c_algo_bit.cpp */,
+				A521BB7F22F0B38F005A5C2B /* i2c_algo_bit.h */,
+				A521BB8022F0B38F005A5C2B /* i2c_base.cpp */,
+				A521BB8122F0B38F005A5C2B /* i2c_base.h */,
+				A521BB8222F0B38F005A5C2B /* linux_definitions.h */,
+				A521BB8322F0B38F005A5C2B /* list.h */,
+				A521BB8422F0B38F005A5C2B /* lm99.cpp */,
+				A521BB8522F0B38F005A5C2B /* nouveau.cpp */,
+				A521BB8622F0B38F005A5C2B /* nouveau.h */,
+				A521BB8722F0B38F005A5C2B /* nouveau_bios.cpp */,
+				A521BB8822F0B38F005A5C2B /* nouveau_bios.h */,
+				A521BB8922F0B38F005A5C2B /* nouveau_definitions.h */,
+				A521BB8A22F0B38F005A5C2B /* nouveau_gpio.cpp */,
+				A521BB8B22F0B38F005A5C2B /* nouveau_gpio.h */,
+				A521BB8C22F0B38F005A5C2B /* nouveau_i2c._base.cpp */,
+				A521BB8D22F0B38F005A5C2B /* nouveau_i2c.h */,
+				A521BB8E22F0B38F005A5C2B /* nouveau_i2c_aux.cpp */,
+				A521BB8F22F0B38F005A5C2B /* nouveau_i2c_bit.cpp */,
+				A521BB9022F0B38F005A5C2B /* nouveau_therm.cpp */,
+				A521BB9122F0B38F005A5C2B /* nouveau_therm.h */,
+				A521BB9222F0B38F005A5C2B /* nouveau_volt.cpp */,
+				A521BB9322F0B38F005A5C2B /* nouveau_volt.h */,
+				A521BB9422F0B38F005A5C2B /* nouveau_xpio.cpp */,
+				A521BB9522F0B38F005A5C2B /* nouveau_xpio.h */,
+				A521BB9622F0B38F005A5C2B /* nv10.cpp */,
+				A521BB9722F0B38F005A5C2B /* nv10.h */,
+				A521BB9822F0B38F005A5C2B /* nv40.cpp */,
+				A521BB9922F0B38F005A5C2B /* nv40.h */,
+				A521BB9A22F0B38F005A5C2B /* nv50.cpp */,
+				A521BB9B22F0B38F005A5C2B /* nv50.h */,
+				A521BB9C22F0B38F005A5C2B /* nv84.cpp */,
+				A521BB9D22F0B38F005A5C2B /* nv84.h */,
+				A521BB9E22F0B38F005A5C2B /* nva3.cpp */,
+				A521BB9F22F0B38F005A5C2B /* nva3.h */,
+				A521BBA022F0B38F005A5C2B /* nvc0.cpp */,
+				A521BBA122F0B38F005A5C2B /* nvc0.h */,
+				A521BBA222F0B38F005A5C2B /* nvclock_i2c.cpp */,
+				A521BBA322F0B38F005A5C2B /* nvclock_i2c.h */,
+				A521BBA422F0B38F005A5C2B /* nvd0.cpp */,
+				A521BBA522F0B38F005A5C2B /* nvd0.h */,
+				A521BBA622F0B38F005A5C2B /* nve0.cpp */,
+				A521BBA722F0B38F005A5C2B /* nve0.h */,
+				A521BBA822F0B38F005A5C2B /* timer.h */,
+				A521BBA922F0B38F005A5C2B /* vga.cpp */,
+				A521BBAA22F0B38F005A5C2B /* vga.h */,
+				A521BBAB22F0B38F005A5C2B /* w83781d.cpp */,
+				A521BBAC22F0B38F005A5C2B /* w83l785r.cpp */,
+				A521BBAD22F0B38F005A5C2B /* xf86i2c.cpp */,
+				A521BBAE22F0B38F005A5C2B /* xf86i2c.h */,
+				A521BBAF22F0B38F005A5C2B /* xfree.h */,
+			);
+			path = GeforceSensors;
+			sourceTree = "<group>";
+		};
+		A521BBB022F0B38F005A5C2B /* IntelX3100 */ = {
+			isa = PBXGroup;
+			children = (
+				A521BBB122F0B38F005A5C2B /* X3100-Info.plist */,
+				A521BBB222F0B38F005A5C2B /* X3100-pre106-Info.plist */,
+				A521BBB322F0B38F005A5C2B /* X3100.cpp */,
+				A521BBB422F0B38F005A5C2B /* X3100.h */,
+			);
+			path = IntelX3100;
+			sourceTree = "<group>";
+		};
+		A521BBB522F0B38F005A5C2B /* NVClockX */ = {
+			isa = PBXGroup;
+			children = (
+				A521BBB622F0B38F005A5C2B /* gpl.txt */,
+				A521BBB722F0B38F005A5C2B /* NVClock */,
+				A521BBCF22F0B38F005A5C2B /* NVClockX-Info.plist */,
+				A521BBD022F0B38F005A5C2B /* NVClockX-pre106-info.plist */,
+				A521BBD122F0B38F005A5C2B /* NVClockX.cpp */,
+				A521BBD222F0B38F005A5C2B /* NVClockX.h */,
+			);
+			path = NVClockX;
+			sourceTree = "<group>";
+		};
+		A521BBB722F0B38F005A5C2B /* NVClock */ = {
+			isa = PBXGroup;
+			children = (
+				A521BBB822F0B38F005A5C2B /* adt7473.cpp */,
+				A521BBB922F0B38F005A5C2B /* backend.cpp */,
+				A521BBBA22F0B38F005A5C2B /* backend.h */,
+				A521BBBB22F0B38F005A5C2B /* bios.cpp */,
+				A521BBBC22F0B38F005A5C2B /* error.cpp */,
+				A521BBBD22F0B38F005A5C2B /* f75375.cpp */,
+				A521BBBE22F0B38F005A5C2B /* f75375.h */,
+				A521BBBF22F0B38F005A5C2B /* i2c.cpp */,
+				A521BBC022F0B38F005A5C2B /* i2c.h */,
+				A521BBC122F0B38F005A5C2B /* info.cpp */,
+				A521BBC222F0B38F005A5C2B /* libc_wrapper.cpp */,
+				A521BBC322F0B38F005A5C2B /* lm99.cpp */,
+				A521BBC422F0B38F005A5C2B /* nv40.cpp */,
+				A521BBC522F0B38F005A5C2B /* nv50.cpp */,
+				A521BBC622F0B38F005A5C2B /* nvclock.h */,
+				A521BBC722F0B38F005A5C2B /* nvreg.h */,
+				A521BBC822F0B38F005A5C2B /* overclock.cpp */,
+				A521BBC922F0B38F005A5C2B /* utils.cpp */,
+				A521BBCA22F0B38F005A5C2B /* w83781d.cpp */,
+				A521BBCB22F0B38F005A5C2B /* w83l785r.cpp */,
+				A521BBCC22F0B38F005A5C2B /* xf86i2c.cpp */,
+				A521BBCD22F0B38F005A5C2B /* xf86i2c.h */,
+				A521BBCE22F0B38F005A5C2B /* xfree.h */,
+			);
+			path = NVClock;
+			sourceTree = "<group>";
+		};
+		A521BBD322F0B38F005A5C2B /* RadeonMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				A521BBD422F0B38F005A5C2B /* ATI_Device_ID_List_Jun_2010.txt */,
+				A521BBD522F0B38F005A5C2B /* ATICard.cpp */,
+				A521BBD622F0B38F005A5C2B /* ATICard.h */,
+				A521BBD722F0B38F005A5C2B /* atombios.h */,
+				A521BBD822F0B38F005A5C2B /* Radeon.cpp */,
+				A521BBD922F0B38F005A5C2B /* Radeon.h */,
+				A521BBDA22F0B38F005A5C2B /* radeon_chipinfo_gen.h */,
+				A521BBDB22F0B38F005A5C2B /* radeon_chipsets.h */,
+				A521BBDC22F0B38F005A5C2B /* RadeonMonitor-Info.plist */,
+				A521BBDD22F0B38F005A5C2B /* RadeonMonitor-pre106-Info.plist */,
+			);
+			path = RadeonMonitor;
+			sourceTree = "<group>";
+		};
+		A521BBDE22F0B39D005A5C2B /* SMIMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				A521BBDF22F0B39D005A5C2B /* InfoPlist.strings */,
+				A521BBE122F0B39D005A5C2B /* SMIMonitor-Info.plist */,
+				A521BBE222F0B39D005A5C2B /* SMIMonitor-Prefix.pch */,
+				A521BBE322F0B39D005A5C2B /* SMIMonitor.cpp */,
+				A521BBE422F0B39D005A5C2B /* SMIMonitor.h */,
+			);
+			name = SMIMonitor;
+			path = plugins/SMIMonitor;
+			sourceTree = "<group>";
+		};
+		A521BBE522F0B3AB005A5C2B /* SuperIOSensors */ = {
+			isa = PBXGroup;
+			children = (
+				A521BBE622F0B3AB005A5C2B /* Fintek718x */,
+				A521BBEB22F0B3AB005A5C2B /* ITE87x */,
+				A521BBF222F0B3AC005A5C2B /* NSCPC8739x */,
+				A521BBF722F0B3AC005A5C2B /* SuperIOFamily */,
+				A521BBFC22F0B3AC005A5C2B /* WinbondW836x */,
+			);
+			name = SuperIOSensors;
+			path = plugins/SuperIOSensors;
+			sourceTree = "<group>";
+		};
+		A521BBE622F0B3AB005A5C2B /* Fintek718x */ = {
+			isa = PBXGroup;
+			children = (
+				A521BBE722F0B3AB005A5C2B /* F718x-Info.plist */,
+				A521BBE822F0B3AB005A5C2B /* F718x-pre106-Info.plist */,
+				A521BBE922F0B3AB005A5C2B /* F718x.cpp */,
+				A521BBEA22F0B3AB005A5C2B /* F718x.h */,
+			);
+			path = Fintek718x;
+			sourceTree = "<group>";
+		};
+		A521BBEB22F0B3AB005A5C2B /* ITE87x */ = {
+			isa = PBXGroup;
+			children = (
+				A521BBEC22F0B3AB005A5C2B /* InfoPlist.strings */,
+				A521BBEE22F0B3AC005A5C2B /* ITEIT87x-Info.plist */,
+				A521BBEF22F0B3AC005A5C2B /* ITEIT87x-Prefix.pch */,
+				A521BBF022F0B3AC005A5C2B /* ITEIT87x.cpp */,
+				A521BBF122F0B3AC005A5C2B /* ITEIT87x.h */,
+			);
+			path = ITE87x;
+			sourceTree = "<group>";
+		};
+		A521BBF222F0B3AC005A5C2B /* NSCPC8739x */ = {
+			isa = PBXGroup;
+			children = (
+				A521BBF322F0B3AC005A5C2B /* PC8739x-Info.plist */,
+				A521BBF422F0B3AC005A5C2B /* PC8739x-pre106-Info.plist */,
+				A521BBF522F0B3AC005A5C2B /* PC8739x.cpp */,
+				A521BBF622F0B3AC005A5C2B /* PC8739x.h */,
+			);
+			path = NSCPC8739x;
+			sourceTree = "<group>";
+		};
+		A521BBF722F0B3AC005A5C2B /* SuperIOFamily */ = {
+			isa = PBXGroup;
+			children = (
+				A521BBF822F0B3AC005A5C2B /* SuperIOFamily-Info.plist */,
+				A521BBF922F0B3AC005A5C2B /* SuperIOFamily-pre106-Info.plist */,
+				A521BBFA22F0B3AC005A5C2B /* SuperIOFamily.cpp */,
+				A521BBFB22F0B3AC005A5C2B /* SuperIOFamily.h */,
+			);
+			path = SuperIOFamily;
+			sourceTree = "<group>";
+		};
+		A521BBFC22F0B3AC005A5C2B /* WinbondW836x */ = {
+			isa = PBXGroup;
+			children = (
+				A521BBFD22F0B3AC005A5C2B /* InfoPlist.strings */,
+				A521BBFF22F0B3AC005A5C2B /* WinbondW836x-Info.plist */,
+				A521BC0022F0B3AC005A5C2B /* WinbondW836x-Prefix.pch */,
+				A521BC0122F0B3AC005A5C2B /* WinbondW836x.cpp */,
+				A521BC0222F0B3AC005A5C2B /* WinbondW836x.h */,
+			);
+			path = WinbondW836x;
+			sourceTree = "<group>";
+		};
+		A55E16931F7041CF0049A107 /* VoodooBattery */ = {
+			isa = PBXGroup;
+			children = (
+				A55E16951F7041CF0049A107 /* InfoPlist.strings */,
+				A55E16981F7041CF0049A107 /* Info.plist */,
+				A55E16991F7041CF0049A107 /* Support.h */,
+				A55E169A1F7041CF0049A107 /* VoodooBattery.cpp */,
+				A55E169B1F7041CF0049A107 /* VoodooBattery.h */,
+			);
+			name = VoodooBattery;
+			path = plugins/VoodooBattery;
+			sourceTree = "<group>";
+		};
+		AEABE451125F8E7400F08235 = {
+			isa = PBXGroup;
+			children = (
+				AEABE469125F8F0700F08235 /* Sources */,
+				124E606716C818AD004D3FE0 /* Frameworks */,
+				AEABE461125F8E9300F08235 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AEABE461125F8E9300F08235 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEF4C80412602EE700297B2B /* FakeSMC.kext */,
+				AE5BA5781268D94A00EA6AB9 /* NVClockX.kext */,
+				AED9E18E125FBEF400736A5A /* ITEIT87x.kext */,
+				AE212C6A12678D3500145048 /* W836x.kext */,
+				AE00C785126A1F440068E69A /* F718x.kext */,
+				AE00C7BD126A24960068E69A /* PC8739x.kext */,
+				AE840E53128D8544006532CB /* ACPIMonitor.kext */,
+				12CBB17E12BDEA9F00157341 /* X3100.kext */,
+				12D78B1E12BFDCFD002C61EA /* RadeonMonitor.kext */,
+				12CB0F3A12C087D400068B06 /* IntelCPUMonitor.kext */,
+				1260E3F116C3DBA2006515EB /* IntelCPUMonitor.kext */,
+				1260E42316C3DC3A006515EB /* Andigilog.kext */,
+				124E606616C818AD004D3FE0 /* HWInfo.kext */,
+				122024FD16D3A8BF003769F4 /* GeforceSensor.kext */,
+				1267DE2118BC8D9A00D833A4 /* AmdCPUMonitor.kext */,
+				12A665A118DB055E00CF7D7E /* ADT7470.kext */,
+				12AB85BB1920F14200ACDEA5 /* SMIMonitor.kext */,
+				1226620B1A66964B009296EF /* DIMMSensor.kext */,
+				A55E16871F7041A50049A107 /* VoodooBatterySMC.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEABE469125F8F0700F08235 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AEFF6178126786E60002217E /* Utils */,
+				AEF4C7FE12602E9E00297B2B /* FakeSMC */,
+				AED15A5C126CBD1C00455FE0 /* Plugins */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		AED15A5C126CBD1C00455FE0 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				A521BB5A22F0B331005A5C2B /* ACPIMonitor */,
+				A521BB6422F0B351005A5C2B /* CPUSensors */,
+				A521BB7122F0B38F005A5C2B /* GPUSensors */,
+				A521BBDE22F0B39D005A5C2B /* SMIMonitor */,
+				A521BBE522F0B3AB005A5C2B /* SuperIOSensors */,
+				A55E16931F7041CF0049A107 /* VoodooBattery */,
+			);
+			name = Plugins;
+			sourceTree = "<group>";
+		};
+		AEF4C7FE12602E9E00297B2B /* FakeSMC */ = {
+			isa = PBXGroup;
+			children = (
+				AED9E581125FC23900736A5A /* SuperIOFamily.h */,
+				AED9E582125FC23900736A5A /* SuperIOFamily.cpp */,
+				AEF4C81612602F2600297B2B /* FakeSMC.h */,
+				AEF4C81512602F2600297B2B /* FakeSMC.cpp */,
+				AEF4C80F12602F2600297B2B /* FakeSMCDevice.h */,
+				AEF4C80E12602F2600297B2B /* FakeSMCDevice.cpp */,
+				AEF4C81112602F2600297B2B /* FakeSMCKey.h */,
+				AEF4C81012602F2600297B2B /* FakeSMCKey.cpp */,
+				AEF4C81312602F2600297B2B /* FakeSMC-Info.plist */,
+				AEF4C81212602F2600297B2B /* FakeSMC-pre106-info.plist */,
+			);
+			name = FakeSMC;
+			sourceTree = "<group>";
+		};
+		AEFF6178126786E60002217E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				12B161971A3F0874007C7B84 /* utils.h */,
+				12B160901A3F01D8007C7B84 /* Cpuid.c */,
+				12B160911A3F01D8007C7B84 /* cpuid.h */,
+				12B160921A3F01D8007C7B84 /* definitions.h */,
+				12B160931A3F01D8007C7B84 /* TigerAdditionals.cpp */,
+				12B160941A3F01D8007C7B84 /* TigerAdditionals.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		122662071A66964B009296EF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		124E606216C818AD004D3FE0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12AB85B71920F14200ACDEA5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A55E16841F7041A50049A107 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A522F6771F706E50005F81B8 /* Support.h in Headers */,
+				A522F6781F706E52005F81B8 /* VoodooBattery.h in Headers */,
+				A522F6791F706E57005F81B8 /* definitions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED49D19126CC78500840536 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		122024FC16D3A8BF003769F4 /* GeforceSensor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1220250316D3A8C0003769F4 /* Build configuration list for PBXNativeTarget "GeforceSensor" */;
+			buildPhases = (
+				122024F916D3A8BF003769F4 /* Sources */,
+				122024FA16D3A8BF003769F4 /* Resources */,
+				122024FB16D3A8BF003769F4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeforceSensor;
+			productName = GeforceSensor;
+			productReference = 122024FD16D3A8BF003769F4 /* GeforceSensor.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		1226620A1A66964B009296EF /* DIMMSensor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 122662161A66964C009296EF /* Build configuration list for PBXNativeTarget "DIMMSensor" */;
+			buildPhases = (
+				122662051A66964B009296EF /* Sources */,
+				122662061A66964B009296EF /* Frameworks */,
+				122662071A66964B009296EF /* Headers */,
+				122662081A66964B009296EF /* Resources */,
+				122662091A66964B009296EF /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DIMMSensor;
+			productName = DIMMSensor;
+			productReference = 1226620B1A66964B009296EF /* DIMMSensor.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+		124E606516C818AD004D3FE0 /* HWInfo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 124E607816C818AD004D3FE0 /* Build configuration list for PBXNativeTarget "HWInfo" */;
+			buildPhases = (
+				124E606016C818AD004D3FE0 /* Sources */,
+				124E606116C818AD004D3FE0 /* Frameworks */,
+				124E606216C818AD004D3FE0 /* Headers */,
+				124E606316C818AD004D3FE0 /* Resources */,
+				124E606416C818AD004D3FE0 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HWInfo;
+			productName = HWInfo;
+			productReference = 124E606616C818AD004D3FE0 /* HWInfo.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+		1260E42216C3DC3A006515EB /* Andigilog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1260E42916C3DC3A006515EB /* Build configuration list for PBXNativeTarget "Andigilog" */;
+			buildPhases = (
+				1260E41F16C3DC3A006515EB /* Sources */,
+				1260E42016C3DC3A006515EB /* Resources */,
+				1260E42116C3DC3A006515EB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Andigilog;
+			productName = Andigilog;
+			productReference = 1260E42316C3DC3A006515EB /* Andigilog.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		1267DE2018BC8D9A00D833A4 /* AmdCPUMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1267DE2818BC8D9C00D833A4 /* Build configuration list for PBXNativeTarget "AmdCPUMonitor" */;
+			buildPhases = (
+				1267DE1D18BC8D9A00D833A4 /* Sources */,
+				1267DE1F18BC8D9A00D833A4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AmdCPUMonitor;
+			productName = AmdCPUMonitor;
+			productReference = 1267DE2118BC8D9A00D833A4 /* AmdCPUMonitor.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		12A665A018DB055E00CF7D7E /* ADT7470 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12A665A718DB055F00CF7D7E /* Build configuration list for PBXNativeTarget "ADT7470" */;
+			buildPhases = (
+				12A6659D18DB055E00CF7D7E /* Sources */,
+				12A6659E18DB055E00CF7D7E /* Resources */,
+				12A6659F18DB055E00CF7D7E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ADT7470;
+			productName = ADT7470;
+			productReference = 12A665A118DB055E00CF7D7E /* ADT7470.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		12AB85BA1920F14200ACDEA5 /* SMIMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12AB85CA1920F14200ACDEA5 /* Build configuration list for PBXNativeTarget "SMIMonitor" */;
+			buildPhases = (
+				12AB85B51920F14200ACDEA5 /* Sources */,
+				12AB85B61920F14200ACDEA5 /* Frameworks */,
+				12AB85B71920F14200ACDEA5 /* Headers */,
+				12AB85B81920F14200ACDEA5 /* Resources */,
+				12AB85B91920F14200ACDEA5 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMIMonitor;
+			productName = SMIMonitor;
+			productReference = 12AB85BB1920F14200ACDEA5 /* SMIMonitor.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+		12CB0F4512C0888E00068B06 /* IntelCPUMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12CB0F4D12C0891400068B06 /* Build configuration list for PBXNativeTarget "IntelCPUMonitor" */;
+			buildPhases = (
+				12CB0F4212C0888E00068B06 /* Sources */,
+				12CB0F4412C0888E00068B06 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IntelCPUMonitor;
+			productName = IntelCPUMonitor;
+			productReference = 1260E3F116C3DBA2006515EB /* IntelCPUMonitor.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		12CBB17D12BDEA9F00157341 /* X3100 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12CBB19712BDEAA000157341 /* Build configuration list for PBXNativeTarget "X3100" */;
+			buildPhases = (
+				12CBB17A12BDEA9F00157341 /* Sources */,
+				12CBB17C12BDEA9F00157341 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = X3100;
+			productName = X3100;
+			productReference = 12CBB17E12BDEA9F00157341 /* X3100.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		12D78B1D12BFDCFD002C61EA /* RadeonMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12D78B2012BFDCFF002C61EA /* Build configuration list for PBXNativeTarget "RadeonMonitor" */;
+			buildPhases = (
+				12D78B1A12BFDCFD002C61EA /* Sources */,
+				12D78B1C12BFDCFD002C61EA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RadeonMonitor;
+			productName = RadeonMonitor;
+			productReference = 12D78B1E12BFDCFD002C61EA /* RadeonMonitor.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		A55E16861F7041A50049A107 /* VoodooBatterySMC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A55E168E1F7041A50049A107 /* Build configuration list for PBXNativeTarget "VoodooBatterySMC" */;
+			buildPhases = (
+				A55E16821F7041A50049A107 /* Sources */,
+				A55E16831F7041A50049A107 /* Frameworks */,
+				A55E16841F7041A50049A107 /* Headers */,
+				A55E16851F7041A50049A107 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VoodooBatterySMC;
+			productName = VoodooBatterySMC;
+			productReference = A55E16871F7041A50049A107 /* VoodooBatterySMC.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+		AE00C784126A1F440068E69A /* F718x */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE00C78B126A1F440068E69A /* Build configuration list for PBXNativeTarget "F718x" */;
+			buildPhases = (
+				AE00C781126A1F440068E69A /* Sources */,
+				AE00C783126A1F440068E69A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = F718x;
+			productName = F718x;
+			productReference = AE00C785126A1F440068E69A /* F718x.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		AE00C7BC126A24960068E69A /* PC8739x */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE00C7C3126A24960068E69A /* Build configuration list for PBXNativeTarget "PC8739x" */;
+			buildPhases = (
+				AE00C7B9126A24960068E69A /* Sources */,
+				AE00C7BB126A24960068E69A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PC8739x;
+			productName = PC8739x;
+			productReference = AE00C7BD126A24960068E69A /* PC8739x.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		AE212C6912678D3500145048 /* W836x */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE212C7012678D3600145048 /* Build configuration list for PBXNativeTarget "W836x" */;
+			buildPhases = (
+				AE212C6612678D3500145048 /* Sources */,
+				AE212C6812678D3500145048 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = W836x;
+			productName = W836x;
+			productReference = AE212C6A12678D3500145048 /* W836x.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		AE5BA5771268D94A00EA6AB9 /* NVClockX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE5BA57E1268D94A00EA6AB9 /* Build configuration list for PBXNativeTarget "NVClockX" */;
+			buildPhases = (
+				AED49D19126CC78500840536 /* Headers */,
+				AE5BA5741268D94A00EA6AB9 /* Sources */,
+				AE5BA5761268D94A00EA6AB9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NVClockX;
+			productName = NVClockX;
+			productReference = AE5BA5781268D94A00EA6AB9 /* NVClockX.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		AE840E52128D8544006532CB /* ACPIMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE840E59128D8545006532CB /* Build configuration list for PBXNativeTarget "ACPIMonitor" */;
+			buildPhases = (
+				AE840E4F128D8544006532CB /* Sources */,
+				AE840E50128D8544006532CB /* Resources */,
+				AE840E51128D8544006532CB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ACPIMonitor;
+			productName = ACPIMonitor;
+			productReference = AE840E53128D8544006532CB /* ACPIMonitor.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		AED9E18D125FBEF400736A5A /* IT87x */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AED9E192125FBEF400736A5A /* Build configuration list for PBXNativeTarget "IT87x" */;
+			buildPhases = (
+				AED9E18A125FBEF400736A5A /* Sources */,
+				AED9E18C125FBEF400736A5A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IT87x;
+			productName = IT87x;
+			productReference = AED9E18E125FBEF400736A5A /* ITEIT87x.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		AEF4C80312602EE700297B2B /* FakeSMC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEF4C80812602EE700297B2B /* Build configuration list for PBXNativeTarget "FakeSMC" */;
+			buildPhases = (
+				AEF4C80012602EE700297B2B /* Sources */,
+				AEF4C80212602EE700297B2B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A521BC0422F0B7F5005A5C2B /* PBXTargetDependency */,
+				953D9A9E2058753300C570B9 /* PBXTargetDependency */,
+				1D1CAABA13657034003878D0 /* PBXTargetDependency */,
+				1D1CAABC1365703A003878D0 /* PBXTargetDependency */,
+				1D1CAABE1365703C003878D0 /* PBXTargetDependency */,
+				1D1CAAC01365703F003878D0 /* PBXTargetDependency */,
+				1D1CAAC213657041003878D0 /* PBXTargetDependency */,
+				1D1CAACA13657046003878D0 /* PBXTargetDependency */,
+				1D1CAAC813657046003878D0 /* PBXTargetDependency */,
+				1D1CAAC613657046003878D0 /* PBXTargetDependency */,
+				1D1CAAC413657046003878D0 /* PBXTargetDependency */,
+				128160D416D628A40012840B /* PBXTargetDependency */,
+				1267DE4C18BC8EBB00D833A4 /* PBXTargetDependency */,
+			);
+			name = FakeSMC;
+			productName = VirtualSMC;
+			productReference = AEF4C80412602EE700297B2B /* FakeSMC.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEABE453125F8E7400F08235 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = slice;
+				TargetAttributes = {
+					A55E16861F7041A50049A107 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					AED9E18D125FBEF400736A5A = {
+						DevelopmentTeam = "-";
+					};
+				};
+			};
+			buildConfigurationList = AEABE456125F8E7400F08235 /* Build configuration list for PBXProject "HWSensors" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = AEABE451125F8E7400F08235;
+			productRefGroup = AEABE461125F8E9300F08235 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEF4C80312602EE700297B2B /* FakeSMC */,
+				12CB0F4512C0888E00068B06 /* IntelCPUMonitor */,
+				AE840E52128D8544006532CB /* ACPIMonitor */,
+				AE5BA5771268D94A00EA6AB9 /* NVClockX */,
+				12D78B1D12BFDCFD002C61EA /* RadeonMonitor */,
+				12CBB17D12BDEA9F00157341 /* X3100 */,
+				AED9E18D125FBEF400736A5A /* IT87x */,
+				AE212C6912678D3500145048 /* W836x */,
+				AE00C784126A1F440068E69A /* F718x */,
+				AE00C7BC126A24960068E69A /* PC8739x */,
+				1260E42216C3DC3A006515EB /* Andigilog */,
+				124E606516C818AD004D3FE0 /* HWInfo */,
+				122024FC16D3A8BF003769F4 /* GeforceSensor */,
+				1267DE2018BC8D9A00D833A4 /* AmdCPUMonitor */,
+				12A665A018DB055E00CF7D7E /* ADT7470 */,
+				12AB85BA1920F14200ACDEA5 /* SMIMonitor */,
+				1226620A1A66964B009296EF /* DIMMSensor */,
+				A55E16861F7041A50049A107 /* VoodooBatterySMC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		122024FA16D3A8BF003769F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		122662081A66964B009296EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		124E606316C818AD004D3FE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1260E42016C3DC3A006515EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12A6659E18DB055E00CF7D7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12AB85B81920F14200ACDEA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A55E16851F7041A50049A107 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE840E50128D8544006532CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		122662091A66964B009296EF /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		124E606416C818AD004D3FE0 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12AB85B91920F14200ACDEA5 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		122024F916D3A8BF003769F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A560DDC823030EB000C1F44D /* adt7473.cpp in Sources */,
+				A560DDC923030EB000C1F44D /* f75375.cpp in Sources */,
+				A560DDCA23030EB000C1F44D /* GeForceSensors-Prefix.pch in Sources */,
+				A560DDCB23030EB000C1F44D /* GeforceSensors.cpp in Sources */,
+				A560DDCC23030EB000C1F44D /* gm100.cpp in Sources */,
+				A560DDCD23030EB000C1F44D /* gp100.cpp in Sources */,
+				A560DDCE23030EB000C1F44D /* i2c_algo_bit.cpp in Sources */,
+				A560DDCF23030EB000C1F44D /* i2c_base.cpp in Sources */,
+				A560DDD023030EB000C1F44D /* lm99.cpp in Sources */,
+				A560DDD123030EB000C1F44D /* nouveau.cpp in Sources */,
+				A560DDD223030EB000C1F44D /* nouveau_bios.cpp in Sources */,
+				A560DDD323030EB000C1F44D /* nouveau_gpio.cpp in Sources */,
+				A560DDD423030EB000C1F44D /* nouveau_i2c._base.cpp in Sources */,
+				A560DDD523030EB000C1F44D /* nouveau_i2c_aux.cpp in Sources */,
+				A560DDD623030EB000C1F44D /* nouveau_i2c_bit.cpp in Sources */,
+				A560DDD723030EB000C1F44D /* nouveau_therm.cpp in Sources */,
+				A560DDD823030EB000C1F44D /* nouveau_volt.cpp in Sources */,
+				A560DDD923030EB000C1F44D /* nouveau_xpio.cpp in Sources */,
+				A560DDDA23030EB000C1F44D /* nv10.cpp in Sources */,
+				A560DDDB23030EB000C1F44D /* nv40.cpp in Sources */,
+				A560DDDC23030EB000C1F44D /* nv50.cpp in Sources */,
+				A560DDDD23030EB000C1F44D /* nv84.cpp in Sources */,
+				A560DDDE23030EB000C1F44D /* nva3.cpp in Sources */,
+				A560DDDF23030EB000C1F44D /* nvc0.cpp in Sources */,
+				A560DDE023030EB000C1F44D /* nvclock_i2c.cpp in Sources */,
+				A560DDE123030EB000C1F44D /* nvd0.cpp in Sources */,
+				A560DDE223030EB000C1F44D /* nve0.cpp in Sources */,
+				A560DDE323030EB000C1F44D /* vga.cpp in Sources */,
+				A560DDE423030EB000C1F44D /* w83781d.cpp in Sources */,
+				A560DDE523030EB000C1F44D /* w83l785r.cpp in Sources */,
+				A560DDE623030EB000C1F44D /* xf86i2c.cpp in Sources */,
+				A560DDE723030EB000C1F44D /* xfree.h in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		122662051A66964B009296EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		124E606016C818AD004D3FE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1260E41F16C3DC3A006515EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1267DE1D18BC8D9A00D833A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A521BC0822F0BA96005A5C2B /* AmdCPUMonitor.cpp in Sources */,
+				A521BC0722F0BA8C005A5C2B /* TigerAdditionals.cpp in Sources */,
+				A521BC0622F0BA87005A5C2B /* Cpuid.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12A6659D18DB055E00CF7D7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12AB85B51920F14200ACDEA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A521BC0522F0BA50005A5C2B /* SMIMonitor.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12CB0F4212C0888E00068B06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A521BC0922F0BAB7005A5C2B /* IntelCPUMonitor.cpp in Sources */,
+				12B160961A3F01D8007C7B84 /* Cpuid.c in Sources */,
+				12B160981A3F01D8007C7B84 /* TigerAdditionals.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12CBB17A12BDEA9F00157341 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A521BC6122F0BBD3005A5C2B /* X3100-Info.plist in Sources */,
+				A521BC6222F0BBD3005A5C2B /* X3100-pre106-Info.plist in Sources */,
+				A521BC6322F0BBD3005A5C2B /* X3100.cpp in Sources */,
+				A521BC6422F0BBD3005A5C2B /* X3100.h in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12D78B1A12BFDCFD002C61EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A521BC4822F0BB60005A5C2B /* Radeon.cpp in Sources */,
+				A521BC4722F0BB36005A5C2B /* ATICard.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A55E16821F7041A50049A107 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A522F6761F706E0F005F81B8 /* VoodooBattery.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE00C781126A1F440068E69A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A560DDE823030F8500C1F44D /* F718x.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE00C7B9126A24960068E69A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A560DDE923030FAE00C1F44D /* PC8739x.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE212C6612678D3500145048 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A521BC6C22F0BC2C005A5C2B /* WinbondW836x-Prefix.pch in Sources */,
+				A521BC6D22F0BC2C005A5C2B /* WinbondW836x.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE5BA5741268D94A00EA6AB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A521BC6022F0BBB5005A5C2B /* NVClockX.cpp in Sources */,
+				A521BC4922F0BB9D005A5C2B /* adt7473.cpp in Sources */,
+				A521BC4A22F0BB9D005A5C2B /* backend.cpp in Sources */,
+				A521BC4B22F0BB9D005A5C2B /* backend.h in Sources */,
+				A521BC4C22F0BB9D005A5C2B /* bios.cpp in Sources */,
+				A521BC4D22F0BB9D005A5C2B /* error.cpp in Sources */,
+				A521BC4E22F0BB9D005A5C2B /* f75375.cpp in Sources */,
+				A521BC4F22F0BB9D005A5C2B /* f75375.h in Sources */,
+				A521BC5022F0BB9D005A5C2B /* i2c.cpp in Sources */,
+				A521BC5122F0BB9D005A5C2B /* i2c.h in Sources */,
+				A521BC5222F0BB9D005A5C2B /* info.cpp in Sources */,
+				A521BC5322F0BB9D005A5C2B /* libc_wrapper.cpp in Sources */,
+				A521BC5422F0BB9D005A5C2B /* lm99.cpp in Sources */,
+				A521BC5522F0BB9D005A5C2B /* nv40.cpp in Sources */,
+				A521BC5622F0BB9D005A5C2B /* nv50.cpp in Sources */,
+				A521BC5722F0BB9D005A5C2B /* nvclock.h in Sources */,
+				A521BC5822F0BB9D005A5C2B /* nvreg.h in Sources */,
+				A521BC5922F0BB9D005A5C2B /* overclock.cpp in Sources */,
+				A521BC5A22F0BB9D005A5C2B /* utils.cpp in Sources */,
+				A521BC5B22F0BB9D005A5C2B /* w83781d.cpp in Sources */,
+				A521BC5C22F0BB9D005A5C2B /* w83l785r.cpp in Sources */,
+				A521BC5D22F0BB9D005A5C2B /* xf86i2c.cpp in Sources */,
+				A521BC5E22F0BB9D005A5C2B /* xf86i2c.h in Sources */,
+				A521BC5F22F0BB9D005A5C2B /* xfree.h in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE840E4F128D8544006532CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A521BB6222F0B331005A5C2B /* ACPIMonitor.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED9E18A125FBEF400736A5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A521BC6522F0BBF0005A5C2B /* InfoPlist.strings in Sources */,
+				A521BC6622F0BBF0005A5C2B /* ITEIT87x-Info.plist in Sources */,
+				A521BC6722F0BBF0005A5C2B /* ITEIT87x-Prefix.pch in Sources */,
+				A521BC6822F0BBF0005A5C2B /* ITEIT87x.cpp in Sources */,
+				A521BC6922F0BBF0005A5C2B /* ITEIT87x.h in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF4C80012602EE700297B2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C7719BC14EA483A0005C3C7 /* SuperIOFamily.cpp in Sources */,
+				AEF4C81812602F2600297B2B /* FakeSMCKey.cpp in Sources */,
+				AEF4C81712602F2600297B2B /* FakeSMCDevice.cpp in Sources */,
+				AEF4C81C12602F2600297B2B /* FakeSMC.cpp in Sources */,
+				12B160971A3F01D8007C7B84 /* TigerAdditionals.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1267DE4C18BC8EBB00D833A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1267DE2018BC8D9A00D833A4 /* AmdCPUMonitor */;
+			targetProxy = 1267DE4B18BC8EBB00D833A4 /* PBXContainerItemProxy */;
+		};
+		128160D416D628A40012840B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 122024FC16D3A8BF003769F4 /* GeforceSensor */;
+			targetProxy = 128160D316D628A40012840B /* PBXContainerItemProxy */;
+		};
+		1D1CAABA13657034003878D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12CB0F4512C0888E00068B06 /* IntelCPUMonitor */;
+			targetProxy = 1D1CAAB913657034003878D0 /* PBXContainerItemProxy */;
+		};
+		1D1CAABC1365703A003878D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE840E52128D8544006532CB /* ACPIMonitor */;
+			targetProxy = 1D1CAABB1365703A003878D0 /* PBXContainerItemProxy */;
+		};
+		1D1CAABE1365703C003878D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE5BA5771268D94A00EA6AB9 /* NVClockX */;
+			targetProxy = 1D1CAABD1365703C003878D0 /* PBXContainerItemProxy */;
+		};
+		1D1CAAC01365703F003878D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12D78B1D12BFDCFD002C61EA /* RadeonMonitor */;
+			targetProxy = 1D1CAABF1365703F003878D0 /* PBXContainerItemProxy */;
+		};
+		1D1CAAC213657041003878D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12CBB17D12BDEA9F00157341 /* X3100 */;
+			targetProxy = 1D1CAAC113657041003878D0 /* PBXContainerItemProxy */;
+		};
+		1D1CAAC413657046003878D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE00C7BC126A24960068E69A /* PC8739x */;
+			targetProxy = 1D1CAAC313657046003878D0 /* PBXContainerItemProxy */;
+		};
+		1D1CAAC613657046003878D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE00C784126A1F440068E69A /* F718x */;
+			targetProxy = 1D1CAAC513657046003878D0 /* PBXContainerItemProxy */;
+		};
+		1D1CAAC813657046003878D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE212C6912678D3500145048 /* W836x */;
+			targetProxy = 1D1CAAC713657046003878D0 /* PBXContainerItemProxy */;
+		};
+		1D1CAACA13657046003878D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AED9E18D125FBEF400736A5A /* IT87x */;
+			targetProxy = 1D1CAAC913657046003878D0 /* PBXContainerItemProxy */;
+		};
+		953D9A9E2058753300C570B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A55E16861F7041A50049A107 /* VoodooBatterySMC */;
+			targetProxy = 953D9A9D2058753300C570B9 /* PBXContainerItemProxy */;
+		};
+		A521BC0422F0B7F5005A5C2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12AB85BA1920F14200ACDEA5 /* SMIMonitor */;
+			targetProxy = A521BC0322F0B7F5005A5C2B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A521BB6A22F0B351005A5C2B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A521BB6B22F0B351005A5C2B /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A521BBDF22F0B39D005A5C2B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A521BBE022F0B39D005A5C2B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A521BBEC22F0B3AB005A5C2B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A521BBED22F0B3AB005A5C2B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A521BBFD22F0B3AC005A5C2B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A521BBFE22F0B3AC005A5C2B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A55E16951F7041CF0049A107 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A55E16961F7041CF0049A107 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		122024FF16D3A8BF003769F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "plugins/GPUSensors/GeForceSensors/GeforceSensors-Info.plist";
+				MODULE_NAME = org.kozlek.GeforceSensor;
+				MODULE_VERSION = 1.2.3;
+				OTHER_CFLAGS = "-DNV_DEBUG_ENABLED=1";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.kozlek.${PRODUCT_NAME}";
+				PRODUCT_NAME = GeforceSensor;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		1220250016D3A8BF003769F4 /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "plugins/GPUSensors/GeForceSensors/GeforceSensors-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.kozlek.GeforceSensor;
+				MODULE_VERSION = 1.2.4;
+				OTHER_CFLAGS = "-DNV_DEBUG_ENABLED=0";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.kozlek.${PRODUCT_NAME}";
+				PRODUCT_NAME = GeforceSensor;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6";
+		};
+		1220250116D3A8BF003769F4 /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "GeforceSensor-Info.plist";
+				MODULE_NAME = org.kozlek.GeforceSensor;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.kozlek.${PRODUCT_NAME}";
+				PRODUCT_NAME = GeforceSensor;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.5";
+		};
+		1220250216D3A8BF003769F4 /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "GeforceSensor-Info.plist";
+				MODULE_NAME = org.kozlek.GeforceSensor;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.kozlek.${PRODUCT_NAME}";
+				PRODUCT_NAME = GeforceSensor;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.4";
+		};
+		122662171A66964C009296EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "plugins/SMBusSensors/DIMMSensor/DIMMSensor-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"ICH_DEBUG=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "plugins/SMBusSensors/DIMMSensor/DIMMSensor-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.DIMMSensor;
+				MODULE_VERSION = 1.0.0d2;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		122662181A66964C009296EF /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "plugins/SMBusSensors/DIMMSensor/DIMMSensor-Prefix.pch";
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "plugins/SMBusSensors/DIMMSensor/DIMMSensor-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.DIMMSensor;
+				MODULE_VERSION = 1.0.0d2;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6";
+		};
+		122662191A66964C009296EF /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "plugins/SMBusSensors/DIMMSensor/DIMMSensor-Prefix.pch";
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "plugins/SMBusSensors/DIMMSensor/DIMMSensor-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.DIMMSensor;
+				MODULE_VERSION = 1.0.0d2;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.5";
+		};
+		1226621A1A66964C009296EF /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "plugins/SMBusSensors/DIMMSensor/DIMMSensor-Prefix.pch";
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "plugins/SMBusSensors/DIMMSensor/DIMMSensor-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.DIMMSensor;
+				MODULE_VERSION = 1.0.0d2;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.4";
+		};
+		124E607416C818AD004D3FE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "plugins/HWInfo/HWInfo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "plugins/HWInfo/HWInfo-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				MODULE_NAME = org.slice.HWInfo;
+				MODULE_VERSION = 1.0.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		124E607516C818AD004D3FE0 /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "plugins/HWInfo/HWInfo-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "plugins/HWInfo/HWInfo-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.HWInfo;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6";
+		};
+		124E607616C818AD004D3FE0 /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "plugins/HWInfo/HWInfo-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "plugins/HWInfo/HWInfo-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.HWInfo;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.5";
+		};
+		124E607716C818AD004D3FE0 /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "plugins/HWInfo/HWInfo-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "plugins/HWInfo/HWInfo-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.HWInfo;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.4";
+		};
+		1260E42516C3DC3A006515EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/SMBusSensors/Andigilog-Info.plist";
+				MODULE_NAME = org.dukzcry.driver.Andigilog;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.dukzcry.Andigilog;
+				PRODUCT_NAME = Andigilog;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		1260E42616C3DC3A006515EB /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/SMBusSensors/Andigilog-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.dukzcry.driver.Andigilog;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.dukzcry.Andigilog;
+				PRODUCT_NAME = Andigilog;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6";
+		};
+		1260E42716C3DC3A006515EB /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/SMBusSensors/Andigilog-Info.plist";
+				MODULE_NAME = org.dukzcry.driver.Andigilog;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.dukzcry.Andigilog;
+				PRODUCT_NAME = Andigilog;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.5";
+		};
+		1260E42816C3DC3A006515EB /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/SMBusSensors/Andigilog-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.dukzcry.driver.Andigilog;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.dukzcry.Andigilog;
+				PRODUCT_NAME = Andigilog;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.4";
+		};
+		1267DE2418BC8D9C00D833A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "plugins/CPUSensors/AmdCPUMonitor/AmdCPUMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.sensor.AmdCPUMonitor;
+				MODULE_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.sensor.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = AmdCPUMonitor;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		1267DE2518BC8D9C00D833A4 /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "plugins/CPUSensors/AmdCPUMonitor/AmdCPUMonitor-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.sensor.AmdCPUMonitor;
+				MODULE_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.sensor.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = AmdCPUMonitor;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6";
+		};
+		1267DE2618BC8D9C00D833A4 /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "AmdCPUMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.sensor.AmdCPUMonitor;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.sensor.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = AmdCPUMonitor;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.5";
+		};
+		1267DE2718BC8D9C00D833A4 /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "AmdCPUMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.sensor.AmdCPUMonitor;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.sensor.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = AmdCPUMonitor;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.4";
+		};
+		12A665A318DB055F00CF7D7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "plugins/SMBusSensors/ADT7470-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = com.yourcompany.driver.ADT7470;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.dukzcry.ADT7470;
+				PRODUCT_NAME = ADT7470;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		12A665A418DB055F00CF7D7E /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "plugins/SMBusSensors/ADT7470-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.duczcry.driver.ADT7470;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.dukzcry.ADT7470;
+				PRODUCT_NAME = ADT7470;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6";
+		};
+		12A665A518DB055F00CF7D7E /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "ADT7470-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = com.yourcompany.driver.ADT7470;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.dukzcry.ADT7470;
+				PRODUCT_NAME = ADT7470;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.5";
+		};
+		12A665A618DB055F00CF7D7E /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "ADT7470-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = com.yourcompany.driver.ADT7470;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.dukzcry.ADT7470;
+				PRODUCT_NAME = ADT7470;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.4";
+		};
+		12AB85C61920F14200ACDEA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_KERNEL_DEVELOPMENT = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "plugins/SMIMonitor/SMIMonitor-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "plugins/SMIMonitor/SMIMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.slice.SMIMonitor;
+				MODULE_VERSION = 1.0.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		12AB85C71920F14200ACDEA5 /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_KERNEL_DEVELOPMENT = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "plugins/SMIMonitor/SMIMonitor-Prefix.pch";
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "plugins/SMIMonitor/SMIMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.slice.SMIMonitor;
+				MODULE_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6";
+		};
+		12AB85C81920F14200ACDEA5 /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_KERNEL_DEVELOPMENT = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "plugins/SMIMonitor/SMIMonitor-Prefix.pch";
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "SMIMonitor/SMIMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.slice.SMIMonitor;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.5";
+		};
+		12AB85C91920F14200ACDEA5 /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_KERNEL_DEVELOPMENT = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "plugins/SMIMonitor/SMIMonitor-Prefix.pch";
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "SMIMonitor/SMIMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.slice.SMIMonitor;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.4";
+		};
+		12CB0F4712C0888F00068B06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/CPUSensors/IntelCPUMonitor/IntelCPUMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.IntelCPUMonitor;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
+				PRODUCT_NAME = IntelCPUMonitor;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		12CB0F4812C0888F00068B06 /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_AUTO_VECTORIZATION = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/CPUSensors/IntelCPUMonitor/IntelCPUMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.IntelCPUMonitor;
+				MODULE_VERSION = 1.2.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
+				PRODUCT_NAME = IntelCPUMonitor;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6";
+		};
+		12CB0F4912C0888F00068B06 /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "IntelCPUMonitor-pre106-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = com.yourcompany.driver.IntelCPUMonitor;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
+				PRODUCT_NAME = IntelCPUMonitor;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.5";
+		};
+		12CB0F4A12C0888F00068B06 /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "IntelCPUMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = com.yourcompany.driver.IntelCPUMonitor;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
+				PRODUCT_NAME = IntelCPUMonitor;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.4";
+		};
+		12CBB19312BDEAA000157341 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/GPUSensors/IntelX3100/X3100-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = com.yourcompany.driver.X3100;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.sensor.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = X3100;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		12CBB19412BDEAA000157341 /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/GPUSensors/IntelX3100/X3100-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.sensor.X3100;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.sensor.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = X3100;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6";
+		};
+		12CBB19512BDEAA000157341 /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "X3100-pre106-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.sensor.X3100;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.sensor.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = X3100;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.5";
+		};
+		12CBB19612BDEAA000157341 /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "X3100-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = com.yourcompany.driver.X3100;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.sensor.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = X3100;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.4";
+		};
+		12D78B2112BFDCFF002C61EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/GPUSensors/RadeonMonitor/RadeonMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.RadeonMonitor;
+				MODULE_VERSION = 1.3.4;
+				PRODUCT_BUNDLE_IDENTIFIER = org.slice.RadeonMonitor;
+				PRODUCT_NAME = RadeonMonitor;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		12D78B2212BFDCFF002C61EA /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/GPUSensors/RadeonMonitor/RadeonMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.RadeonMonitor;
+				MODULE_VERSION = 1.3.4;
+				PRODUCT_BUNDLE_IDENTIFIER = org.slice.RadeonMonitor;
+				PRODUCT_NAME = RadeonMonitor;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+				ZERO_LINK = NO;
+			};
+			name = "Release 10.6";
+		};
+		12D78B2312BFDCFF002C61EA /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "RadeonMonitor-pre106-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.RadeonMonitor;
+				MODULE_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.slice.RadeonMonitor;
+				PRODUCT_NAME = RadeonMonitor;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+				ZERO_LINK = YES;
+			};
+			name = "Release 10.5";
+		};
+		12D78B2412BFDCFF002C61EA /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "RadeonMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.RadeonMonitor;
+				MODULE_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.slice.RadeonMonitor;
+				PRODUCT_NAME = RadeonMonitor;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+				ZERO_LINK = YES;
+			};
+			name = "Release 10.4";
+		};
+		A55E168F1F7041A50049A107 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = "${MODULE_VERSION}";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = plugins/VoodooBattery/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.slice.VoodooBatterySMC;
+				MODULE_VERSION = 1.6.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_CFLAGS = (
+					"-DINFO",
+					"-DDEBUG",
+					"-DKEXT_PRODUCTNAME=$(PRODUCT_NAME)",
+					"-DKEXT_VERSION=$(MODULE_VERSION)",
+					"-DKEXT_CONFIG=Debug",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(MODULE_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		A55E16901F7041A50049A107 /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = "${MODULE_VERSION}";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = plugins/VoodooBattery/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.slice.VoodooBatterySMC;
+				MODULE_VERSION = 1.6.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = (
+					"-DINFO",
+					"-DERROR",
+					"-DKEXT_PRODUCTNAME=$(PRODUCT_NAME)",
+					"-DKEXT_VERSION=$(MODULE_VERSION)",
+					"-DKEXT_CONFIG=Release",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(MODULE_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6";
+		};
+		A55E16911F7041A50049A107 /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = "${MODULE_VERSION}";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = VoodooBattery/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.slice.VoodooBatterySMC;
+				MODULE_VERSION = 1.6.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(MODULE_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.5";
+		};
+		A55E16921F7041A50049A107 /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = "${MODULE_VERSION}";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = VoodooBattery/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.slice.VoodooBatterySMC;
+				MODULE_VERSION = 1.6.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(MODULE_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.4";
+		};
+		AE00C787126A1F440068E69A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/SuperIOSensors/Fintek718x/F718x-Info.plist";
+				MODULE_NAME = com.yourcompany.driver.F718x;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.mozodojo.${PRODUCT_NAME}";
+				PRODUCT_NAME = F718x;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		AE00C788126A1F440068E69A /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/SuperIOSensors/Fintek718x/F718x-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.mozodojo.F718x;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.mozodojo.${PRODUCT_NAME}";
+				PRODUCT_NAME = F718x;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6";
+		};
+		AE00C789126A1F440068E69A /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "F718x-pre106-Info.plist";
+				MODULE_NAME = org.mozodojo.F718x;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.mozodojo.${PRODUCT_NAME}";
+				PRODUCT_NAME = F718x;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.5";
+		};
+		AE00C78A126A1F440068E69A /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "F718x-pre106-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.mozodojo.F718x;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.mozodojo.${PRODUCT_NAME}";
+				PRODUCT_NAME = F718x;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.4";
+		};
+		AE00C7BF126A24960068E69A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/SuperIOSensors/NSCPC8739x/PC8739x-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.slice.PC8739x;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
+				PRODUCT_NAME = PC8739x;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		AE00C7C0126A24960068E69A /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/SuperIOSensors/NSCPC8739x/PC8739x-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.slice.PC8739x;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
+				PRODUCT_NAME = PC8739x;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6";
+		};
+		AE00C7C1126A24960068E69A /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "PC8739x-pre106-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.slice.PC8739x;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
+				PRODUCT_NAME = PC8739x;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.5";
+		};
+		AE00C7C2126A24960068E69A /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "PC8739x-pre106-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.slice.PC8739x;
+				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
+				PRODUCT_NAME = PC8739x;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.4";
+		};
+		AE212C6C12678D3600145048 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/SuperIOSensors/WinbondW836x/WinbondW836x-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.mozodojo.W836x;
+				MODULE_VERSION = 1.3.0;
+				OTHER_CFLAGS = "-DDebug=1";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.mozodojo.${PRODUCT_NAME}";
+				PRODUCT_NAME = W836x;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		AE212C6D12678D3600145048 /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/SuperIOSensors/WinbondW836x/WinbondW836x-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.mozodojo.W836x;
+				MODULE_VERSION = 1.3.4;
+				OTHER_CFLAGS = "-DDebug=0";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.mozodojo.${PRODUCT_NAME}";
+				PRODUCT_NAME = W836x;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6";
+		};
+		AE212C6E12678D3600145048 /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "W836x-pre106-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.mozodojo.W836x;
+				MODULE_VERSION = 1.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.mozodojo.${PRODUCT_NAME}";
+				PRODUCT_NAME = W836x;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.5";
+		};
+		AE212C6F12678D3600145048 /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "W836x-pre106-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.mozodojo.W836x;
+				MODULE_VERSION = 1.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.mozodojo.${PRODUCT_NAME}";
+				PRODUCT_NAME = W836x;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.4";
+		};
+		AE5BA57A1268D94A00EA6AB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/GPUSensors/NVClockX/NVClockX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = com.yourcompany.driver.NVClockX;
+				MODULE_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.usrsse2.${PRODUCT_NAME}";
+				PRODUCT_NAME = NVClockX;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		AE5BA57B1268D94A00EA6AB9 /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/GPUSensors/NVClockX/NVClockX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.usrsse2.NVClockX;
+				MODULE_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.usrsse2.${PRODUCT_NAME}";
+				PRODUCT_NAME = NVClockX;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6";
+		};
+		AE5BA57C1268D94A00EA6AB9 /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "NVClockX-pre106-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.usrsse2.NVClockX;
+				MODULE_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.usrsse2.${PRODUCT_NAME}";
+				PRODUCT_NAME = NVClockX;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.5";
+		};
+		AE5BA57D1268D94A00EA6AB9 /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "NVClockX-pre106-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.usrsse2.NVClockX;
+				MODULE_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.usrsse2.${PRODUCT_NAME}";
+				PRODUCT_NAME = NVClockX;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.4";
+		};
+		AE840E55128D8545006532CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/ACPIMonitor/ACPIMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.ACPIMonitor;
+				MODULE_VERSION = 1.0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
+				PRODUCT_NAME = ACPIMonitor;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		AE840E56128D8545006532CB /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "plugins/ACPIMonitor/ACPIMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.ACPIMonitor;
+				MODULE_VERSION = 1.0.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
+				PRODUCT_NAME = ACPIMonitor;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6";
+		};
+		AE840E57128D8545006532CB /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "ACPIMonitor-pre106-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.ACPIMonitor;
+				MODULE_VERSION = 1.0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
+				PRODUCT_NAME = ACPIMonitor;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.5";
+		};
+		AE840E58128D8545006532CB /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "ACPIMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.slice.ACPIMonitor;
+				MODULE_VERSION = 1.0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
+				PRODUCT_NAME = ACPIMonitor;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.4";
+		};
+		AEABE454125F8E7400F08235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = NO;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_ENABLE_BUILTIN_FUNCTIONS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx10.11;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		AEABE455125F8E7400F08235 /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = NO;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_AUTO_VECTORIZATION = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_ENABLE_BUILTIN_FUNCTIONS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_PEDANTIC = NO;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = NO;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PROVISIONING_PROFILE = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx10.11;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = "Release 10.6";
+		};
+		AED9E190125FBEF400736A5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "-";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "plugins/SuperIOSensors/ITE87x/ITEIT87x-Info.plist";
+				MODULE_NAME = org.mozodojo.IT87x;
+				MODULE_VERSION = 1.0.4;
+				PRODUCT_BUNDLE_IDENTIFIER = org.mozodojo.ITEIT87x;
+				PRODUCT_NAME = ITEIT87x;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		AED9E191125FBEF400736A5A /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = "-";
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "plugins/SuperIOSensors/ITE87x/ITEIT87x-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.mozodojo.IT87x;
+				MODULE_VERSION = 1.0.7;
+				PRODUCT_BUNDLE_IDENTIFIER = org.mozodojo.ITEIT87x;
+				PRODUCT_NAME = ITEIT87x;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+				ZERO_LINK = NO;
+			};
+			name = "Release 10.6";
+		};
+		AEF4C80612602EE700297B2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_MEMORY_MANAGEMENT = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = $MODULE_VERSION;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "fakesmc/FakeSMC-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.netkas.FakeSMC;
+				MODULE_VERSION = 3.5.2;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DDebug=1";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.netkas.${PRODUCT_NAME}";
+				PRODUCT_NAME = FakeSMC;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		AEF4C80712602EE700297B2B /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_MEMORY_MANAGEMENT = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = $MODULE_VERSION;
+				GCC_AUTO_VECTORIZATION = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "fakesmc/FakeSMC-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.netkas.FakeSMC;
+				MODULE_VERSION = 3.5.2;
+				OTHER_CFLAGS = "-DDebug=0";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.netkas.${PRODUCT_NAME}";
+				PRODUCT_NAME = FakeSMC;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
+				ZERO_LINK = NO;
+			};
+			name = "Release 10.6";
+		};
+		AEF4C8381260304100297B2B /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = NO;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_ENABLE_BUILTIN_FUNCTIONS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PROVISIONING_PROFILE = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx10.11;
+				VALID_ARCHS = i386;
+			};
+			name = "Release 10.5";
+		};
+		AEF4C83A1260304100297B2B /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = "-";
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "IT87x-pre106-Info.plist";
+				MODULE_NAME = org.mozodojo.IT87x;
+				MODULE_VERSION = 1.0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = org.mozodojo.ITEIT87x;
+				PRODUCT_NAME = ITEIT87x;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+				ZERO_LINK = NO;
+			};
+			name = "Release 10.5";
+		};
+		AEF4C83B1260304100297B2B /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_MEMORY_MANAGEMENT = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = $MODULE_VERSION;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "FakeSMC-pre106-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.netkas.FakeSMC;
+				MODULE_VERSION = 3.1.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.netkas.${PRODUCT_NAME}";
+				PRODUCT_NAME = FakeSMC;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
+				ZERO_LINK = NO;
+			};
+			name = "Release 10.5";
+		};
+		AEF4C83C1260304900297B2B /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = NO;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_ENABLE_BUILTIN_FUNCTIONS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = "";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = "-DTIGER";
+				PROVISIONING_PROFILE = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx10.11;
+				VALID_ARCHS = i386;
+			};
+			name = "Release 10.4";
+		};
+		AEF4C83E1260304900297B2B /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = "-";
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "IT87x-pre106-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MODULE_NAME = org.mozodojo.IT87x;
+				MODULE_VERSION = 1.0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = org.mozodojo.ITEIT87x;
+				PRODUCT_NAME = IT87x;
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+				ZERO_LINK = NO;
+			};
+			name = "Release 10.4";
+		};
+		AEF4C83F1260304900297B2B /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_MEMORY_MANAGEMENT = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = $MODULE_VERSION;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "FakeSMC-pre106-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.netkas.FakeSMC;
+				MODULE_VERSION = 3.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.netkas.${PRODUCT_NAME}";
+				PRODUCT_NAME = FakeSMC;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
+				ZERO_LINK = NO;
+			};
+			name = "Release 10.4";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1220250316D3A8C0003769F4 /* Build configuration list for PBXNativeTarget "GeforceSensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				122024FF16D3A8BF003769F4 /* Debug */,
+				1220250016D3A8BF003769F4 /* Release 10.6 */,
+				1220250116D3A8BF003769F4 /* Release 10.5 */,
+				1220250216D3A8BF003769F4 /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		122662161A66964C009296EF /* Build configuration list for PBXNativeTarget "DIMMSensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				122662171A66964C009296EF /* Debug */,
+				122662181A66964C009296EF /* Release 10.6 */,
+				122662191A66964C009296EF /* Release 10.5 */,
+				1226621A1A66964C009296EF /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		124E607816C818AD004D3FE0 /* Build configuration list for PBXNativeTarget "HWInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				124E607416C818AD004D3FE0 /* Debug */,
+				124E607516C818AD004D3FE0 /* Release 10.6 */,
+				124E607616C818AD004D3FE0 /* Release 10.5 */,
+				124E607716C818AD004D3FE0 /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		1260E42916C3DC3A006515EB /* Build configuration list for PBXNativeTarget "Andigilog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1260E42516C3DC3A006515EB /* Debug */,
+				1260E42616C3DC3A006515EB /* Release 10.6 */,
+				1260E42716C3DC3A006515EB /* Release 10.5 */,
+				1260E42816C3DC3A006515EB /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		1267DE2818BC8D9C00D833A4 /* Build configuration list for PBXNativeTarget "AmdCPUMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1267DE2418BC8D9C00D833A4 /* Debug */,
+				1267DE2518BC8D9C00D833A4 /* Release 10.6 */,
+				1267DE2618BC8D9C00D833A4 /* Release 10.5 */,
+				1267DE2718BC8D9C00D833A4 /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		12A665A718DB055F00CF7D7E /* Build configuration list for PBXNativeTarget "ADT7470" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12A665A318DB055F00CF7D7E /* Debug */,
+				12A665A418DB055F00CF7D7E /* Release 10.6 */,
+				12A665A518DB055F00CF7D7E /* Release 10.5 */,
+				12A665A618DB055F00CF7D7E /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		12AB85CA1920F14200ACDEA5 /* Build configuration list for PBXNativeTarget "SMIMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12AB85C61920F14200ACDEA5 /* Debug */,
+				12AB85C71920F14200ACDEA5 /* Release 10.6 */,
+				12AB85C81920F14200ACDEA5 /* Release 10.5 */,
+				12AB85C91920F14200ACDEA5 /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		12CB0F4D12C0891400068B06 /* Build configuration list for PBXNativeTarget "IntelCPUMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12CB0F4712C0888F00068B06 /* Debug */,
+				12CB0F4812C0888F00068B06 /* Release 10.6 */,
+				12CB0F4912C0888F00068B06 /* Release 10.5 */,
+				12CB0F4A12C0888F00068B06 /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		12CBB19712BDEAA000157341 /* Build configuration list for PBXNativeTarget "X3100" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12CBB19312BDEAA000157341 /* Debug */,
+				12CBB19412BDEAA000157341 /* Release 10.6 */,
+				12CBB19512BDEAA000157341 /* Release 10.5 */,
+				12CBB19612BDEAA000157341 /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		12D78B2012BFDCFF002C61EA /* Build configuration list for PBXNativeTarget "RadeonMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12D78B2112BFDCFF002C61EA /* Debug */,
+				12D78B2212BFDCFF002C61EA /* Release 10.6 */,
+				12D78B2312BFDCFF002C61EA /* Release 10.5 */,
+				12D78B2412BFDCFF002C61EA /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		A55E168E1F7041A50049A107 /* Build configuration list for PBXNativeTarget "VoodooBatterySMC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A55E168F1F7041A50049A107 /* Debug */,
+				A55E16901F7041A50049A107 /* Release 10.6 */,
+				A55E16911F7041A50049A107 /* Release 10.5 */,
+				A55E16921F7041A50049A107 /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		AE00C78B126A1F440068E69A /* Build configuration list for PBXNativeTarget "F718x" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE00C787126A1F440068E69A /* Debug */,
+				AE00C788126A1F440068E69A /* Release 10.6 */,
+				AE00C789126A1F440068E69A /* Release 10.5 */,
+				AE00C78A126A1F440068E69A /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		AE00C7C3126A24960068E69A /* Build configuration list for PBXNativeTarget "PC8739x" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE00C7BF126A24960068E69A /* Debug */,
+				AE00C7C0126A24960068E69A /* Release 10.6 */,
+				AE00C7C1126A24960068E69A /* Release 10.5 */,
+				AE00C7C2126A24960068E69A /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		AE212C7012678D3600145048 /* Build configuration list for PBXNativeTarget "W836x" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE212C6C12678D3600145048 /* Debug */,
+				AE212C6D12678D3600145048 /* Release 10.6 */,
+				AE212C6E12678D3600145048 /* Release 10.5 */,
+				AE212C6F12678D3600145048 /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		AE5BA57E1268D94A00EA6AB9 /* Build configuration list for PBXNativeTarget "NVClockX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE5BA57A1268D94A00EA6AB9 /* Debug */,
+				AE5BA57B1268D94A00EA6AB9 /* Release 10.6 */,
+				AE5BA57C1268D94A00EA6AB9 /* Release 10.5 */,
+				AE5BA57D1268D94A00EA6AB9 /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		AE840E59128D8545006532CB /* Build configuration list for PBXNativeTarget "ACPIMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE840E55128D8545006532CB /* Debug */,
+				AE840E56128D8545006532CB /* Release 10.6 */,
+				AE840E57128D8545006532CB /* Release 10.5 */,
+				AE840E58128D8545006532CB /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		AEABE456125F8E7400F08235 /* Build configuration list for PBXProject "HWSensors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEABE454125F8E7400F08235 /* Debug */,
+				AEABE455125F8E7400F08235 /* Release 10.6 */,
+				AEF4C8381260304100297B2B /* Release 10.5 */,
+				AEF4C83C1260304900297B2B /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		AED9E192125FBEF400736A5A /* Build configuration list for PBXNativeTarget "IT87x" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED9E190125FBEF400736A5A /* Debug */,
+				AED9E191125FBEF400736A5A /* Release 10.6 */,
+				AEF4C83A1260304100297B2B /* Release 10.5 */,
+				AEF4C83E1260304900297B2B /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		AEF4C80812602EE700297B2B /* Build configuration list for PBXNativeTarget "FakeSMC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEF4C80612602EE700297B2B /* Debug */,
+				AEF4C80712602EE700297B2B /* Release 10.6 */,
+				AEF4C83B1260304100297B2B /* Release 10.5 */,
+				AEF4C83F1260304900297B2B /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEABE453125F8E7400F08235 /* Project object */;
+}

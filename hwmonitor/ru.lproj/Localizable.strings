@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  HWSensors
+
+  Created by Navi on 21.02.12.
+  Copyright (c) 2012 . All rights reserved.
+*/
+"TEMPERATURES"="ТЕМПЕРАТУРЫ";
+"FREQUENCIES"="ЧАСТОТЫ";
+"MULTIPLIERS"="МНОЖИТЕЛИ";
+"VOLTAGES"="НАПРЯЖЕНИЯ";
+"FANS"="ВЕНТИЛЯТОРЫ";
+"HARD DRIVES TEMPERATURES"="ТЕМПЕРАТУРЫ ДИСКОВ";
+"BATTERIES"="ЗАРЯД БАТАРЕЙ";
+"CPU Heatsink"="Радиатор ЦПУ";
+"CPU Proximity"="Датчик ЦПУ";
+"CPU %X Diode"="ЦПУ %X";
+"CPU %X Core"="Ядро ЦПУ %X";
+"GPU %X Board" = "GPU %X, радиатор ";
+"GPU %X Core" = "GPU %X, ядро ";
+"GPU %X Proximity" = "GPU %X, радиатор";
+"GPU %X Shaders"="GPU %X, шейдеры";
+"GPU %X Memory"="GPU %X, память";
+"GPU %X ROP"="GPU %X, ROP";
+"Motherboard"="Чипсет";
+"Memory"="Модули памяти";
+"Ambient"="Корпус";
+"CPU Package Multiplier"="Общий множитель ЦПУ";
+"CPU %X Multiplier"="Множитель ЦПУ %X";
+"CPU Voltage"="Вольтаж ЦПУ";
+"CPU VRM Voltage"="Шина ЦПУ";
+"DIMM Voltage"="Шина модулей DIMM";
+"+12V Bus Voltage"="Шина +12В";
+"+5V Bus Voltage"="Шина +5В";
+"-12V Bus Voltage"="Шина -12В";
+"-5V Bus Voltage"="Шина -5В";
+"3.3 VCC Voltage"="Шина 3.3В VCC";
+"3.3 VSB Voltage"="Шина 3.3В VSB";
+"Battery Voltage"="Шина батареи";
+"GPU %X Voltage"="Вольтаж GPU %X";

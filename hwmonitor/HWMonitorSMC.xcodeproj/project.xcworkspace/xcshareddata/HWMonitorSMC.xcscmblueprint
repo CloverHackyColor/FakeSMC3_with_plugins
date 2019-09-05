@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2e15404a-8354-49a5-8ee8-3805ff3cba1c",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "2e15404a-8354-49a5-8ee8-3805ff3cba1c" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2e15404a-8354-49a5-8ee8-3805ff3cba1c" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "52C130FE-8019-43DF-A163-D5925FE8B035",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2e15404a-8354-49a5-8ee8-3805ff3cba1c" : "hwsensors3\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HWMonitorSMC",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "trunk\/hwmonitor\/HWMonitorSMC.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn+ssh:\/\/svn.code.sf.net\/p\/hwsensors\/hwsensors3\/code3",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2e15404a-8354-49a5-8ee8-3805ff3cba1c"
+    }
+  ]
+}

@@ -7,7 +7,7 @@
 
 # XCode files/directories
 *~.nib
-DerivedData/
+DerivedData
 build/
 *.pbxuser
 *.mode1v3
@@ -18,3 +18,35 @@ build/
 !default.mode2v3
 !default.perspectivev3
 xcuserdata/
+
+# Swift.gitignore @ https://github.com/github/gitignore
+
+# Xcode
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.xcuserstate
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.zip
+*.vi
+*~
+
+# OS or Editor folders
+._*
+Thumbs.db
+.cache
+.tmproj
+*.esproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+

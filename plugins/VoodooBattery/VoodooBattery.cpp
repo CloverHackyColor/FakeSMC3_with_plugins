@@ -280,9 +280,9 @@ bool VoodooBattery::start(IOService * provider) {
   }
 
   for (UInt8 i = 0; i < AcAdapterCount; i++) {
-//    if (attach(AcAdapterDevice[i])) {
+    if (attach(AcAdapterDevice[i])) {
       InfoLog("A/C adapter %s available", AcAdapterDevice[i]->getName());
- //   }
+    }
   }
 
 //  if (PNLFDevice) {

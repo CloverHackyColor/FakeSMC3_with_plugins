@@ -132,7 +132,10 @@ bool VoodooBattery::addSensor(const char* key, const char* type, unsigned int si
                                                         (void *)(long long)size,
                                                         (void *)this)) {
     if (sensors) {
-      return sensors->setObject(key, OSNumber::withNumber(index, 32));
+      OSNumber *n = OSNumber::withNumber(index, 32);
+      bool ret = sensors->setObject(key, n);
+      n->release();
+      return ret;
     }
   }
   return false;
@@ -177,9 +180,11 @@ IOService * VoodooBattery::probe(IOService * provider, SInt32 * score) {
     iterator->release();
     iterator = 0;
   }
-
+  pnp->release();
   IOLog("Found %u batteries\n", BatteryCount);
-  if (BatteryCount == 0) return 0;
+  if (BatteryCount == 0) {
+    return 0;
+  }
 
   // We will also try to find an A/C adapter in acpi space
   AcAdapterCount = 0;
@@ -198,6 +203,7 @@ IOService * VoodooBattery::probe(IOService * provider, SInt32 * score) {
     iterator = 0;
   }
   IOLog("Found %u ac adapters\n", AcAdapterCount);
+  pnp->release();
 
   // look for LID device if any
   iterator = IORegistryIterator::iterateOver(gIOACPIPlane, kIORegistryIterateRecursively);
@@ -213,6 +219,7 @@ IOService * VoodooBattery::probe(IOService * provider, SInt32 * score) {
     iterator->release();
     iterator = 0;
   }
+  pnp->release();
 //PNLFDevice APP0002 PnpDeviceIdPnlf
   iterator = IORegistryIterator::iterateOver(gIOACPIPlane, kIORegistryIterateRecursively);
   pnp = OSString::withCString(PnpDeviceIdPnlf);
@@ -227,7 +234,7 @@ IOService * VoodooBattery::probe(IOService * provider, SInt32 * score) {
     iterator->release();
     iterator = 0;
   }
-
+  pnp->release();
 
   return this;
 }
@@ -653,6 +660,7 @@ void VoodooBattery::PublishBatteryInfo(UInt8 battery, OSObject * acpi, int Ext)
   BatteryPowerSource[battery]->setSerialString(GetSymbolFromArray(info, 10 + Ext));
   BatteryPowerSource[battery]->setManufacturer(GetSymbolFromArray(info, 12 + Ext));
   BatteryPowerSource[battery]->setCycleCount(Battery[battery].Cycle);
+  BatteryPowerSource[battery]->setBatterySerialNumber(GetSymbolFromArray(info, 9 + Ext), OSDynamicCast(OSSymbol, getProperty(kIOPMPSSerialKey)));
 }
 
 
@@ -671,7 +679,7 @@ void VoodooBattery::BatteryInformation(UInt8 battery) {
         acpi->release();
         return;
       } else {
-        WarningLog("Error in ACPI data");
+        WarningLog("No _BIX info, try to get _BIF");
         //BatteryConnected[battery] = false;
         //try to get _BIF
       }
@@ -819,9 +827,10 @@ void VoodooBattery::BatteryStatus(UInt8 battery) {
       BatteryPowerSource[battery]->setAtWarnLevel(warning);
       BatteryPowerSource[battery]->setAtCriticalLevel(critical);
       BatteryPowerSource[battery]->setVoltage(Battery[battery].PresentVoltage);
+      BatteryPowerSource[battery]->setRunTimeToEmpty(TimeRemaining * 60); //seconds
 
       if (critical && bogus) {
-        BatteryPowerSource[battery]->setErrorCondition((OSSymbol *) permanentFailureKey);
+        BatteryPowerSource[battery]->setErrorCondition((OSSymbol *)permanentFailureKey);
       }
 
       BatteryPowerSource[battery]->rebuildLegacyIOBatteryInfo();
@@ -1076,6 +1085,22 @@ void AppleSmartBattery::setFullyCharged(bool charged) {
                 (charged ? kOSBooleanTrue:kOSBooleanFalse));
 }
 
+void AppleSmartBattery::setRunTimeToEmpty(int seconds)
+{
+  OSNumber *n = OSNumber::withNumber(seconds, NUM_BITS);
+  if (n) {
+    setPSProperty(_RunTimeToEmptySym, n);
+    n->release();
+  }
+}
+
+int AppleSmartBattery::runTimeToEmpty(void)
+{
+  OSNumber *n = OSDynamicCast(OSNumber, properties->getObject(_RunTimeToEmptySym));
+  int ret = n ? n->unsigned32BitValue() : 0;
+  return ret;
+}
+
 void AppleSmartBattery::setInstantAmperage(int mA) {
   OSNumber *n = OSNumber::withNumber(mA, 32);
   if (n) {
@@ -1095,6 +1120,35 @@ void AppleSmartBattery::setInstantaneousTimeToEmpty(int seconds) {
 void AppleSmartBattery::setSerialString(OSSymbol * sym) {
   if (sym) {
     setPSProperty(softwareSerialKey, (OSObject *) sym);
+  }
+}
+
+#define kMaxGeneratedSerialSize (64)
+
+void AppleSmartBattery::setBatterySerialNumber(const OSSymbol* deviceName, const OSSymbol* serialNumber)
+{
+  DebugLog("setBatterySerialNumber called\n");
+
+  const char *device_cstring_ptr;
+  if (deviceName)
+    device_cstring_ptr = deviceName->getCStringNoCopy();
+  else
+    device_cstring_ptr = "Unknown";
+
+  const char *serial_cstring_ptr;
+  if (serialNumber)
+    serial_cstring_ptr = serialNumber->getCStringNoCopy();
+  else
+    serial_cstring_ptr = "Unknown";
+
+  char serialBuf[kMaxGeneratedSerialSize];
+  bzero(serialBuf, kMaxGeneratedSerialSize);
+  snprintf(serialBuf, kMaxGeneratedSerialSize, "%s-%s", device_cstring_ptr, serial_cstring_ptr);
+
+  const OSSymbol *printableSerial = OSSymbol::withCString(serialBuf);
+  if (printableSerial) {
+    setPSProperty(_BatterySerialNumberSym, const_cast<OSSymbol*>(printableSerial));
+    printableSerial->release();
   }
 }
 

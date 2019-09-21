@@ -298,6 +298,7 @@ bool NVClockX::start(IOService * provider) {
     if ((fanKey!=NULL)&(nv_card->set_fanspeed!=NULL)) {
       nv_card->set_fanspeed(fanKey->unsigned8BitValue());
     }
+ //   if (fanKey) fanKey->release();
 		
 		OSNumber* speedKey=OSDynamicCast(OSNumber, getProperty("GPUSpeed"));
 		
@@ -307,6 +308,7 @@ bool NVClockX::start(IOService * provider) {
 			nv_card->set_gpu_speed(speedKey->unsigned16BitValue());
 			InfoLog("Overclocked to %d", (UInt16)nv_card->get_gpu_speed());
 		}
+//    if (speedKey) speedKey->release();
 
 		//snprintf(key, 5, "FGC%d", index);
 		//gpuFreqSensor[index] = new FrequencySensor(key, "freq", 2);

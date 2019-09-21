@@ -148,11 +148,14 @@ bool IntelCPUMonitor::init(OSDictionary *properties) {
 	return true;
 }
 
-IOService* IntelCPUMonitor::probe(IOService *provider, SInt32 *score) {
+IOService* IntelCPUMonitor::probe(IOService *provider, SInt32 *score)
+{
   //  bool RPltSet = false;
   DebugLog("Probing...");
   
-  if (super::probe(provider, score) != this) { return 0; }
+  if (super::probe(provider, score) != this) {
+    return 0;
+  }
   
   InfoLog("Based on code by mercurysquad, superhai (C)2008. Turbostates measurement added by Navi");
 //  InfoLog("at probe 0xE2 = 0x%llx\n",  rdmsr64(0xE2));
@@ -184,11 +187,13 @@ IOService* IntelCPUMonitor::probe(IOService *provider, SInt32 *score) {
   CpuStepping =  cpuid_info()->cpuid_stepping;
   CpuMobile = false;
   userTjmax = 0;
-  if (OSNumber* number = OSDynamicCast(OSNumber, getProperty("TjMax"))) {
+  OSNumber* number = OSDynamicCast(OSNumber, getProperty("TjMax"));
+  if (number) {
     // User defined Tjmax
     userTjmax = number->unsigned32BitValue();
     IOLog("User defined TjMax=%d\n", (int)userTjmax);
     //    snprintf(Platform, 4, "n");
+//    number->release();
   }
   /*
   if (OSString* name = OSDynamicCast(OSString, getProperty("RPlt"))) {

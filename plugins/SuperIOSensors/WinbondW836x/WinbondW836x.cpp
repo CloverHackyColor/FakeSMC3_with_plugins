@@ -50,7 +50,7 @@
 
 #include <architecture/i386/pio.h>
 //#include "cpuid.h"
-#include "FakeSMC.h"
+#include "../../../fakesmc/FakeSMC.h"
 #include "../../../utils/utils.h"
 
 //#define Debug false
@@ -550,7 +550,7 @@ bool W836x::probePort() {
   InfoLog("-  77: %02x", readByte(0, 0x77));
   InfoLog("-  79: %02x", readByte(0, 0x79));
   
-  for (int i = 0; i<4; i++) {
+  for (int i = 0; i<3; i++) {
     int reg;
     int bank, index;
     reg = NUVOTON_TEMPERATURE[i];
@@ -646,6 +646,7 @@ bool W836x::start(IOService * provider) {
             InfoLog(" mother vendor=%s product=%s", vendor, product);
           }
         }
+        VendorNick->release();
       } else {
         WarningLog("unknown OEMVendor %s", vendor);
       }
@@ -959,7 +960,8 @@ SuperIOSensor * W836x::addSensor(const char* name,
       return sensor;
     }
   }
-	
+
+  if (sensor) sensor->release();
 	return 0;
 }
 

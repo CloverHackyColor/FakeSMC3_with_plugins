@@ -46,9 +46,9 @@ const char *	AcpiBatteryInformation		  = "_BIF";
 const char *	AcpiBatteryInformationEx	  = "_BIX";
 const char *	AcpiBatteryStatus		        = "_BST";
 const char *	LidStatus					          = "_LID";
-const char *  MethodBQC                 = "_BQC";
-const char *  MethodBCM                 = "_BCM";
-const char *  MethodBCL                 = "_BCL";
+const char *  MethodBQC                   = "_BQC";
+const char *  MethodBCM                   = "_BCM";
+const char *  MethodBCL                   = "_BCL";
 
 /*
 // _BIF
@@ -93,23 +93,56 @@ Package {
   OEM Information
 }
 */
+// Return package from _BIX
+
+#define BIX_REVISION            0
+#define BIX_POWER_UNIT          1
+#define BIX_DESIGN_CAPACITY     2
+#define BIX_LAST_FULL_CAPACITY  3
+#define BIX_TECHNOLOGY          4
+#define BIX_DESIGN_VOLTAGE      5
+#define BIX_CAPACITY_WARNING    6
+#define BIX_LOW_WARNING         7
+#define BIX_CYCLE_COUNT         8
+#define BIX_ACCURACY            9
+#define BIX_MAX_SAMPLE_TIME     10
+#define BIX_MIN_SAMPLE_TIME     11
+#define BIX_MAX_AVG_INTERVAL    12
+#define BIX_MIN_AVG_INTERVAL    13
+#define BIX_GRANULARITY_1       14
+#define BIX_GRANULARITY_2       15
+#define BIX_MODEL_NUMBER        16
+#define BIX_SERIAL_NUMBER       17
+#define BIX_BATTERY_TYPE        18
+#define BIX_OEM                 19
+
+#define NUM_BITS        32
 
 static const OSSymbol * unknownObjectKey		  = OSSymbol::withCString("");
 static const OSSymbol * designCapacityKey		  = OSSymbol::withCString(kIOPMPSDesignCapacityKey);
 static const OSSymbol * deviceNameKey			    = OSSymbol::withCString(kIOPMDeviceNameKey);
 static const OSSymbol * fullyChargedKey			  = OSSymbol::withCString(kIOPMFullyChargedKey);
 static const OSSymbol * instantAmperageKey		= OSSymbol::withCString("InstantAmperage");
+static const OSSymbol *_AverageCurrentSym =      OSSymbol::withCString("AverageCurrent");
 static const OSSymbol * instantTimeToEmptyKey	= OSSymbol::withCString("InstantTimeToEmpty");
 static const OSSymbol * softwareSerialKey		  = OSSymbol::withCString("BatterySerialNumber");
 static const OSSymbol * chargeStatusKey			  = OSSymbol::withCString(kIOPMPSBatteryChargeStatusKey);
 static const OSSymbol * permanentFailureKey		= OSSymbol::withCString("Permanent Battery Failure");
+static const OSSymbol *_RunTimeToEmptySym =      OSSymbol::withCString("RunTimeToEmpty");
+static const OSSymbol *_RelativeStateOfChargeSym =  OSSymbol::withCString("RelativeStateOfCharge");
+static const OSSymbol *_AbsoluteStateOfChargeSym =  OSSymbol::withCString("AbsoluteStateOfCharge");
+static const OSSymbol *_RemainingCapacitySym =    OSSymbol::withCString("RemainingCapacity");
+
 //
 static const OSSymbol * batteryTypeKey  = OSSymbol::withCString("BatteryType");
+static const OSSymbol *_BatterySerialNumberSym = OSSymbol::withCString("BatterySerialNumber");
+static const OSSymbol *_FirmwareSerialNumberSym =    OSSymbol::withCString("FirmwareSerialNumber");
+static const OSSymbol *_DateOfManufacture =    OSSymbol::withCString("Date of Manufacture");
 
 //static IOPMPowerState PowerStates[2] = 
 //{ {1,0,0,0,0,0,0,0,0,0,0,0}, {1,2,2,2,0,0,0,0,0,0,0,0} };
 
-enum {																								// Apple loves to have the goodies private
+enum {				// Apple loves to have the goodies private
     kIOPMSetValue				= (1<<16),
     kIOPMSetDesktopMode			= (1<<17),
     kIOPMSetACAdaptorConnected	= (1<<18)
@@ -187,6 +220,7 @@ struct BatteryClass {
 	UInt32	RemainingCapacity;
 	UInt32	LastRemainingCapacity;
   UInt32	Cycle;
+  
 };
 
 class AppleSmartBattery : public IOPMPowerSource {
@@ -203,6 +237,10 @@ protected:
 	void	setSerialString(OSSymbol * sym);
 	void	rebuildLegacyIOBatteryInfo(void);
   void	setBatteryType(OSSymbol * sym);
+  void  setBatterySerialNumber(const OSSymbol* deviceName, const OSSymbol* serialNumber);
+
+  void  setRunTimeToEmpty(int seconds);
+  int    runTimeToEmpty(void);
   //----- new for ElCapitan
   /* Protected "setter" methods for subclasses
    * Subclasses should use these setters to modify all battery properties.

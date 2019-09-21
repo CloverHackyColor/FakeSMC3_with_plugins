@@ -43,12 +43,10 @@
 		A521BC5E22F0BB9D005A5C2B /* xf86i2c.h in Sources */ = {isa = PBXBuildFile; fileRef = A521BBCD22F0B38F005A5C2B /* xf86i2c.h */; };
 		A521BC5F22F0BB9D005A5C2B /* xfree.h in Sources */ = {isa = PBXBuildFile; fileRef = A521BBCE22F0B38F005A5C2B /* xfree.h */; };
 		A521BC6022F0BBB5005A5C2B /* NVClockX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBD122F0B38F005A5C2B /* NVClockX.cpp */; };
-		A521BC6122F0BBD3005A5C2B /* X3100-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = A521BBB122F0B38F005A5C2B /* X3100-Info.plist */; };
 		A521BC6222F0BBD3005A5C2B /* X3100-pre106-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = A521BBB222F0B38F005A5C2B /* X3100-pre106-Info.plist */; };
 		A521BC6322F0BBD3005A5C2B /* X3100.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBB322F0B38F005A5C2B /* X3100.cpp */; };
 		A521BC6422F0BBD3005A5C2B /* X3100.h in Sources */ = {isa = PBXBuildFile; fileRef = A521BBB422F0B38F005A5C2B /* X3100.h */; };
 		A521BC6522F0BBF0005A5C2B /* InfoPlist.strings in Sources */ = {isa = PBXBuildFile; fileRef = A521BBEC22F0B3AB005A5C2B /* InfoPlist.strings */; };
-		A521BC6622F0BBF0005A5C2B /* ITEIT87x-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = A521BBEE22F0B3AC005A5C2B /* ITEIT87x-Info.plist */; };
 		A521BC6722F0BBF0005A5C2B /* ITEIT87x-Prefix.pch in Sources */ = {isa = PBXBuildFile; fileRef = A521BBEF22F0B3AC005A5C2B /* ITEIT87x-Prefix.pch */; };
 		A521BC6822F0BBF0005A5C2B /* ITEIT87x.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBF022F0B3AC005A5C2B /* ITEIT87x.cpp */; };
 		A521BC6922F0BBF0005A5C2B /* ITEIT87x.h in Sources */ = {isa = PBXBuildFile; fileRef = A521BBF122F0B3AC005A5C2B /* ITEIT87x.h */; };
@@ -140,20 +138,6 @@
 			remoteGlobalIDString = 12D78B1D12BFDCFD002C61EA;
 			remoteInfo = RadeonMonitor;
 		};
-		1D1CAAC113657041003878D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 12CBB17D12BDEA9F00157341;
-			remoteInfo = X3100;
-		};
-		1D1CAAC313657046003878D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AE00C7BC126A24960068E69A;
-			remoteInfo = PC8739x;
-		};
 		1D1CAAC513657046003878D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
@@ -219,7 +203,6 @@
 		A521BB6722F0B351005A5C2B /* AmdCPUMonitor-pre106-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AmdCPUMonitor-pre106-Info.plist"; sourceTree = "<group>"; };
 		A521BB6822F0B351005A5C2B /* AmdCPUMonitor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AmdCPUMonitor.cpp; sourceTree = "<group>"; };
 		A521BB6922F0B351005A5C2B /* AmdCPUMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmdCPUMonitor.h; sourceTree = "<group>"; };
-		A521BB6B22F0B351005A5C2B /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A521BB6D22F0B351005A5C2B /* IntelCPUMonitor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IntelCPUMonitor-Info.plist"; sourceTree = "<group>"; };
 		A521BB6E22F0B351005A5C2B /* IntelCPUMonitor-pre106-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IntelCPUMonitor-pre106-Info.plist"; sourceTree = "<group>"; };
 		A521BB6F22F0B351005A5C2B /* IntelCPUMonitor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IntelCPUMonitor.cpp; sourceTree = "<group>"; };
@@ -355,11 +338,12 @@
 		A521BC0122F0B3AC005A5C2B /* WinbondW836x.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WinbondW836x.cpp; sourceTree = "<group>"; };
 		A521BC0222F0B3AC005A5C2B /* WinbondW836x.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WinbondW836x.h; sourceTree = "<group>"; };
 		A55E16871F7041A50049A107 /* VoodooBatterySMC.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoodooBatterySMC.kext; sourceTree = BUILT_PRODUCTS_DIR; };
-		A55E16961F7041CF0049A107 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A55E16981F7041CF0049A107 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A55E16991F7041CF0049A107 /* Support.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Support.h; sourceTree = "<group>"; };
 		A55E169A1F7041CF0049A107 /* VoodooBattery.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VoodooBattery.cpp; sourceTree = "<group>"; };
 		A55E169B1F7041CF0049A107 /* VoodooBattery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoodooBattery.h; sourceTree = "<group>"; };
+		A5FBD81E2335F260009828C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A5FBD81F2335F260009828C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AE00C785126A1F440068E69A /* F718x.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = F718x.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE00C7BD126A24960068E69A /* PC8739x.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PC8739x.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE212C6A12678D3500145048 /* W836x.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = W836x.kext; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1254,11 +1238,9 @@
 				1D1CAABC1365703A003878D0 /* PBXTargetDependency */,
 				1D1CAABE1365703C003878D0 /* PBXTargetDependency */,
 				1D1CAAC01365703F003878D0 /* PBXTargetDependency */,
-				1D1CAAC213657041003878D0 /* PBXTargetDependency */,
 				1D1CAACA13657046003878D0 /* PBXTargetDependency */,
 				1D1CAAC813657046003878D0 /* PBXTargetDependency */,
 				1D1CAAC613657046003878D0 /* PBXTargetDependency */,
-				1D1CAAC413657046003878D0 /* PBXTargetDependency */,
 				128160D416D628A40012840B /* PBXTargetDependency */,
 				1267DE4C18BC8EBB00D833A4 /* PBXTargetDependency */,
 			);
@@ -1273,7 +1255,7 @@
 		AEABE453125F8E7400F08235 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = slice;
 				TargetAttributes = {
 					A55E16861F7041A50049A107 = {
@@ -1286,14 +1268,14 @@
 			};
 			buildConfigurationList = AEABE456125F8E7400F08235 /* Build configuration list for PBXProject "HWSensors" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
 				en,
+				ja,
+				de,
+				fr,
+				Base,
 			);
 			mainGroup = AEABE451125F8E7400F08235;
 			productRefGroup = AEABE461125F8E9300F08235 /* Products */;
@@ -1505,7 +1487,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A521BC6122F0BBD3005A5C2B /* X3100-Info.plist in Sources */,
 				A521BC6222F0BBD3005A5C2B /* X3100-pre106-Info.plist in Sources */,
 				A521BC6322F0BBD3005A5C2B /* X3100.cpp in Sources */,
 				A521BC6422F0BBD3005A5C2B /* X3100.h in Sources */,
@@ -1598,7 +1579,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A521BC6522F0BBF0005A5C2B /* InfoPlist.strings in Sources */,
-				A521BC6622F0BBF0005A5C2B /* ITEIT87x-Info.plist in Sources */,
 				A521BC6722F0BBF0005A5C2B /* ITEIT87x-Prefix.pch in Sources */,
 				A521BC6822F0BBF0005A5C2B /* ITEIT87x.cpp in Sources */,
 				A521BC6922F0BBF0005A5C2B /* ITEIT87x.h in Sources */,
@@ -1650,16 +1630,6 @@
 			target = 12D78B1D12BFDCFD002C61EA /* RadeonMonitor */;
 			targetProxy = 1D1CAABF1365703F003878D0 /* PBXContainerItemProxy */;
 		};
-		1D1CAAC213657041003878D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 12CBB17D12BDEA9F00157341 /* X3100 */;
-			targetProxy = 1D1CAAC113657041003878D0 /* PBXContainerItemProxy */;
-		};
-		1D1CAAC413657046003878D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AE00C7BC126A24960068E69A /* PC8739x */;
-			targetProxy = 1D1CAAC313657046003878D0 /* PBXContainerItemProxy */;
-		};
 		1D1CAAC613657046003878D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AE00C784126A1F440068E69A /* F718x */;
@@ -1691,7 +1661,7 @@
 		A521BB6A22F0B351005A5C2B /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A521BB6B22F0B351005A5C2B /* English */,
+				A5FBD81E2335F260009828C9 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1723,7 +1693,7 @@
 		A55E16951F7041CF0049A107 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A55E16961F7041CF0049A107 /* English */,
+				A5FBD81F2335F260009828C9 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1735,6 +1705,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1758,6 +1729,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1779,6 +1751,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1798,6 +1771,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1818,7 +1792,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
@@ -1856,7 +1832,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
@@ -1887,7 +1865,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
@@ -1918,7 +1898,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
@@ -1950,11 +1932,13 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1992,11 +1976,13 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
@@ -2028,11 +2014,13 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
@@ -2064,11 +2052,13 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
@@ -2098,6 +2088,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2119,6 +2111,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = "";
@@ -2139,6 +2133,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
@@ -2157,6 +2153,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
@@ -2176,6 +2174,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2198,6 +2198,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = "";
@@ -2218,6 +2220,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
@@ -2237,6 +2241,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
@@ -2256,6 +2262,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2278,6 +2286,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = "";
@@ -2297,6 +2307,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
@@ -2316,6 +2328,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
@@ -2336,6 +2350,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2375,6 +2390,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2408,6 +2424,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2441,6 +2458,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2473,6 +2491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -2498,6 +2517,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
@@ -2520,6 +2540,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
@@ -2544,6 +2565,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
@@ -2566,6 +2588,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2588,6 +2612,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -2606,6 +2632,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_AUTO_VECTORIZATION = YES;
@@ -2627,6 +2655,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
@@ -2645,6 +2675,7 @@
 		12D78B2112BFDCFF002C61EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -2669,6 +2700,7 @@
 		12D78B2212BFDCFF002C61EA /* Release 10.6 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_MODEL_TUNING = "";
@@ -2689,6 +2721,7 @@
 		12D78B2312BFDCFF002C61EA /* Release 10.5 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_AUTO_VECTORIZATION = YES;
@@ -2711,6 +2744,7 @@
 		12D78B2412BFDCFF002C61EA /* Release 10.4 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -2768,6 +2802,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(MODULE_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = Debug;
@@ -2912,7 +2947,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(MODULE_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.11;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = "Release 10.4";
@@ -2921,6 +2956,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2942,6 +2979,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_MODEL_TUNING = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -2960,6 +2999,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -2979,6 +3020,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -2997,6 +3040,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -3019,6 +3064,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_MODEL_TUNING = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -3037,6 +3084,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -3055,6 +3104,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -3073,6 +3124,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -3098,6 +3150,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_MODEL_TUNING = "";
@@ -3119,6 +3172,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_AUTO_VECTORIZATION = YES;
@@ -3141,6 +3195,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_MODEL_TUNING = G5;
@@ -3161,6 +3216,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -3183,6 +3240,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_MODEL_TUNING = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -3201,6 +3260,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -3221,6 +3282,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
@@ -3240,6 +3303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -3263,6 +3327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_MODEL_TUNING = "";
@@ -3283,6 +3348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -3305,6 +3371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -3330,11 +3397,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -3375,11 +3444,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -3423,6 +3494,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -3445,6 +3518,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEVELOPMENT_TEAM = "-";
@@ -3467,6 +3542,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_MEMORY_MANAGEMENT = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -3480,7 +3556,7 @@
 				INFOPLIST_FILE = "fakesmc/FakeSMC-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MODULE_NAME = org.netkas.FakeSMC;
-				MODULE_VERSION = 3.5.2;
+				MODULE_VERSION = 3.5.3;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DDebug=1";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.netkas.${PRODUCT_NAME}";
@@ -3495,6 +3571,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_MEMORY_MANAGEMENT = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
@@ -3505,7 +3582,7 @@
 				INFOPLIST_FILE = "fakesmc/FakeSMC-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MODULE_NAME = org.netkas.FakeSMC;
-				MODULE_VERSION = 3.5.2;
+				MODULE_VERSION = 3.5.3;
 				OTHER_CFLAGS = "-DDebug=0";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.netkas.${PRODUCT_NAME}";
 				PRODUCT_NAME = FakeSMC;
@@ -3524,11 +3601,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -3565,6 +3644,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEVELOPMENT_TEAM = "-";
@@ -3587,6 +3668,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_MEMORY_MANAGEMENT = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
@@ -3618,11 +3700,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -3660,6 +3744,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEVELOPMENT_TEAM = "-";
@@ -3681,6 +3767,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_MEMORY_MANAGEMENT = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;

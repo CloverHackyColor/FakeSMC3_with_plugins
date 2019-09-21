@@ -393,8 +393,11 @@ int  SMIMonitor::i8k_set_fan_control_auto(int fan)
 }
 
 
-IOService* SMIMonitor::probe(IOService *provider, SInt32 *score) {
-  if (super::probe(provider, score) != this) { return 0; }
+IOService* SMIMonitor::probe(IOService *provider, SInt32 *score)
+{
+  if (super::probe(provider, score) != this) {
+    return 0;
+  }
 
   if (!i8k_get_dell_signature()) {
     WarningLog("Unable to get Dell SMM signature!");

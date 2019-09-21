@@ -737,10 +737,11 @@ void FakeSMCDevice::saveKeyToNVRAM(FakeSMCKey *key) {
     snprintf(name, 32, "%s-%s-%s", kFakeSMCKeyPropertyPrefix, key->getName(), key->getType());
     
     const OSSymbol *tempName = OSSymbol::withCString(name);
-    
-    dtNvram->setProperty(tempName, OSData::withBytes(key->getValue(), key->getSize()));
+    OSData * keyData = OSData::withBytes(key->getValue(), key->getSize());
+    dtNvram->setProperty(tempName, keyData);
     
     OSSafeReleaseNULL(tempName);
+     if (keyData) keyData->release();
     //OSSafeRelease(nvram);
   }
   /*

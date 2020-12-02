@@ -15,7 +15,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.0d1</string>
+	<string>$(MODULE_VERSION)</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>Radeon Cards Monitoring Plugin</key>

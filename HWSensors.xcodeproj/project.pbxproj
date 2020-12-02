@@ -2495,7 +2495,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2504,6 +2504,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "plugins/CPUSensors/IntelCPUMonitor/IntelCPUMonitor-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MARKETING_VERSION = 1.0.2;
 				MODULE_NAME = org.slice.IntelCPUMonitor;
 				MODULE_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
@@ -2520,15 +2521,16 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_AUTO_VECTORIZATION = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "plugins/CPUSensors/IntelCPUMonitor/IntelCPUMonitor-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MARKETING_VERSION = 1.0.2;
 				MODULE_NAME = org.slice.IntelCPUMonitor;
-				MODULE_VERSION = 1.2.3;
+				MODULE_VERSION = 1.2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
 				PRODUCT_NAME = IntelCPUMonitor;
 				SDKROOT = macosx10.11;
@@ -2543,7 +2545,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_AUTO_VECTORIZATION = YES;
@@ -2552,6 +2554,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "IntelCPUMonitor-pre106-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MARKETING_VERSION = 1.0.2;
 				MODULE_NAME = com.yourcompany.driver.IntelCPUMonitor;
 				MODULE_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
@@ -2568,13 +2571,14 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "$(MODULE_VERSION)";
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_MODEL_TUNING = G5;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "IntelCPUMonitor-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MARKETING_VERSION = 1.0.2;
 				MODULE_NAME = com.yourcompany.driver.IntelCPUMonitor;
 				MODULE_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
@@ -2687,7 +2691,7 @@
 				INFOPLIST_FILE = "plugins/GPUSensors/RadeonMonitor/RadeonMonitor-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MODULE_NAME = org.slice.RadeonMonitor;
-				MODULE_VERSION = 1.3.4;
+				MODULE_VERSION = 1.3.5;
 				PRODUCT_BUNDLE_IDENTIFIER = org.slice.RadeonMonitor;
 				PRODUCT_NAME = RadeonMonitor;
 				PROVISIONING_PROFILE = "";
@@ -2708,7 +2712,7 @@
 				INFOPLIST_FILE = "plugins/GPUSensors/RadeonMonitor/RadeonMonitor-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MODULE_NAME = org.slice.RadeonMonitor;
-				MODULE_VERSION = 1.3.4;
+				MODULE_VERSION = 1.3.5;
 				PRODUCT_BUNDLE_IDENTIFIER = org.slice.RadeonMonitor;
 				PRODUCT_NAME = RadeonMonitor;
 				PROVISIONING_PROFILE = "";

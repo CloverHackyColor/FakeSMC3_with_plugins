@@ -210,7 +210,10 @@ void cpuid_update_generic_info() {
       case CPU_MODEL_XEON_MILL:
       case CPU_MODEL_KABYLAKE1:
       case CPU_MODEL_KABYLAKE2:
-        
+    case CPU_MODEL_COMETLAKE_S:
+    case CPU_MODEL_COMETLAKE_Y:
+    case CPU_MODEL_COMETLAKE_U:
+
         msr = rdmsr64(MSR_CORE_THREAD_COUNT);
         info_p->core_count   = bitfield((uint32_t)msr, 31, 16);
         info_p->thread_count = bitfield((uint32_t)msr, 15,  0);

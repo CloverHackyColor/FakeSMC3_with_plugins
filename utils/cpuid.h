@@ -179,6 +179,9 @@
 #define CPU_MODEL_XEON_MILL     0x85  /* Knights Mill */
 #define CPU_MODEL_KABYLAKE1     0x8E /* Kabylake Mobile */
 #define CPU_MODEL_KABYLAKE2     0x9E /* Kabylake Dektop */
+#define CPU_MODEL_COMETLAKE_S   0x9F  /* desktop Comet Lake */
+#define CPU_MODEL_COMETLAKE_Y   0xA5  /* aka 10th generation Amber Lake Y */
+#define CPU_MODEL_COMETLAKE_U   0xA6
 
 
 

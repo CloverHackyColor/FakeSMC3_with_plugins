@@ -345,7 +345,11 @@ IOService* IntelCPUMonitor::probe(IOService *provider, SInt32 *score)
         case CPU_MODEL_CANNONLAKE:
         case CPU_MODEL_XEON_MILL:
         case CPU_MODEL_KABYLAKE1:
-        case CPU_MODEL_KABYLAKE2: {
+        case CPU_MODEL_KABYLAKE2:
+        case CPU_MODEL_COMETLAKE_S:
+        case CPU_MODEL_COMETLAKE_Y:
+        case CPU_MODEL_COMETLAKE_U:
+        {
           nehalemArch = true;
           for (int i = 0; i < count; i++) {
             tjmax[i] = (rdmsr64(MSR_IA32_TEMPERATURE_TARGET) >> 16) & 0xFF;

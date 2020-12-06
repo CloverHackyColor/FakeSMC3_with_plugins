@@ -3,7 +3,7 @@ Driver for emulation SMC device with hardware sensors support
 
 ## HWSensors
 ### This is a Mac OS X Package
-Working 10.6 to 10.14
+Working 10.6 to 11.x
 
 ### HWSensors branch based on FakeSMC-3.x
 
@@ -15,7 +15,7 @@ Working 10.6 to 10.14
     + IntelCPUMonitor
     + AmdCpuMonitor
 - GPUSensors
-    + RadeonMonitor  for ATI/AMD Radeon card (temperature only)
+    + RadeonMonitor  for ATI/AMD Radeon card (temperature only), up to RX5700
     + GeforceSensors for Nvidia card Fermi, Kepler, Maxwell, Pascal
     + NVClockX for Nvidia Geforce 7xxx, 8xxx, Tesla
     + X3100 for IntelX3100 (at GM950 chipset)
@@ -28,7 +28,7 @@ Working 10.6 to 10.14
     + monitor and control temperature and fans in Dell computers by using SMM technology
 - Applications 
     + HWMonitorSMC for old computers
-    + HWMonitorSMC2 for SandyBridge and up
+    + HWMonitorSMC2 for SandyBridge and up. It is separate project https://github.com/CloverHackyColor/HWMonitorSMC2
 
 
 ### HWSensors Project (c) 2010 netkas, slice, usr-sse2, kozlek, navi, vector sigma and other contributors. All rights reserved. 

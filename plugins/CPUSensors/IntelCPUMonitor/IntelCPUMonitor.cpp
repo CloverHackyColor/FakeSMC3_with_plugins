@@ -349,6 +349,12 @@ IOService* IntelCPUMonitor::probe(IOService *provider, SInt32 *score)
         case CPU_MODEL_COMETLAKE_S:
         case CPU_MODEL_COMETLAKE_Y:
         case CPU_MODEL_COMETLAKE_U:
+        case CPU_MODEL_ICELAKE_A:
+        case CPU_MODEL_ICELAKE_C:
+        case CPU_MODEL_ICELAKE_D:
+        case CPU_MODEL_ICELAKE:
+        case CPU_MODEL_TIGERLAKE_C:
+        case CPU_MODEL_TIGERLAKE_D:
         {
           nehalemArch = true;
           for (int i = 0; i < count; i++) {

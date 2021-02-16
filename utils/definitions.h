@@ -53,6 +53,7 @@
 #define KEY_AMBIENT1_TEMPERATURE                "TA1P"
 #define KEY_DIMM_TEMPERATURE                    "Tm0P" 
 #define KEY_DIMM2_TEMPERATURE                   "Tm1P"
+#define KEY_DIMMn_TEMPERATURE                   "Tm%XP"
 #define KEY_AIRVENT_TEMPERATURE                 "TV0P" // Air Vent Exit
 #define KEY_AIRPORT_TEMPERATURE                 "TW0P"
 

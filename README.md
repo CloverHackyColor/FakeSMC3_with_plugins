@@ -1,9 +1,9 @@
-# FakeSMC3_with_plugins
+# FakeSMC3 with plugins
 Driver for emulation SMC device with hardware sensors support
 
 ## HWSensors
 ### This is a Mac OS X Package
-Working 10.6 to 10.14
+Working 10.6 to 11.x
 
 ### HWSensors branch based on FakeSMC-3.x
 
@@ -11,11 +11,13 @@ Working 10.6 to 10.14
 * FakeSMC.kext version 3.x
 - ACPIMonitor.kext for custom making ACPI methods to access to hardware
 - VoodooBatterySMC for laptop battery monitoring
+- IntelMCHMonitor for chipset temperature monitoring, from 7th gen
+  (Kabylake, Coffeelake, and up). Get also DIMM temperature
 - CPU sensors:
-    + IntelCPUMonitor
-    + AmdCpuMonitor
+    + IntelCPUMonitor, from Core Duo up to IceLake
+    + AmdCpuMonitor, FX... and Ryzen
 - GPUSensors
-    + RadeonMonitor  for ATI/AMD Radeon card (temperature only)
+    + RadeonMonitor  for ATI/AMD Radeon card (temperature only), up to RX5900
     + GeforceSensors for Nvidia card Fermi, Kepler, Maxwell, Pascal
     + NVClockX for Nvidia Geforce 7xxx, 8xxx, Tesla
     + X3100 for IntelX3100 (at GM950 chipset)
@@ -27,8 +29,8 @@ Working 10.6 to 10.14
 - SMI Monitor
     + monitor and control temperature and fans in Dell computers by using SMM technology
 - Applications 
-    + HWMonitorSMC for old computers
-    + HWMonitorSMC2 for SandyBridge and up
+    + HWMonitorSMC
+    
 
 
 ### HWSensors Project (c) 2010 netkas, slice, usr-sse2, kozlek, navi, vector sigma and other contributors. All rights reserved. 

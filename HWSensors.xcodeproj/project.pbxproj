@@ -11,6 +11,7 @@
 		12B160971A3F01D8007C7B84 /* TigerAdditionals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12B160931A3F01D8007C7B84 /* TigerAdditionals.cpp */; };
 		12B160981A3F01D8007C7B84 /* TigerAdditionals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12B160931A3F01D8007C7B84 /* TigerAdditionals.cpp */; };
 		2C7719BC14EA483A0005C3C7 /* SuperIOFamily.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AED9E582125FC23900736A5A /* SuperIOFamily.cpp */; };
+		A502386B25DBD1B300C823D7 /* IntelMCHMonitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A502385725DBCCC100C823D7 /* IntelMCHMonitor.cpp */; };
 		A521BB6222F0B331005A5C2B /* ACPIMonitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BB5D22F0B331005A5C2B /* ACPIMonitor.cpp */; };
 		A521BC0522F0BA50005A5C2B /* SMIMonitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A521BBE322F0B39D005A5C2B /* SMIMonitor.cpp */; };
 		A521BC0622F0BA87005A5C2B /* Cpuid.c in Sources */ = {isa = PBXBuildFile; fileRef = 12B160901A3F01D8007C7B84 /* Cpuid.c */; };
@@ -166,6 +167,13 @@
 			remoteGlobalIDString = A55E16861F7041A50049A107;
 			remoteInfo = VoodooBatterySMC;
 		};
+		A502386925DBCE9800C823D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A502385E25DBCE4F00C823D7;
+			remoteInfo = IntelMCHMonitor;
+		};
 		A521BC0322F0B7F5005A5C2B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AEABE453125F8E7400F08235 /* Project object */;
@@ -194,6 +202,11 @@
 		12CB0F3A12C087D400068B06 /* IntelCPUMonitor.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntelCPUMonitor.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		12CBB17E12BDEA9F00157341 /* X3100.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = X3100.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D78B1E12BFDCFD002C61EA /* RadeonMonitor.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadeonMonitor.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		A502385625DBCCC100C823D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A502385725DBCCC100C823D7 /* IntelMCHMonitor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IntelMCHMonitor.cpp; sourceTree = "<group>"; };
+		A502385825DBCCC100C823D7 /* IntelMCHMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntelMCHMonitor.h; sourceTree = "<group>"; };
+		A502385925DBCCC100C823D7 /* IntelMCHMonitor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IntelMCHMonitor-Info.plist"; sourceTree = "<group>"; };
+		A502385F25DBCE4F00C823D7 /* IntelMCHMonitor.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntelMCHMonitor.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		A521BB5B22F0B331005A5C2B /* ACPIMonitor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ACPIMonitor-Info.plist"; sourceTree = "<group>"; };
 		A521BB5C22F0B331005A5C2B /* ACPIMonitor-pre106-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ACPIMonitor-pre106-Info.plist"; sourceTree = "<group>"; };
 		A521BB5D22F0B331005A5C2B /* ACPIMonitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ACPIMonitor.cpp; sourceTree = "<group>"; };
@@ -434,6 +447,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A502385C25DBCE4F00C823D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A55E16831F7041A50049A107 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -507,6 +527,18 @@
 				124E606916C818AD004D3FE0 /* Kernel.framework */,
 			);
 			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		A502385425DBCCC100C823D7 /* IntelMCHMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				A502385525DBCCC100C823D7 /* InfoPlist.strings */,
+				A502385725DBCCC100C823D7 /* IntelMCHMonitor.cpp */,
+				A502385825DBCCC100C823D7 /* IntelMCHMonitor.h */,
+				A502385925DBCCC100C823D7 /* IntelMCHMonitor-Info.plist */,
+			);
+			name = IntelMCHMonitor;
+			path = plugins/IntelMCHMonitor;
 			sourceTree = "<group>";
 		};
 		A521BB5A22F0B331005A5C2B /* ACPIMonitor */ = {
@@ -833,6 +865,7 @@
 				12AB85BB1920F14200ACDEA5 /* SMIMonitor.kext */,
 				1226620B1A66964B009296EF /* DIMMSensor.kext */,
 				A55E16871F7041A50049A107 /* VoodooBatterySMC.kext */,
+				A502385F25DBCE4F00C823D7 /* IntelMCHMonitor.kext */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -853,6 +886,7 @@
 				A521BB5A22F0B331005A5C2B /* ACPIMonitor */,
 				A521BB6422F0B351005A5C2B /* CPUSensors */,
 				A521BB7122F0B38F005A5C2B /* GPUSensors */,
+				A502385425DBCCC100C823D7 /* IntelMCHMonitor */,
 				A521BBDE22F0B39D005A5C2B /* SMIMonitor */,
 				A521BBE522F0B3AB005A5C2B /* SuperIOSensors */,
 				A55E16931F7041CF0049A107 /* VoodooBattery */,
@@ -908,6 +942,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		12AB85B71920F14200ACDEA5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A502385A25DBCE4F00C823D7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1106,6 +1147,24 @@
 			productReference = 12D78B1E12BFDCFD002C61EA /* RadeonMonitor.kext */;
 			productType = "com.apple.product-type.kernel-extension.iokit";
 		};
+		A502385E25DBCE4F00C823D7 /* IntelMCHMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A502386425DBCE4F00C823D7 /* Build configuration list for PBXNativeTarget "IntelMCHMonitor" */;
+			buildPhases = (
+				A502385A25DBCE4F00C823D7 /* Headers */,
+				A502385B25DBCE4F00C823D7 /* Sources */,
+				A502385C25DBCE4F00C823D7 /* Frameworks */,
+				A502385D25DBCE4F00C823D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IntelMCHMonitor;
+			productName = IntelMCHMonitor;
+			productReference = A502385F25DBCE4F00C823D7 /* IntelMCHMonitor.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
 		A55E16861F7041A50049A107 /* VoodooBatterySMC */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A55E168E1F7041A50049A107 /* Build configuration list for PBXNativeTarget "VoodooBatterySMC" */;
@@ -1232,6 +1291,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A502386A25DBCE9800C823D7 /* PBXTargetDependency */,
 				A521BC0422F0B7F5005A5C2B /* PBXTargetDependency */,
 				953D9A9E2058753300C570B9 /* PBXTargetDependency */,
 				1D1CAABA13657034003878D0 /* PBXTargetDependency */,
@@ -1255,9 +1315,13 @@
 		AEABE453125F8E7400F08235 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = slice;
 				TargetAttributes = {
+					A502385E25DBCE4F00C823D7 = {
+						CreatedOnToolsVersion = 11.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					A55E16861F7041A50049A107 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -1300,6 +1364,7 @@
 				12AB85BA1920F14200ACDEA5 /* SMIMonitor */,
 				1226620A1A66964B009296EF /* DIMMSensor */,
 				A55E16861F7041A50049A107 /* VoodooBatterySMC */,
+				A502385E25DBCE4F00C823D7 /* IntelMCHMonitor */,
 			);
 		};
 /* End PBXProject section */
@@ -1341,6 +1406,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		12AB85B81920F14200ACDEA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A502385D25DBCE4F00C823D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1502,6 +1574,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A502385B25DBCE4F00C823D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A502386B25DBD1B300C823D7 /* IntelMCHMonitor.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A55E16821F7041A50049A107 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1650,6 +1730,11 @@
 			target = A55E16861F7041A50049A107 /* VoodooBatterySMC */;
 			targetProxy = 953D9A9D2058753300C570B9 /* PBXContainerItemProxy */;
 		};
+		A502386A25DBCE9800C823D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A502385E25DBCE4F00C823D7 /* IntelMCHMonitor */;
+			targetProxy = A502386925DBCE9800C823D7 /* PBXContainerItemProxy */;
+		};
 		A521BC0422F0B7F5005A5C2B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 12AB85BA1920F14200ACDEA5 /* SMIMonitor */;
@@ -1658,6 +1743,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A502385525DBCCC100C823D7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A502385625DBCCC100C823D7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		A521BB6A22F0B351005A5C2B /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2178,6 +2271,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
@@ -2185,6 +2279,7 @@
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "plugins/CPUSensors/AmdCPUMonitor/AmdCPUMonitor-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MARKETING_VERSION = 1.0.3;
 				MODULE_NAME = org.slice.sensor.AmdCPUMonitor;
 				MODULE_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.sensor.${PRODUCT_NAME:rfc1034identifier}";
@@ -2201,12 +2296,14 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = "";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "plugins/CPUSensors/AmdCPUMonitor/AmdCPUMonitor-Info.plist";
 				INFOPLIST_PREPROCESS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MARKETING_VERSION = 1.0.3;
 				MODULE_NAME = org.slice.sensor.AmdCPUMonitor;
 				MODULE_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.sensor.${PRODUCT_NAME:rfc1034identifier}";
@@ -2223,11 +2320,13 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "AmdCPUMonitor-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MARKETING_VERSION = 1.0.3;
 				MODULE_NAME = org.slice.sensor.AmdCPUMonitor;
 				MODULE_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.sensor.${PRODUCT_NAME:rfc1034identifier}";
@@ -2244,11 +2343,13 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "AmdCPUMonitor-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MARKETING_VERSION = 1.0.3;
 				MODULE_NAME = org.slice.sensor.AmdCPUMonitor;
 				MODULE_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.sensor.${PRODUCT_NAME:rfc1034identifier}";
@@ -2495,7 +2596,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.0.2;
+				CURRENT_PROJECT_VERSION = 1.2.5;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2504,7 +2605,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "plugins/CPUSensors/IntelCPUMonitor/IntelCPUMonitor-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.2.5;
 				MODULE_NAME = org.slice.IntelCPUMonitor;
 				MODULE_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
@@ -2521,16 +2622,16 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.0.2;
+				CURRENT_PROJECT_VERSION = 1.2.5;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_AUTO_VECTORIZATION = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "plugins/CPUSensors/IntelCPUMonitor/IntelCPUMonitor-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.2.5;
 				MODULE_NAME = org.slice.IntelCPUMonitor;
-				MODULE_VERSION = 1.2.4;
+				MODULE_VERSION = 1.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
 				PRODUCT_NAME = IntelCPUMonitor;
 				SDKROOT = macosx10.11;
@@ -2545,7 +2646,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.0.2;
+				CURRENT_PROJECT_VERSION = 1.2.5;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_AUTO_VECTORIZATION = YES;
@@ -2554,7 +2655,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "IntelCPUMonitor-pre106-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.2.5;
 				MODULE_NAME = com.yourcompany.driver.IntelCPUMonitor;
 				MODULE_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
@@ -2571,14 +2672,14 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.0.2;
+				CURRENT_PROJECT_VERSION = 1.2.5;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_MODEL_TUNING = G5;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "IntelCPUMonitor-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.2.5;
 				MODULE_NAME = com.yourcompany.driver.IntelCPUMonitor;
 				MODULE_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.slice.${PRODUCT_NAME}";
@@ -2762,6 +2863,233 @@
 				SDKROOT = macosx10.11;
 				WRAPPER_EXTENSION = kext;
 				ZERO_LINK = YES;
+			};
+			name = "Release 10.4";
+		};
+		A502386525DBCE4F00C823D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "plugins/IntelMCHMonitor/IntelMCHMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.Slice.IntelMCHMonitor;
+				MODULE_START = IntelMCHMonitor_start;
+				MODULE_STOP = IntelMCHMonitor_stop;
+				MODULE_VERSION = 1.0.0d1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.slice.IntelMCHMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		A502386625DBCE4F00C823D7 /* Release 10.6 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "plugins/IntelMCHMonitor/IntelMCHMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.Slice.IntelMCHMonitor;
+				MODULE_START = IntelMCHMonitor_start;
+				MODULE_STOP = IntelMCHMonitor_stop;
+				MODULE_VERSION = 1.0.0d1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.slice.IntelMCHMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.6";
+		};
+		A502386725DBCE4F00C823D7 /* Release 10.5 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "plugins/IntelMCHMonitor/IntelMCHMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.Slice.IntelMCHMonitor;
+				MODULE_START = IntelMCHMonitor_start;
+				MODULE_STOP = IntelMCHMonitor_stop;
+				MODULE_VERSION = 1.0.0d1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.slice.IntelMCHMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release 10.5";
+		};
+		A502386825DBCE4F00C823D7 /* Release 10.4 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "plugins/IntelMCHMonitor/IntelMCHMonitor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MODULE_NAME = org.Slice.IntelMCHMonitor;
+				MODULE_START = IntelMCHMonitor_start;
+				MODULE_STOP = IntelMCHMonitor_stop;
+				MODULE_VERSION = 1.0.0d1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.slice.IntelMCHMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
+				WRAPPER_EXTENSION = kext;
 			};
 			name = "Release 10.4";
 		};
@@ -3900,6 +4228,17 @@
 				12D78B2212BFDCFF002C61EA /* Release 10.6 */,
 				12D78B2312BFDCFF002C61EA /* Release 10.5 */,
 				12D78B2412BFDCFF002C61EA /* Release 10.4 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release 10.6";
+		};
+		A502386425DBCE4F00C823D7 /* Build configuration list for PBXNativeTarget "IntelMCHMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A502386525DBCE4F00C823D7 /* Debug */,
+				A502386625DBCE4F00C823D7 /* Release 10.6 */,
+				A502386725DBCE4F00C823D7 /* Release 10.5 */,
+				A502386825DBCE4F00C823D7 /* Release 10.4 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release 10.6";

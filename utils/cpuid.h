@@ -161,8 +161,8 @@
 #define CPU_MODEL_IVY_BRIDGE_E5 0x3E  /* Ivy Bridge Xeon */
 #define CPU_MODEL_HASWELL_MB    0x3F  /* Haswell MB */
 //#define CPU_MODEL_HASWELL_H    0x??  // Haswell H
-#define CPU_MODEL_HASWELL_ULT    0x45  /* Haswell ULT */
-#define CPU_MODEL_HASWELL_ULX    0x46  /* Haswell ULX */
+#define CPU_MODEL_HASWELL_ULT   0x45  /* Haswell ULT */
+#define CPU_MODEL_HASWELL_ULX   0x46  /* Haswell ULX */
 #define CPU_MODEL_BROADWELL_HQ  0x47
 #define CPU_MODEL_AIRMONT       0x4C
 #define CPU_MODEL_AVOTON        0x4D
@@ -176,9 +176,16 @@
 #define CPU_MODEL_ATOM_X3       0x5D
 #define CPU_MODEL_SKYLAKE_D     0x5E /* Skylake Desktop */
 #define CPU_MODEL_CANNONLAKE    0x66
+#define CPU_MODEL_ICELAKE_A     0x6A  /* Xeon Ice Lake */
+#define CPU_MODEL_ICELAKE_C     0x6C  /* Xeon Ice Lake */
+#define CPU_MODEL_ATOM_GM       0x7A  /* Goldmont Plus */
+#define CPU_MODEL_ICELAKE_D     0x7D  /* 10h Ice Lake */
+#define CPU_MODEL_ICELAKE       0x7E  /* 10h Ice Lake */
 #define CPU_MODEL_XEON_MILL     0x85  /* Knights Mill */
+#define CPU_MODEL_TIGERLAKE_C   0x8C  /* 11h generation Tiger Lake */
+#define CPU_MODEL_TIGERLAKE_D   0x8D  /* 11h generation Tiger Lake */
 #define CPU_MODEL_KABYLAKE1     0x8E /* Kabylake Mobile */
-#define CPU_MODEL_KABYLAKE2     0x9E /* Kabylake Dektop */
+#define CPU_MODEL_KABYLAKE2     0x9E /* Kabylake Dektop, CoffeeLake */
 #define CPU_MODEL_COMETLAKE_S   0x9F  /* desktop Comet Lake */
 #define CPU_MODEL_COMETLAKE_Y   0xA5  /* aka 10th generation Amber Lake Y */
 #define CPU_MODEL_COMETLAKE_U   0xA6

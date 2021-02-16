@@ -1,19 +1,24 @@
 /*
- *  AmdCPUMonitor.cpp
- *  HWSensors
+ *  IntelMCHMonitor.cpp
+ *  HWSensors3
  *
- *  Copyright 2014 Slice. All rights reserved.
- *  First created at 25.02.2014
+ *  Copyright 2021 Slice. All rights reserved.
+ *  First created at 16.02.2021
  */
 
-#include "AmdCPUMonitor.h"
+#include "IntelMCHMonitor.h"
 #include "FakeSMC.h"
+
+#define INVID8(offset) (mmio_base[offset])
+#define INVID16(offset) OSReadLittleInt16((mmio_base), offset)
+#define INVID(offset) OSReadLittleInt32((mmio_base), offset)
+#define OUTVID(offset,val) OSWriteLittleInt32((mmio_base), offset, val)
 
 
 #define super IOService
-OSDefineMetaClassAndStructors(AmdCPUMonitor, IOService)
+OSDefineMetaClassAndStructors(IntelMCHMonitor, IOService)
 
-bool AmdCPUMonitor::addSensor(const char* key,
+bool IntelMCHMonitor::addSensor(const char* key,
                               const char* type,
                               unsigned int size,
                               int index) {
@@ -27,7 +32,7 @@ bool AmdCPUMonitor::addSensor(const char* key,
   return false;
 }
 
-IOService* AmdCPUMonitor::probe(IOService *provider, SInt32 *score) {
+IOService* IntelMCHMonitor::probe(IOService *provider, SInt32 *score) {
   if (super::probe(provider, score) != this) { return 0; }
   UInt32 vendor_id = 0, device_id = 0, class_id = 0;
   if (OSDictionary * dictionary = serviceMatching(kGenericPCIDevice)) {
@@ -51,9 +56,9 @@ IOService* AmdCPUMonitor::probe(IOService *provider, SInt32 *score) {
           class_id = *(UInt32*)data->getBytesNoCopy();
         }
         
-        if (((vendor_id==0x1022) && ((device_id & 0xF0FF)== 0x1003)) ||
-            ((vendor_id==0x1022) && (device_id== 0x1463))) { //Rizen
-          InfoLog("found AMD Miscellaneous Control id=%x class_id=%x", (UInt16)device_id, class_id);
+        if (((vendor_id==0x8086) && ((device_id & 0xFF00) == 0x3E00)) ||
+            ((vendor_id==0x8086) && (class_id == 0x060000))) {
+          InfoLog("found Intel MCH id=%x class_id=%x", (UInt16)device_id, class_id);
           VCard = device;
         }
       }
@@ -62,7 +67,7 @@ IOService* AmdCPUMonitor::probe(IOService *provider, SInt32 *score) {
   return this;
 }
 
-bool AmdCPUMonitor::start(IOService * provider) {
+bool IntelMCHMonitor::start(IOService * provider) {
   if (!provider || !super::start(provider)) { return false; }
 	
 	if (!(fakeSMC = waitForService(serviceMatching(kFakeSMCDeviceService)))) {
@@ -72,12 +77,39 @@ bool AmdCPUMonitor::start(IOService * provider) {
   if (!VCard) {
     return false;
   }
+  
+  IOMemoryDescriptor *    theDescriptor;
+  IOPhysicalAddress bar = (IOPhysicalAddress)((VCard->configRead32(kMCHBAR)) & ~0xf);
+  DebugLog("register space=%08lx\n", (long unsigned int)bar);
+  theDescriptor = IOMemoryDescriptor::withPhysicalAddress (bar, 0x1000, kIODirectionOutIn); // | kIOMapInhibitCache);
+  
+  if (theDescriptor != NULL) {
+    mmio = theDescriptor->map();
+    if (mmio != NULL) {
+      mmio_base = (volatile UInt8 *)mmio->getVirtualAddress();
+#if DEBUG
+      DebugLog(" MCHBAR mapped\n");
+      for (int i=0; i<0x2f; i +=16) {
+        DebugLog("%04lx: ", (long unsigned int)i+0x1000);
+        for (int j=0; j<16; j += 1) {
+          DebugLog("%02lx ", (long unsigned int)INVID8(i+j+0x1000));
+        }
+        DebugLog("\n");
+      }
+#endif
+    } else {
+      InfoLog(" MCHBAR failed to map\n");
+      return -1;
+    }
+  }
+
 	
 	char name[5];
-	snprintf(name, 5, KEY_CPU_PROXIMITY_TEMPERATURE); 
+	snprintf(name, 5, KEY_NORTHBRIDGE_TEMPERATURE); //TN0P
 			
 	UInt8 length = 0;
 	void * data = 0;
+  bool keyAdded = false;
 			
 	IOReturn result = fakeSMC->callPlatformFunction(kFakeSMCGetKeyValue,
                                                   true, (void *)name,
@@ -85,28 +117,32 @@ bool AmdCPUMonitor::start(IOService * provider) {
                                                   (void *)&data, 0);
 			
 	if (kIOReturnSuccess == result) {
-		WarningLog("Key TC0P already exists, kext will not load");
+		WarningLog("Key TN0P already exists, kext will not load");
 		return false;    
 	}
+
+  if (!addSensor(name, TYPE_SP78, 2, 0)) {
+    WarningLog("error adding Intel MCH temperature sensor");
+  } else {
+    keyAdded = true;
+  }
+
   
-	if (addSensor(name, TYPE_SP78, 2, 0)) {
-    InfoLog(" AMD CPU temperature sensor added");
-    return true;
-	}
-			
-/*	if (kIOReturnSuccess != fakeSMC->callPlatformFunction(kFakeSMCAddKeyHandler,
-                                                        false, (void *)name,
-                                                        (void *)TYPE_SP78,
-                                                        (void *)2, this)) {
-		WarningLog("Can't add key to fake SMC device, kext will not load");
-		return false;
-	} */
+  // DIMM
+  for (int i = 0; i<4; i++) {
+    snprintf(name, 5, KEY_DIMMn_TEMPERATURE, i); //Tm0P, Tm1P as in HWMonitor, Tm2P, Tm3P also possible
+    if (!addSensor(name, TYPE_SP78, 2, i)) {
+      WarningLog("error adding DIMM temperature sensor");
+    } else {
+      keyAdded = true;
+    }
+  }
 	
-	return false;
+	return keyAdded;
 }
 
 
-bool AmdCPUMonitor::init(OSDictionary *properties) {
+bool IntelMCHMonitor::init(OSDictionary *properties) {
   if (!super::init(properties)) {
     return false;
   }
@@ -118,17 +154,17 @@ bool AmdCPUMonitor::init(OSDictionary *properties) {
 	return true;
 }
 
-void AmdCPUMonitor::stop (IOService* provider) {
+void IntelMCHMonitor::stop (IOService* provider) {
 	sensors->flushCollection();
 	super::stop(provider);
 }
 
-void AmdCPUMonitor::free () {
+void IntelMCHMonitor::free () {
 	sensors->release();
 	super::free();
 }
 
-IOReturn AmdCPUMonitor::callPlatformFunction(const OSSymbol *functionName,
+IOReturn IntelMCHMonitor::callPlatformFunction(const OSSymbol *functionName,
                                              bool waitForFunction,
                                              void *param1,
                                              void *param2,
@@ -139,29 +175,43 @@ IOReturn AmdCPUMonitor::callPlatformFunction(const OSSymbol *functionName,
   
   if (functionName->isEqualTo(kFakeSMCGetValueCallback)) {
     const char* name = (const char*)param1;
-    void* data = param2;
+    char* data = (char*)param2;
     
     if (name && data) {
-      switch (name[0]) {
-        case 'T':
-          if (strcasecmp(name, KEY_CPU_PROXIMITY_TEMPERATURE) == 0) {
-            value = (VCard->configRead32(0xA4) >> 21) / 8;
-            bcopy(&value, data, 2);
-            
+      *data = 0;
+      UInt32 index;
+      switch (name[1]) {
+        case 'N':
+          if (strcasecmp(name, KEY_NORTHBRIDGE_TEMPERATURE) == 0) {
+            value = INVID8(TPKG);
+            bcopy(&value, data, 1);
             return kIOReturnSuccess;
           }
+          break;
+        case 'm':
+          index = 0;
+          if (OSNumber *number = OSDynamicCast(OSNumber, sensors->getObject(name))) {
+            index = number->unsigned16BitValue();
+          } else {
+            return kIOReturnBadArgument;
+          }
+          if (index == 0 || index == 2) {
+            value = INVID16(DDR1);
+          } else {
+            value = INVID16(DDR2);
+          }
+          if (index & 1) {
+            value >>= 8;
+          }
+          value &= 0xFF;
+          bcopy(&value, data, 1);
           break;
         default:
           return kIOReturnBadArgument;
       }
-      
-      //bcopy(&value, data, 2);
-      
       return kIOReturnSuccess;
     }
-    
     //DebugLog("bad argument key name or data");
-    
     return kIOReturnBadArgument;
   }
   

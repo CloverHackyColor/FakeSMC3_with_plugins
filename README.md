@@ -29,8 +29,8 @@ Working 10.6 to 11.x
 - SMI Monitor
     + monitor and control temperature and fans in Dell computers by using SMM technology
 - Applications 
-    + HWMonitorSMC
-    
+    + HWMonitorSMC, it has less functionality. Working with old computer. BigSur 11.x compatible.
+    + HWMonitorSMC2 for SandyBridge and up. It is separate project https://github.com/CloverHackyColor/HWMonitorSMC2
 
 
 ### HWSensors Project (c) 2010 netkas, slice, usr-sse2, kozlek, navi, vector sigma and other contributors. All rights reserved. 

@@ -76,8 +76,10 @@
 #define WarningLog(string, args...) do { IOLog (LogPrefix "[Warning] " string "\n", ## args); } while(0)
 #define InfoLog(string, args...)	do { IOLog (LogPrefix string "\n", ## args); } while(0)
 
-class IntelMCHMonitor : public IOService {
+class IntelMCHMonitor : public IOService
+{  
     OSDeclareDefaultStructors(IntelMCHMonitor)
+  
 private:
 	IOService*			fakeSMC;
 	OSDictionary*		sensors;

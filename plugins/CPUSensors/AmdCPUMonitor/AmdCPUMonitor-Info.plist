@@ -29,7 +29,7 @@
 			<key>IOMatchCategory</key>
 			<string>AmdCPUMonitor</string>
 			<key>IOProbeScore</key>
-			<string>500</string>
+			<integer>500</integer>
 			<key>IOProviderClass</key>
 			<string>IOResources</string>
 			<key>IOResourceMatch</key>

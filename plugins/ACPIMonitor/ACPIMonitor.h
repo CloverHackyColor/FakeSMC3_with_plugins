@@ -12,7 +12,8 @@
 
 class ACPIMonitor : public IOService
 {
-    OSDeclareDefaultStructors(ACPIMonitor)    
+    OSDeclareDefaultStructors(ACPIMonitor)
+  
 private:
 	IOService*				    fakeSMC;
 	IOACPIPlatformDevice*	acpiDevice;
@@ -25,16 +26,16 @@ private:
 	bool				      addTachometer(const char* method, const char* caption);
 	
 public:
-	virtual IOService* probe(IOService *provider, SInt32 *score);
-  virtual bool		  start(IOService *provider);
-	virtual bool		  init(OSDictionary *properties=0);
-	virtual void		  free(void);
-	virtual void		  stop(IOService *provider);
+	virtual IOService* probe(IOService *provider, SInt32 *score)  override;
+  virtual bool		  start(IOService *provider) override;
+	virtual bool		  init(OSDictionary *properties=0) override;
+	virtual void		  free(void) override;
+	virtual void		  stop(IOService *provider) override;
 	
 	virtual IOReturn	callPlatformFunction(const OSSymbol *functionName,
                                          bool waitForFunction,
                                          void *param1,
                                          void *param2,
                                          void *param3,
-                                         void *param4); 
+                                         void *param4) override;
 };

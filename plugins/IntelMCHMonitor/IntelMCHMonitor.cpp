@@ -107,10 +107,11 @@ bool IntelMCHMonitor::start(IOService * provider) {
 	char name[5];
 	snprintf(name, 5, KEY_NORTHBRIDGE_TEMPERATURE); //TN0P
 			
-	UInt8 length = 0;
-	void * data = 0;
   bool keyAdded = false;
-			
+/*
+  UInt8 length = 0;
+  void * data = 0;
+
 	IOReturn result = fakeSMC->callPlatformFunction(kFakeSMCGetKeyValue,
                                                   true, (void *)name,
                                                   (void *)&length,
@@ -120,7 +121,7 @@ bool IntelMCHMonitor::start(IOService * provider) {
 		WarningLog("Key TN0P already exists, kext will not load");
 		return false;    
 	}
-
+*/
   if (!addSensor(name, TYPE_SP78, 2, 0)) {
     WarningLog("error adding Intel MCH temperature sensor");
   } else {

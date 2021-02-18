@@ -138,18 +138,18 @@ public:
 	virtual long    readVoltage(unsigned long index);
 	virtual long    readTachometer(unsigned long index);
 	
-	virtual bool    init(OSDictionary *properties=0);
-	virtual IOService*  probe(IOService *provider, SInt32 *score);
-  virtual bool    start(IOService *provider);
-	virtual void  stop(IOService *provider);
-	virtual void  free(void);
+	virtual bool    init(OSDictionary *properties=0) override;
+	virtual IOService*  probe(IOService *provider, SInt32 *score)  override;
+  virtual bool    start(IOService *provider) override;
+	virtual void  stop(IOService *provider) override;
+	virtual void  free(void) override;
 	
 	virtual IOReturn  callPlatformFunction(const OSSymbol *functionName,
                                          bool waitForFunction,
                                          void *param1,
                                          void *param2,
                                          void *param3,
-                                         void *param4); 
+                                         void *param4) override; 
 };
 
 #endif

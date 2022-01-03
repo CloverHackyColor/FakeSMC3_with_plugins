@@ -3,7 +3,7 @@ Driver for emulation SMC device with hardware sensors support
 
 ## HWSensors
 ### This is a Mac OS X Package
-Working 10.6 to 11.x
+Working 10.6 to 12.x
 
 ### HWSensors branch based on FakeSMC-3.x
 
@@ -14,7 +14,7 @@ Working 10.6 to 11.x
 - IntelMCHMonitor for chipset temperature monitoring, from 7th gen
   (Kabylake, Coffeelake, and up). Get also DIMM temperature
 - CPU sensors:
-    + IntelCPUMonitor, from Core Duo up to IceLake
+    + IntelCPUMonitor, from Core Duo up to AlderLake
     + AmdCpuMonitor, FX... and Ryzen
 - GPUSensors
     + RadeonMonitor  for ATI/AMD Radeon card (temperature only), up to RX5900

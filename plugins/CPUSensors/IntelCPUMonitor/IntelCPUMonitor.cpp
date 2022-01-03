@@ -355,6 +355,9 @@ IOService* IntelCPUMonitor::probe(IOService *provider, SInt32 *score)
         case CPU_MODEL_ICELAKE:
         case CPU_MODEL_TIGERLAKE_C:
         case CPU_MODEL_TIGERLAKE_D:
+        case CPU_MODEL_ROCKETLAKE:
+        case CPU_MODEL_ALDERLAKE:
+
         {
           nehalemArch = true;
           for (int i = 0; i < count; i++) {

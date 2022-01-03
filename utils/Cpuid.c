@@ -219,7 +219,8 @@ void cpuid_update_generic_info() {
     case CPU_MODEL_ICELAKE:
     case CPU_MODEL_TIGERLAKE_C:
     case CPU_MODEL_TIGERLAKE_D:
-
+    case CPU_MODEL_ROCKETLAKE:
+    case CPU_MODEL_ALDERLAKE:
 
         msr = rdmsr64(MSR_CORE_THREAD_COUNT);
         info_p->core_count   = bitfield((uint32_t)msr, 31, 16);

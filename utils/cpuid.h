@@ -182,13 +182,16 @@
 #define CPU_MODEL_ICELAKE_D     0x7D  /* 10h Ice Lake */
 #define CPU_MODEL_ICELAKE       0x7E  /* 10h Ice Lake */
 #define CPU_MODEL_XEON_MILL     0x85  /* Knights Mill */
+#define CPU_MODEL_ATOM_TM       0x86  /* Tremont */
 #define CPU_MODEL_TIGERLAKE_C   0x8C  /* 11h generation Tiger Lake */
 #define CPU_MODEL_TIGERLAKE_D   0x8D  /* 11h generation Tiger Lake */
-#define CPU_MODEL_KABYLAKE1     0x8E /* Kabylake Mobile */
-#define CPU_MODEL_KABYLAKE2     0x9E /* Kabylake Dektop, CoffeeLake */
+#define CPU_MODEL_KABYLAKE1     0x8E  /* Kabylake Mobile */
+#define CPU_MODEL_ALDERLAKE     0x97  /* 12h generation Alder Lake */
+#define CPU_MODEL_KABYLAKE2     0x9E  /* Kabylake Dektop, CoffeeLake */
 #define CPU_MODEL_COMETLAKE_S   0x9F  /* desktop Comet Lake */
-#define CPU_MODEL_COMETLAKE_Y   0xA5  /* aka 10th generation Amber Lake Y */
-#define CPU_MODEL_COMETLAKE_U   0xA6
+#define CPU_MODEL_COMETLAKE_Y   0xA5  /* 10th generation Comet Lake Y */
+#define CPU_MODEL_COMETLAKE_U   0xA6  /* 10th generation Comet Lake Y */
+#define CPU_MODEL_ROCKETLAKE    0xA7  /* 11h Rocket Lake */
 
 
 

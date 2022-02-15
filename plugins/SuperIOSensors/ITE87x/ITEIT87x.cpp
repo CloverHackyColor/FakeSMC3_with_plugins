@@ -273,6 +273,7 @@ bool IT87x::probePort() {
     case IT8665F:
     case IT8686E:
     case IT8688E:
+    case IT8689E:
     case IT8705F:
     case IT8708F:
     case IT8712F:
@@ -319,7 +320,7 @@ bool IT87x::probePort() {
   if (id == IT8721F || id == IT8726F || id == IT8728F || id == IT8752F ||
       id == IT8771E || id == IT8772E || id == IT8792E || id == IT8987E ||
       id == IT8620F || id == IT8628F || id == IT8613F || id == IT8795E ||
-      id == IT8655F || id == IT8665F || id == IT8686E || id == IT8688E) {
+      id == IT8655F || id == IT8665F || id == IT8686E || id == IT8688E || id == IT8689E) {
     voltageGain = 12;
   } else {
     voltageGain = 16;
@@ -361,6 +362,7 @@ const char *IT87x::getModelName() {
     case IT8665F: return "IT8665F";
     case IT8686E: return "IT8686E";
     case IT8688E: return "IT8688E";
+    case IT8689E: return "IT8689E";
     case IT8705F: return "IT8705F";
     case IT8708F: return "IT8708F";
     case IT8712F: return "IT8712F";

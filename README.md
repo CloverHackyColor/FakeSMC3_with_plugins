@@ -17,7 +17,7 @@ Working 10.6 to 12.x
     + IntelCPUMonitor, from Core Duo up to AlderLake
     + AmdCpuMonitor, FX... and Ryzen
 - GPUSensors
-    + RadeonMonitor  for ATI/AMD Radeon card (temperature only), up to RX5900
+    + RadeonMonitor  for ATI/AMD Radeon card (temperature only), up to RX6900
     + GeforceSensors for Nvidia card Fermi, Kepler, Maxwell, Pascal
     + NVClockX for Nvidia Geforce 7xxx, 8xxx, Tesla
     + X3100 for IntelX3100 (at GM950 chipset)
@@ -29,7 +29,7 @@ Working 10.6 to 12.x
 - SMI Monitor
     + monitor and control temperature and fans in Dell computers by using SMM technology
 - Applications 
-    + HWMonitorSMC, it has less functionality. Working with old computer. BigSur 11.x compatible.
+    + HWMonitorSMC, it has less functionality. Working with old computer. Monterey 12.x compatible.
     + HWMonitorSMC2 for SandyBridge and up. It is separate project https://github.com/CloverHackyColor/HWMonitorSMC2
 
 

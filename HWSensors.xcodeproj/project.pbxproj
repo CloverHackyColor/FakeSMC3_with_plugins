@@ -3922,7 +3922,7 @@
 				INFOPLIST_FILE = "fakesmc/FakeSMC-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULE_NAME = org.netkas.FakeSMC;
-				MODULE_VERSION = 3.5.3;
+				MODULE_VERSION = 3.5.4;
 				OTHER_CFLAGS = "-DDebug=0";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.netkas.${PRODUCT_NAME}";
 				PRODUCT_NAME = FakeSMC;

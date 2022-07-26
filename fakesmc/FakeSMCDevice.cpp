@@ -552,6 +552,7 @@ void FakeSMCDevice::loadKeysFromClover(IOService *platform) {
   char    Platform[8];
   char    PlatformB[8];
   UInt8   SMCRevision[6];
+  UInt8   SMCRevisionBF[6];
   UInt8   WakeType;
   UInt16  ClockWake;
   
@@ -596,6 +597,16 @@ void FakeSMCDevice::loadKeysFromClover(IOService *platform) {
         bcopy(data->getBytesNoCopy(), SMCRevision, 6);
         InfoLog("SMC Revision set to: %01x.%02xf%02x", SMCRevision[0], SMCRevision[1], SMCRevision[5]);
         this->addKeyWithValue("REV ", "{rev", 6, SMCRevision);
+      }
+    }
+    data = OSDynamicCast(OSData, rootNode->getProperty("RVBF"));
+    if (data) {
+      if (isRevLess) {
+        rootNode->removeProperty("RVBF");
+      } else {
+        bcopy(data->getBytesNoCopy(), SMCRevisionBF, 6);
+        InfoLog("SMC Revision BF set to: %01x.%02xf%02x", SMCRevisionBF[0], SMCRevisionBF[1], SMCRevisionBF[5]);
+        this->addKeyWithValue("RVBF ", "{rev", 6, SMCRevisionBF);
       }
     }
     data = OSDynamicCast(OSData, rootNode->getProperty("EPCI"));

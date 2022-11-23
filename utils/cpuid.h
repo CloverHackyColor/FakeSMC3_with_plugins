@@ -192,7 +192,7 @@
 #define CPU_MODEL_COMETLAKE_Y   0xA5  /* 10th generation Comet Lake Y */
 #define CPU_MODEL_COMETLAKE_U   0xA6  /* 10th generation Comet Lake Y */
 #define CPU_MODEL_ROCKETLAKE    0xA7  /* 11h Rocket Lake */
-
+#define CPU_MODEL_RAPTORLAKE    0xB7  /* 13h Raptor Lake */
 
 
 typedef enum { eax, ebx, ecx, edx } cpuid_register_t;

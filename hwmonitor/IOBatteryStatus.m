@@ -36,12 +36,12 @@
 + (NSString *)getKeyboardName {
   io_service_t service = IOServiceGetMatchingService(0, IOServiceNameMatching("AppleBluetoothHIDKeyboard"));
   NSString * value = nil;
-  
+
   if (!service ) {
     return nil;
   }
   value = CFBridgingRelease(IORegistryEntryCreateCFProperty(service, CFSTR("Product"), kCFAllocatorDefault, 0));
-  
+
   IOObjectRelease(service);
   return value;
 }
@@ -49,13 +49,13 @@
 + (NSString *)getTrackpadName {
   io_service_t service = IOServiceGetMatchingService(0, IOServiceNameMatching("BNBTrackpadDevice"));
   NSString * value = nil;
-  
+
   if (!service ) {
     return nil;
   }
-    
+
     value = CFBridgingRelease(IORegistryEntryCreateCFProperty(service, CFSTR("Product"), kCFAllocatorDefault, 0));
-  
+
   IOObjectRelease(service);
   return value;
 }
@@ -63,21 +63,21 @@
 + (NSString *)getMouseName {
   io_service_t service = IOServiceGetMatchingService(0, IOServiceNameMatching("BNBMouseDevice"));
   NSString * value = nil;
-  
+
   if (!service ) {
     return nil;
   }
-    
+
   value = CFBridgingRelease(IORegistryEntryCreateCFProperty(service, CFSTR("Product"), kCFAllocatorDefault, 0));
-  
+
   IOObjectRelease(service);
   return value;
 }
 
 + (NSInteger )getKeyboardBatteryLevel {
   io_service_t service = IOServiceGetMatchingService(0, IOServiceNameMatching("AppleBluetoothHIDKeyboard"));
-  
-  
+
+
   if (!service ) {
     return 0; //nil;
   }
@@ -85,37 +85,37 @@
 NSNumber * percent = CFBridgingRelease(IORegistryEntryCreateCFProperty(service,
                                                                        CFSTR("BatteryPercent, "),
                                                                        kCFAllocatorDefault, 0));
-  
+
   IOObjectRelease(service);
   return [percent integerValue];
 }
 
 + (NSInteger )getTrackpadBatteryLevel {
   io_service_t service = IOServiceGetMatchingService(0, IOServiceNameMatching("BNBTrackpadDevice"));
-  
-  
+
+
   if (!service ) {
     return 0; //nil;
   }
     NSNumber * percent = CFBridgingRelease(IORegistryEntryCreateCFProperty(service,
                                                                            CFSTR("BatteryPercent"),
                                                                            kCFAllocatorDefault, 0));
-  
+
   IOObjectRelease(service);
   return [percent integerValue];
 }
 
 + (NSInteger )getMouseBatteryLevel {
   io_service_t service = IOServiceGetMatchingService(0, IOServiceNameMatching("BNBMouseDevice"));
-  
-  
+
+
   if (!service ) {
     return 0; //nil;
   }
   NSNumber * percent = CFBridgingRelease(IORegistryEntryCreateCFProperty(service,
                                                                          CFSTR("BatteryPercent"),
                                                                          kCFAllocatorDefault, 0));
-  
+
   IOObjectRelease(service);
   return [percent integerValue];
 }
@@ -145,7 +145,7 @@ NSNumber * percent = CFBridgingRelease(IORegistryEntryCreateCFProperty(service,
   matching = IOServiceMatching( "IOPMPowerSource" );
   entry = IOServiceGetMatchingService( kIOMasterPortDefault , matching );
   IORegistryEntryCreateCFProperties( entry , &properties , NULL , 0 );
-  
+
   NSDictionary * dict = CFBridgingRelease(properties);
   IOObjectRelease( entry );
   return dict;
@@ -155,26 +155,21 @@ NSNumber * percent = CFBridgingRelease(IORegistryEntryCreateCFProperty(service,
 + (int)getBatteryVoltageFrom:(NSDictionary *)IOPMPowerSource {
   int ret = BAT0_NOT_FOUND;
   if (IOPMPowerSource && [IOPMPowerSource objectForKey:@kIOPMPSVoltageKey]) {
-    if ([IOPMPowerSource objectForKey:@kIOPMPSBatteryInstalledKey] != nil &&
-        [[IOPMPowerSource objectForKey:@kIOPMPSBatteryInstalledKey] boolValue] == YES) {
-      ret = [[IOPMPowerSource objectForKey:@kIOPMPSVoltageKey] intValue];
-    }
+    return [[IOPMPowerSource objectForKey:@kIOPMPSVoltageKey] intValue];
   }
-  return ret;
+
+  return 0;
 }
 
 // Capacity measured in mA
-+ (int) getBatteryAmperageFrom:(NSDictionary *)IOPMPowerSource {
-  int ret = BAT0_NOT_FOUND;
++ (int) getBatteryAmperageFrom:(NSDictionary *)IOPMPowerSource
+{
   if (IOPMPowerSource && [IOPMPowerSource objectForKey:@kIOPMPSAmperageKey]) {
-    if ([IOPMPowerSource objectForKey:@kIOPMPSBatteryInstalledKey] != nil &&
-        [[IOPMPowerSource objectForKey:@kIOPMPSBatteryInstalledKey] boolValue] == YES) {
       int mA = [[IOPMPowerSource objectForKey:@kIOPMPSAmperageKey] intValue];
-      ret = (mA > 0) ? mA : (0 - mA);
+    return (mA > 0) ? mA : (0 - mA);
     }
-  }
-  return ret;
+
+  return 0;
 }
 
 @end
-

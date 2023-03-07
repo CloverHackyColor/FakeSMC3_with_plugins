@@ -31,53 +31,53 @@ float decodeNumericValue(NSData* _data, NSString*_type)
          [_type characterAtIndex:0] == 's')
         && [_type characterAtIndex:1] == 'i') {
       BOOL signd = [_type characterAtIndex:0] == 's';
-      
+
       switch ([_type characterAtIndex:2]) {
         case '8':
           if ([_data length] == 1) {
             UInt8 encoded = 0;
-            
+
             bcopy([_data bytes], &encoded, 1);
-            
+
             if (signd && bit_get(encoded, BIT(7))) {
               bit_clear(encoded, BIT(7));
               return -encoded;
             }
-            
+
             return encoded;
           }
           break;
-          
+
         case '1':
           if ([_type characterAtIndex:3] == '6' && [_data length] == 2) {
             UInt16 encoded = 0;
-            
+
             bcopy([_data bytes], &encoded, 2);
-            
+
             encoded = OSSwapBigToHostInt16(encoded);
-            
+
             if (signd && bit_get(encoded, BIT(15))) {
               bit_clear(encoded, BIT(15));
               return -encoded;
             }
-            
+
             return encoded;
           }
           break;
-          
+
         case '3':
           if ([_type characterAtIndex:3] == '2' && [_data length] == 4) {
             UInt32 encoded = 0;
-            
+
             bcopy([_data bytes], &encoded, 4);
-            
+
             encoded = OSSwapBigToHostInt32(encoded);
-            
+
             if (signd && bit_get(encoded, BIT(31))) {
               bit_clear(encoded, BIT(31));
               return -encoded;
             }
-            
+
             return encoded;
           }
           break;
@@ -87,26 +87,26 @@ float decodeNumericValue(NSData* _data, NSString*_type)
               [_type characterAtIndex:0] == 's') &&
              [_type characterAtIndex:1] == 'p' && [_data length] == 2) {
       UInt16 encoded = 0;
-      
+
       bcopy([_data bytes], &encoded, 2);
-      
+
       UInt8 i = getIndexOfHexChar([_type characterAtIndex:2]);
       UInt8 f = getIndexOfHexChar([_type characterAtIndex:3]);
-      
+
       if ((i + f) != (([_type characterAtIndex:0] == 's') ? 15 : 16) )
         return 0;
-      
+
       UInt16 swapped = OSSwapBigToHostInt16(encoded);
-      
+
       BOOL signd = [_type characterAtIndex:0] == 's';
       BOOL minus = !!(bit_get(swapped, BIT(15)));
-      
+
       if (signd && minus) bit_clear(swapped, BIT(15));
-      
+
       return ((float)swapped / (float)BIT(f)) * (signd && minus ? -1 : 1);
     }
   }
-  
+
   return 0;
 }
 
@@ -126,16 +126,16 @@ float decodeNumericValue(NSData* _data, NSString*_type)
 
 + (NSData *) readValueForKey:(NSString *)key {
   SMCOpen(&conn);
-  
+
   UInt32Char_t  readkey = "\0";
   strncpy(readkey,
           [key cStringUsingEncoding:NSASCIIStringEncoding]==NULL
           ? ""
           : [key cStringUsingEncoding:NSASCIIStringEncoding],4);
-  
+
   readkey[4]=0;
   SMCVal_t      val;
-  
+
   kern_return_t result = SMCReadKey(readkey, &val);
   if (result != kIOReturnSuccess) {
     return NULL;
@@ -145,20 +145,20 @@ float decodeNumericValue(NSData* _data, NSString*_type)
     return [NSData dataWithBytes:val.bytes length:val.dataSize];
   }
   return nil;
-  
+
 }
 
 + (NSString *) getTypeOfKey:(NSString *)key {
   SMCOpen(&conn);
-  
+
   UInt32Char_t  readkey = "\0";
   strncpy(readkey,[key cStringUsingEncoding:NSASCIIStringEncoding]==NULL
           ? ""
           : [key cStringUsingEncoding:NSASCIIStringEncoding],4);
-  
+
   readkey[4]=0;
   SMCVal_t      val;
-  
+
   kern_return_t result = SMCReadKey(readkey, &val);
   if (result != kIOReturnSuccess)
     return NULL;
@@ -177,7 +177,7 @@ float decodeNumericValue(NSData* _data, NSString*_type)
   self.key = aKey;
   self.group = aGroup;
   self.caption = aCaption;
-  
+
   return self;
 }
 
@@ -187,39 +187,39 @@ float decodeNumericValue(NSData* _data, NSString*_type)
     switch (self.group) {
       case TemperatureSensorGroup:
         return [[NSString alloc] initWithFormat:@"%2d°",(int)v];
-        
+
       case HDSmartTempSensorGroup: {
         unsigned int t = 0;
         bcopy([value bytes], &t, 2);
         //t = [NSSensor swapBytes:t] >> 8;
         return [[NSString alloc] initWithFormat:@"%d°",t];
       }
-        
+
       case BatterySensorsGroup: {
         NSInteger * t;
         t = (NSInteger*)[value bytes];
         return [[NSString alloc] initWithFormat:@"%ld",*t];
       }
-        
+
       case HDSmartLifeSensorGroup: {
         NSInteger * l;
         l = (NSInteger*)[value bytes];
         return [[NSString alloc] initWithFormat:@"%ld%%",*l];
       }
-        
+
       case VoltageSensorGroup:
         return [[NSString alloc] initWithFormat:@"%2.3fV", v];
-        
+
       case TachometerSensorGroup:
         return [[NSString alloc] initWithFormat:@"%drpm",(int)v];
-        
+
       case FrequencySensorGroup: {
         unsigned int MHZ = 0;
         bcopy([value bytes], &MHZ, 2);
         MHZ = [HWMonitorSensor swapBytes:MHZ];
         return [[NSString alloc] initWithFormat:@"%dMHz",MHZ];
       }
-        
+
       case MultiplierSensorGroup: {
         unsigned int mlt = 0;
         bcopy([value bytes], &mlt, 2);
@@ -227,9 +227,8 @@ float decodeNumericValue(NSData* _data, NSString*_type)
       } break;
     }
   }
-  
+
   return @"-";
 }
 
 @end
-

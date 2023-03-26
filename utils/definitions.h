@@ -109,6 +109,7 @@
 #define KEY_ADAPTER_AMPERAGE                    "ACIC"
 #define KEY_NUMBER_OF_ADAPTERS                  "AC-N"
 #define KEY_CONNECTED_ADAPTER                   "AC-W"
+#define KEY_REMAIN_CAPACITY                     "BRSC"
 
 #define KEY_NORTHBRIDGE_VOLTAGE                 "VN0C"
 

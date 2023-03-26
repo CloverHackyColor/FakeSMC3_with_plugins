@@ -484,7 +484,7 @@ void VoodooBattery::Update(void) {
   }
   BatteriesAreFull = true;
   for (UInt8 i = 0; i < BatteryCount; i++) {
-    if (BatteryConnected[i]) { BatteryStatus(i); }
+    if (BatteryConnected[i]) { BatteryInformation(i); }
     if (!AcAdapterCount) { ExternalPowerConnected |= CalculatedAcAdapterConnected[i]; }
   }
   if (!AcAdapterCount) { ExternalPower(ExternalPowerConnected); }
@@ -570,6 +570,30 @@ void VoodooBattery::GetBatteryInfoEx(UInt8 battery, OSObject * acpi) {
   Battery[battery].DesignVoltage = GetValueFromArray(info, 5);
   Battery[battery].DesignCapacityWarning = GetValueFromArray(info, 6);
   Battery[battery].DesignCapacityLow = GetValueFromArray(info, 7);
+  Battery[battery].Cycle = GetValueFromArray(info, 8);
+
+  int fMaxErr       = GetValueFromArray (info, BIX_ACCURACY);  //9
+
+  OSSymbol* deviceName    = GetSymbolFromArray(info, BIX_MODEL_NUMBER);
+  OSSymbol* serialNumber    = GetSymbolFromArray(info, BIX_SERIAL_NUMBER);
+  OSSymbol* type        = GetSymbolFromArray(info, BIX_BATTERY_TYPE);
+  OSSymbol* manufacturer    = GetSymbolFromArray(info, BIX_OEM);
+
+    DebugLog("fPowerUnit       = 0x%x\n", (unsigned)PowerUnitIsWatt);
+    DebugLog("fDesignCapacityRaw  = %d\n", (int)Battery[battery].DesignCapacity);
+    DebugLog("fMaxCapacityRaw     = %d\n", (int)Battery[battery].LastFullChargeCapacity);
+    DebugLog("fBatteryTech     = 0x%x\n", (unsigned)Battery[battery].Technology);
+    DebugLog("fDesignVoltage   = %d\n", (int)Battery[battery].DesignVoltage);
+    DebugLog("fCapacityWarningRaw = %d\n", (int)Battery[battery].DesignCapacityWarning);
+    DebugLog("fLowWarningRaw      = %d\n", (int)Battery[battery].DesignCapacityWarning);
+    DebugLog("fCycleCount      = %d\n", (int)Battery[battery].Cycle);
+    InfoLog("fMaxErr          = %d\n", (int)fMaxErr);
+    InfoLog("fDeviceName      = '%s'\n", deviceName->getCStringNoCopy());
+    InfoLog("fSerialNumber    = '%s'\n", serialNumber->getCStringNoCopy());
+    InfoLog("fType            = '%s'\n", type->getCStringNoCopy());
+    InfoLog("fManufacturer    = '%s'\n", manufacturer->getCStringNoCopy());
+
+
   if (!Battery[battery].DesignVoltage) { Battery[battery].DesignVoltage = DummyVoltage; }
 
   if (PowerUnitIsWatt) {
@@ -596,7 +620,7 @@ void VoodooBattery::GetBatteryInfoEx(UInt8 battery, OSObject * acpi) {
       Battery[battery].LastFullChargeCapacity = temp;
     }
   }
-  Battery[battery].Cycle  = GetValueFromArray(info, 8);
+
 }
 
 void VoodooBattery::GetBatteryInfo(UInt8 battery, OSObject * acpi) {
@@ -648,10 +672,12 @@ void VoodooBattery::PublishBatteryInfo(UInt8 battery, OSObject * acpi, int Ext)
 {
   OSArray * info = OSDynamicCast(OSArray, acpi);
   // Publish to our IOKit powersource
+  BatteryPowerSource[battery]->setBatteryInstalled(true);
+  BatteryPowerSource[battery]->setExternalChargeCapable(true);
+  BatteryPowerSource[battery]->setExternalConnected(true);
   BatteryPowerSource[battery]->setMaxCapacity(Battery[battery].LastFullChargeCapacity);
   BatteryPowerSource[battery]->setDesignCapacity(Battery[battery].DesignCapacity);
-  BatteryPowerSource[battery]->setExternalChargeCapable(true);
-  BatteryPowerSource[battery]->setBatteryInstalled(true);
+
   BatteryPowerSource[battery]->setLocation(StartLocation + battery);
   BatteryPowerSource[battery]->setAdapterInfo(0);
   BatteryPowerSource[battery]->setDeviceName(GetSymbolFromArray(info, 9 + Ext));
@@ -669,13 +695,16 @@ void VoodooBattery::BatteryInformation(UInt8 battery) {
   if (BatteryConnected[battery]) {
     DebugLog("Battery %u Connected", battery);
     OSObject * acpi = NULL;
-
-    if (kIOReturnSuccess == BatteryDevice[battery]->evaluateObject(AcpiBatteryInformationEx, &acpi)) { //_BIX
-      if (acpi && (OSTypeIDInst(acpi) == OSTypeID(OSArray))) {
+    BatteryStatus(battery);
+    OSStatus Status = BatteryDevice[battery]->evaluateObject(AcpiBatteryInformationEx, &acpi);
+    DebugLog("Battery _BIX status =%x", Status);
+    if (kIOReturnSuccess == Status) { //_BIX
+       
+      if (acpi /*&& (OSTypeIDInst(acpi) == OSTypeID(OSArray))*/) {
         GetBatteryInfoEx(battery, acpi);
         PublishBatteryInfo(battery, acpi, 7);
-
         BatteryPowerSource[battery]->updateStatus();
+
         acpi->release();
         return;
       } else {
@@ -684,9 +713,10 @@ void VoodooBattery::BatteryInformation(UInt8 battery) {
         //try to get _BIF
       }
     }
-
-    if (kIOReturnSuccess == BatteryDevice[battery]->evaluateObject(AcpiBatteryInformation, &acpi)) { //_BIF
-      if (acpi && (OSTypeIDInst(acpi) == OSTypeID(OSArray))) {
+    Status = BatteryDevice[battery]->evaluateObject(AcpiBatteryInformation, &acpi);
+    DebugLog("Battery _BIF status =%x", Status);
+    if (kIOReturnSuccess == Status) { //_BIF
+      if (acpi /*&& (OSTypeIDInst(acpi) == OSTypeID(OSArray))*/) {
         GetBatteryInfo(battery, acpi);
         PublishBatteryInfo(battery, acpi, 0);
         acpi->release();
@@ -707,7 +737,7 @@ void VoodooBattery::BatteryStatus(UInt8 battery) {
   OSObject * acpi = NULL;
 
   if (kIOReturnSuccess == BatteryDevice[battery]->evaluateObject(AcpiBatteryStatus, &acpi)) { //_BST
-    if (acpi && (OSTypeIDInst(acpi) == OSTypeID(OSArray))) {
+    if (acpi /*&& (OSTypeIDInst(acpi) == OSTypeID(OSArray))*/) {
       OSArray * status = OSDynamicCast(OSArray, acpi);
       setProperty(BatteryDevice[battery]->getName(), status);
 
@@ -720,12 +750,15 @@ void VoodooBattery::BatteryStatus(UInt8 battery) {
       Battery[battery].PresentRate = GetValueFromArray(status, 1);
       Battery[battery].RemainingCapacity = GetValueFromArray(status, 2);
       Battery[battery].PresentVoltage = GetValueFromArray(status, 3);
-
+      InfoLog("Battery %d: Remaining Capacity = %d", battery, Battery[battery].RemainingCapacity);
       if (PowerUnitIsWatt) {
         UInt32 volt = Battery[battery].DesignVoltage / 1000;
         Battery[battery].PresentRate /= volt;
         Battery[battery].RemainingCapacity /= volt;
       }
+      BatteryPowerSource[battery]->setCurrentCapacity(Battery[battery].RemainingCapacity);
+      BatteryPowerSource[battery]->setMaxCapacity(Battery[battery].LastFullChargeCapacity);
+      InfoLog("Battery %d: MaxCapacity = %d", battery, Battery[battery].LastFullChargeCapacity);
       // Average rate calculation
       if (!Battery[battery].PresentRate || (Battery[battery].PresentRate == AcpiUnknown)) {
         UInt32 delta = (Battery[battery].RemainingCapacity > Battery[battery].LastRemainingCapacity ?
@@ -829,6 +862,7 @@ void VoodooBattery::BatteryStatus(UInt8 battery) {
       BatteryPowerSource[battery]->setVoltage(Battery[battery].PresentVoltage);
       BatteryPowerSource[battery]->setRunTimeToEmpty(TimeRemaining * 60); //seconds
 
+
       if (critical && bogus) {
         BatteryPowerSource[battery]->setErrorCondition((OSSymbol *)permanentFailureKey);
       }
@@ -841,6 +875,8 @@ void VoodooBattery::BatteryStatus(UInt8 battery) {
       WarningLog("Error in ACPI data");
       BatteryConnected[battery] = false;
     }
+  } else {
+    WarningLog("No ACPI status? Or not array");
   }
   Battery[battery].LastRemainingCapacity = Battery[battery].RemainingCapacity;
 }
@@ -882,7 +918,7 @@ IOReturn VoodooBattery::callPlatformFunction(const OSSymbol *functionName,
           }
         }
 
-        BatteryStatus(batNum);
+        BatteryInformation(batNum);
         switch (name[3]) {
           case 'C':
             value = Battery[batNum].AverageRate;
@@ -1007,10 +1043,10 @@ IOReturn VoodooBattery::callPlatformFunction(const OSSymbol *functionName,
 
 }
 
-#pragma mark -
-#pragma mark VoodooBattery PowerSource Device
-#pragma mark -
-#pragma mark IOPMPowerSource
+//#pragma mark -
+//#pragma mark VoodooBattery PowerSource Device
+//#pragma mark -
+#//pragma mark IOPMPowerSource
 
 OSDefineMetaClassAndStructors(AppleSmartBattery, IOPMPowerSource)
 
@@ -1022,7 +1058,7 @@ IOReturn AppleSmartBattery::message(UInt32 type, IOService * provider, void * ar
   return kIOReturnSuccess;
 }
 
-#pragma mark Own
+//#pragma mark Own
 
 AppleSmartBattery * AppleSmartBattery::NewBattery(void) {
   // Create and initialize our powersource

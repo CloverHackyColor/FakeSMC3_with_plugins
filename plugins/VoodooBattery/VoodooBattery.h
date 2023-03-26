@@ -1,9 +1,9 @@
 /*
  --- VoodooBattery ---
  (C) 2009 Superhai
- 
+
  Contact	http://www.superhai.com/
- 
+
  */
 
 #include <IOKit/acpi/IOACPIPlatformDevice.h>
@@ -50,22 +50,50 @@ const char *  MethodBQC                   = "_BQC";
 const char *  MethodBCM                   = "_BCM";
 const char *  MethodBCL                   = "_BCL";
 
+// Return package from _BIX
+
+#define BIX_REVISION            0
+#define BIX_POWER_UNIT          1
+#define BIX_DESIGN_CAPACITY     2
+#define BIX_LAST_FULL_CAPACITY  3
+#define BIX_TECHNOLOGY          4
+#define BIX_DESIGN_VOLTAGE      5
+#define BIX_CAPACITY_WARNING    6
+#define BIX_LOW_WARNING         7
+#define BIX_CYCLE_COUNT         8  //== BIF Granularity 1
+#define BIX_ACCURACY            9  //== BIF Granularity 2
+#define BIX_MAX_SAMPLE_TIME     10
+#define BIX_MIN_SAMPLE_TIME     11
+#define BIX_MAX_AVG_INTERVAL    12
+#define BIX_MIN_AVG_INTERVAL    13
+#define BIX_GRANULARITY_1       14
+#define BIX_GRANULARITY_2       15
+#define BIX_MODEL_NUMBER        16
+#define BIX_SERIAL_NUMBER       17
+#define BIX_BATTERY_TYPE        18
+#define BIX_OEM                 19
+
+
+
 /*
 // _BIF
 Package {
-  Power Unit                      // Integer (DWORD)
-  Design Capacity                 // Integer (DWORD)
-  Last Full Charge Capacity       // Integer (DWORD)
-  Battery Technology              // Integer (DWORD)
-  Design Voltage                  // Integer (DWORD)
-  Design Capacity of Warning      // Integer (DWORD)
-  Design Capacity of Low          // Integer (DWORD)
-  Battery Capacity Granularity 1  // Integer (DWORD)
-  Battery Capacity Granularity 2  // Integer (DWORD)
-  Model Number                    // String (ASCIIZ)
-  Serial Number                   // String (ASCIIZ)
-  Battery Type                    // String (ASCIIZ)
-  OEM Information                 // String (ASCIIZ)
+  Power Unit                      // Integer (DWORD) 0
+  Design Capacity                 // Integer (DWORD) 1
+  Last Full Charge Capacity       // Integer (DWORD) 2
+  Battery Technology              // Integer (DWORD) 3
+  Design Voltage                  // Integer (DWORD) 4
+  Design Capacity of Warning      // Integer (DWORD) 5
+  Design Capacity of Low          // Integer (DWORD) 6
+  Battery Capacity Granularity 1  // Integer (DWORD) 7   == Cycle count
+  Battery Capacity Granularity 2  // Integer (DWORD) 8   == Accuracy
+  Model Number                    // String (ASCIIZ) 9
+  Serial Number                   // String (ASCIIZ) 0x0A
+  Battery Type                    // String (ASCIIZ) 0x0B
+  OEM Information                 // String (ASCIIZ) 0x0C
+ #define BIF_CYCLE_COUNT         13   //rehabman: zprood extended _BIF
+ #define BIF_TEMPERATURE         14   //rehabman: rehabman extended _BIF
+
 }
 
 // _BIX
@@ -93,30 +121,41 @@ Package {
   OEM Information
 }
 */
-// Return package from _BIX
 
-#define BIX_REVISION            0
-#define BIX_POWER_UNIT          1
-#define BIX_DESIGN_CAPACITY     2
-#define BIX_LAST_FULL_CAPACITY  3
-#define BIX_TECHNOLOGY          4
-#define BIX_DESIGN_VOLTAGE      5
-#define BIX_CAPACITY_WARNING    6
-#define BIX_LOW_WARNING         7
-#define BIX_CYCLE_COUNT         8
-#define BIX_ACCURACY            9
-#define BIX_MAX_SAMPLE_TIME     10
-#define BIX_MIN_SAMPLE_TIME     11
-#define BIX_MAX_AVG_INTERVAL    12
-#define BIX_MIN_AVG_INTERVAL    13
-#define BIX_GRANULARITY_1       14
-#define BIX_GRANULARITY_2       15
-#define BIX_MODEL_NUMBER        16
-#define BIX_SERIAL_NUMBER       17
-#define BIX_BATTERY_TYPE        18
-#define BIX_OEM                 19
+
+
 
 #define NUM_BITS        32
+
+// Return package from BBIX
+
+#define BBIX_MANUF_ACCESS    0
+#define BBIX_BATTERYMODE    1
+#define BBIX_ATRATETIMETOFULL  2
+#define BBIX_ATRATETIMETOEMPTY  3
+#define BBIX_TEMPERATURE    4
+#define BBIX_VOLTAGE      5
+#define BBIX_CURRENT      6
+#define BBIX_AVG_CURRENT    7
+#define BBIX_REL_STATE_CHARGE  8
+#define BBIX_ABS_STATE_CHARGE  9
+#define BBIX_REMAIN_CAPACITY  10
+#define BBIX_RUNTIME_TO_EMPTY  11
+#define BBIX_AVG_TIME_TO_EMPTY  12
+#define BBIX_AVG_TIME_TO_FULL  13
+#define BBIX_MANUF_DATE      14
+#define BBIX_MANUF_DATA      15
+
+// Return package from _BIF
+
+#define  BST_STATUS        0
+#define  BST_RATE          1
+#define  BST_CAPACITY      2
+#define  BST_VOLTAGE       3
+
+#define NUM_BITS        32
+#define NUM_CELLS               4
+
 
 static const OSSymbol * unknownObjectKey		  = OSSymbol::withCString("");
 static const OSSymbol * designCapacityKey		  = OSSymbol::withCString(kIOPMPSDesignCapacityKey);
@@ -139,7 +178,7 @@ static const OSSymbol *_BatterySerialNumberSym = OSSymbol::withCString("BatteryS
 static const OSSymbol *_FirmwareSerialNumberSym =    OSSymbol::withCString("FirmwareSerialNumber");
 static const OSSymbol *_DateOfManufacture =    OSSymbol::withCString("Date of Manufacture");
 
-//static IOPMPowerState PowerStates[2] = 
+//static IOPMPowerState PowerStates[2] =
 //{ {1,0,0,0,0,0,0,0,0,0,0,0}, {1,2,2,2,0,0,0,0,0,0,0,0} };
 
 enum {				// Apple loves to have the goodies private
@@ -220,7 +259,7 @@ struct BatteryClass {
 	UInt32	RemainingCapacity;
 	UInt32	LastRemainingCapacity;
   UInt32	Cycle;
-  
+
 };
 
 class AppleSmartBattery : public IOPMPowerSource {
@@ -256,10 +295,10 @@ protected:
   void setIsCharging(bool);
   void setAtWarnLevel(bool);
   void setAtCriticalLevel(bool);
-
+  void setTimeRemaining(int);
   void setCurrentCapacity(unsigned int);
   void setMaxCapacity(unsigned int);
-  void setTimeRemaining(int);
+
   void setAmperage(int);
   void setVoltage(unsigned int);
   void setCycleCount(unsigned int);
@@ -337,7 +376,7 @@ public:
 	virtual void      stop(IOService * provider);
 	virtual IOReturn  setPowerState(unsigned long state, IOService * device);
 	virtual IOReturn  message(UInt32 type, IOService * provider, void * argument);
-  
+
   virtual IOReturn	callPlatformFunction(const OSSymbol *functionName,
                                          bool waitForFunction,
                                          void *param1,
@@ -366,7 +405,7 @@ OSSymbol * GetSymbolFromArray(OSArray * array, UInt8 index) {
 			return (OSSymbol *) OSSymbol::withCString((const char *) data->getBytesNoCopy());
 		}
 	}
-  
+
 	if (object && (OSTypeIDInst(object) == OSTypeID(OSString))) {
 		OSString * string = OSDynamicCast(OSString, object);
     if (string) {

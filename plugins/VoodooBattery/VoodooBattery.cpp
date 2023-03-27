@@ -808,6 +808,7 @@ void VoodooBattery::BatteryStatus(UInt8 battery) {
           BatteriesAreFull &= true;
           BatteryPowerSource[battery]->setIsCharging(false);
           BatteryPowerSource[battery]->setFullyCharged(true);
+          Battery[battery].LastFullChargeCapacity = Battery[battery].RemainingCapacity;
 
           if ((Battery[battery].LastRemainingCapacity >= Battery[battery].DesignCapacity) ||
               (Battery[battery].LastRemainingCapacity == 0)) {

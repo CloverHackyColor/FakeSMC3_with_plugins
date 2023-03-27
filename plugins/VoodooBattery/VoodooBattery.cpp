@@ -815,7 +815,7 @@ void VoodooBattery::BatteryStatus(UInt8 battery) {
           } else {
             BatteryPowerSource[battery]->setCurrentCapacity(Battery[battery].LastRemainingCapacity);
           }
-
+          BatteryPowerSource[battery]->setMaxCapacity(Battery[battery].LastFullChargeCapacity);
           BatteryPowerSource[battery]->setInstantAmperage((SInt32) Battery[battery].PresentRate);
           BatteryPowerSource[battery]->setAmperage((SInt32) Battery[battery].AverageRate);
           break;

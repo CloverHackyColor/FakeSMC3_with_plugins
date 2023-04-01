@@ -3,7 +3,7 @@ Driver for emulation SMC device with hardware sensors support
 
 ## HWSensors
 ### This is a Mac OS X Package
-Working 10.6 to 12.x
+Working 10.6 to 13.x
 
 ### HWSensors branch based on FakeSMC-3.x
 
@@ -29,8 +29,12 @@ Working 10.6 to 12.x
 - SMI Monitor
     + monitor and control temperature and fans in Dell computers by using SMM technology
 - Applications 
-    + HWMonitorSMC, it has less functionality. Working with old computer. Monterey 12.x compatible.
+    + HWMonitorSMC, it has less functionality. Working with old computer. Ventura 13.x compatible.
     + HWMonitorSMC2 for SandyBridge and up. It is separate project https://github.com/CloverHackyColor/HWMonitorSMC2
 
+## Compilation
+Take MacKernelSDK (https://github.com/joevt/MacKernelSDK) and copy it into the project. Or just make a symbol link
+user FakeSMC3_with_plugins % ln -s ../joevt/MacKernelSDK MacKernelSDK
+The xcodeproject already tuned to use it and tested with Xcode14.2.
 
 ### HWSensors Project (c) 2010 netkas, slice, usr-sse2, kozlek, navi, vector sigma and other contributors. All rights reserved. 

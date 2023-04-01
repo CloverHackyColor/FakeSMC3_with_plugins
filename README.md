@@ -33,8 +33,11 @@ Working 10.6 to 13.x
     + HWMonitorSMC2 for SandyBridge and up. It is separate project https://github.com/CloverHackyColor/HWMonitorSMC2
 
 ## Compilation
-*Take MacKernelSDK (https://github.com/joevt/MacKernelSDK) and copy it into the project. Or just make a symbol link
-*user FakeSMC3_with_plugins % ln -s ../joevt/MacKernelSDK MacKernelSDK
-*The xcodeproject already tuned to use it and tested with Xcode14.2.
+Take MacKernelSDK (https://github.com/joevt/MacKernelSDK) and copy it into the project. Or just make a symbol link
+~~~~
+user FakeSMC3_with_plugins % ln -s ../joevt/MacKernelSDK MacKernelSDK
+~~~~
+
+The xcodeproject already tuned to use it and tested with Xcode14.2.
 
 ### HWSensors Project (c) 2010 netkas, slice, usr-sse2, kozlek, navi, vector sigma and other contributors. All rights reserved. 

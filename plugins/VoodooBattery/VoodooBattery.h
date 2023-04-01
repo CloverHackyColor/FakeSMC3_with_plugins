@@ -22,8 +22,8 @@ const UInt8 MaxAcAdaptersSupported  = 2;
 const UInt8	AverageBoundPercent     = 25;
 
 const UInt32	QuickPollInterval   = 1000;
-const UInt32	NormalPollInterval  = 60000;
-const UInt32	QuickPollPeriod     = 60000;
+const UInt32	NormalPollInterval  = 2000;
+const UInt32	QuickPollPeriod     = 2000;
 const UInt32	QuickPollCount      = QuickPollPeriod / QuickPollInterval;
 
 const UInt32	AcpiUnknown  = 0xFFFFFFFF;

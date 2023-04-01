@@ -564,6 +564,8 @@ void VoodooBattery::ChangeBrightness(int Shift)
 void VoodooBattery::GetBatteryInfoEx(UInt8 battery, OSObject * acpi) {
   OSArray * info = OSDynamicCast(OSArray, acpi);
   if (GetValueFromArray(info, 1) == 0x00000000) PowerUnitIsWatt = true;
+//#define BIX_DESIGN_CAPACITY     2
+//#define BIX_LAST_FULL_CAPACITY  3
   Battery[battery].DesignCapacity = GetValueFromArray(info, 2);
   Battery[battery].LastFullChargeCapacity = GetValueFromArray(info, 3);
   Battery[battery].Technology = GetValueFromArray(info, 4);
@@ -595,6 +597,7 @@ void VoodooBattery::GetBatteryInfoEx(UInt8 battery, OSObject * acpi) {
 
 
   if (!Battery[battery].DesignVoltage) { Battery[battery].DesignVoltage = DummyVoltage; }
+  
 
   if (PowerUnitIsWatt) {
     UInt32 volt = Battery[battery].DesignVoltage / 1000;
@@ -610,9 +613,10 @@ void VoodooBattery::GetBatteryInfoEx(UInt8 battery, OSObject * acpi) {
       Battery[battery].DesignCapacityLow /= volt;
     }
   }
+  
 
   if (Battery[battery].DesignCapacity < Battery[battery].LastFullChargeCapacity) {
-    WarningLog("Battery reports lower design capacity than maximum charged (%u/%u)",
+    InfoLog("Battery reports lower design capacity than maximum charged (%u/%u)",
                Battery[battery].DesignCapacity, Battery[battery].LastFullChargeCapacity);
     if (Battery[battery].LastFullChargeCapacity < AcpiMax) {
       UInt32 temp = Battery[battery].DesignCapacity;
@@ -757,16 +761,20 @@ void VoodooBattery::BatteryStatus(UInt8 battery) {
         Battery[battery].PresentRate /= volt;
         Battery[battery].RemainingCapacity /= volt;
       }
+      if (Battery[battery].LastFullChargeCapacity < Battery[battery].RemainingCapacity) {
+        Battery[battery].LastFullChargeCapacity = Battery[battery].RemainingCapacity;
+      }
       BatteryPowerSource[battery]->setBatteryInstalled(true);
       BatteryPowerSource[battery]->setCurrentCapacity(Battery[battery].RemainingCapacity);
       BatteryPowerSource[battery]->setMaxCapacity(Battery[battery].LastFullChargeCapacity);
       InfoLog("Battery %d: MaxCapacity = %d", battery, Battery[battery].LastFullChargeCapacity);
       // Average rate calculation
+      UInt32 interval = QuickPoll ? 3600 / (QuickPollInterval / 1000) : 3600 / (NormalPollInterval / 1000);
       if (!Battery[battery].PresentRate || (Battery[battery].PresentRate == AcpiUnknown)) {
         UInt32 delta = (Battery[battery].RemainingCapacity > Battery[battery].LastRemainingCapacity ?
                         Battery[battery].RemainingCapacity - Battery[battery].LastRemainingCapacity :
                         Battery[battery].LastRemainingCapacity - Battery[battery].RemainingCapacity);
-        UInt32 interval = QuickPoll ? 3600 / (QuickPollInterval / 1000) : 3600 / (NormalPollInterval / 1000);
+        
         Battery[battery].PresentRate = delta ? delta * interval : interval;
       }
 

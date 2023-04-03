@@ -574,12 +574,12 @@ void VoodooBattery::GetBatteryInfoEx(UInt8 battery, OSObject * acpi) {
   Battery[battery].DesignCapacityLow = GetValueFromArray(info, 7);
   Battery[battery].Cycle = GetValueFromArray(info, 8);
 
-//  int fMaxErr       = GetValueFromArray (info, BIX_ACCURACY);  //9
+  int fMaxErr       = GetValueFromArray (info, BIX_ACCURACY);  //9
 
-  OSSymbol* deviceName    = GetSymbolFromArray(info, BIX_MODEL_NUMBER);
-  OSSymbol* serialNumber    = GetSymbolFromArray(info, BIX_SERIAL_NUMBER);
-  OSSymbol* type        = GetSymbolFromArray(info, BIX_BATTERY_TYPE);
-  OSSymbol* manufacturer    = GetSymbolFromArray(info, BIX_OEM);
+//  OSSymbol* deviceName    = GetSymbolFromArray(info, BIX_MODEL_NUMBER);
+//  OSSymbol* serialNumber    = GetSymbolFromArray(info, BIX_SERIAL_NUMBER);
+//  OSSymbol* type        = GetSymbolFromArray(info, BIX_BATTERY_TYPE);
+//  OSSymbol* manufacturer    = GetSymbolFromArray(info, BIX_OEM);
 
     DebugLog("fPowerUnit       = 0x%x\n", (unsigned)PowerUnitIsWatt);
     DebugLog("fDesignCapacityRaw  = %d\n", (int)Battery[battery].DesignCapacity);
@@ -589,11 +589,11 @@ void VoodooBattery::GetBatteryInfoEx(UInt8 battery, OSObject * acpi) {
     DebugLog("fCapacityWarningRaw = %d\n", (int)Battery[battery].DesignCapacityWarning);
     DebugLog("fLowWarningRaw      = %d\n", (int)Battery[battery].DesignCapacityWarning);
     DebugLog("fCycleCount      = %d\n", (int)Battery[battery].Cycle);
-//    InfoLog("fMaxErr          = %d\n", (int)fMaxErr);
-    InfoLog("fDeviceName      = '%s'\n", deviceName->getCStringNoCopy());
-    InfoLog("fSerialNumber    = '%s'\n", serialNumber->getCStringNoCopy());
-    InfoLog("fType            = '%s'\n", type->getCStringNoCopy());
-    InfoLog("fManufacturer    = '%s'\n", manufacturer->getCStringNoCopy());
+    InfoLog("fMaxErr          = %d\n", (int)fMaxErr);
+//    InfoLog("fDeviceName      = '%s'\n", deviceName->getCStringNoCopy());
+//    InfoLog("fSerialNumber    = '%s'\n", serialNumber->getCStringNoCopy());
+//    InfoLog("fType            = '%s'\n", type->getCStringNoCopy());
+//    InfoLog("fManufacturer    = '%s'\n", manufacturer->getCStringNoCopy());
 
 
   if (!Battery[battery].DesignVoltage) { Battery[battery].DesignVoltage = DummyVoltage; }

@@ -476,7 +476,7 @@ void VoodooBattery::Update(void) {
     if (QuickPoll) {
       DebugLog("QuickPoll %u", QuickPoll);
       Poller->setTimeoutMS(QuickPollInterval);
-      QuickPoll--;
+//      QuickPoll--;
     } else {
       DebugLog("NormalPoll");
       Poller->setTimeoutMS(NormalPollInterval);
@@ -555,7 +555,7 @@ void VoodooBattery::ChangeBrightness(int Shift)
 
     OSNumber* num = OSNumber::withNumber(brightnessLevels[index], 32);
     if (kIOReturnSuccess != PNLFDevice->evaluateObject(MethodBCM, NULL, (OSObject**)&num, 1)) {
-      DebugLog("_BCM returned error\n");
+      ErrorLog("_BCM returned error\n");
     }
     num->release();
   }
@@ -574,7 +574,7 @@ void VoodooBattery::GetBatteryInfoEx(UInt8 battery, OSObject * acpi) {
   Battery[battery].DesignCapacityLow = GetValueFromArray(info, 7);
   Battery[battery].Cycle = GetValueFromArray(info, 8);
 
-  int fMaxErr       = GetValueFromArray (info, BIX_ACCURACY);  //9
+//  int fMaxErr       = GetValueFromArray (info, BIX_ACCURACY);  //9
 
   OSSymbol* deviceName    = GetSymbolFromArray(info, BIX_MODEL_NUMBER);
   OSSymbol* serialNumber    = GetSymbolFromArray(info, BIX_SERIAL_NUMBER);
@@ -589,7 +589,7 @@ void VoodooBattery::GetBatteryInfoEx(UInt8 battery, OSObject * acpi) {
     DebugLog("fCapacityWarningRaw = %d\n", (int)Battery[battery].DesignCapacityWarning);
     DebugLog("fLowWarningRaw      = %d\n", (int)Battery[battery].DesignCapacityWarning);
     DebugLog("fCycleCount      = %d\n", (int)Battery[battery].Cycle);
-    InfoLog("fMaxErr          = %d\n", (int)fMaxErr);
+//    InfoLog("fMaxErr          = %d\n", (int)fMaxErr);
     InfoLog("fDeviceName      = '%s'\n", deviceName->getCStringNoCopy());
     InfoLog("fSerialNumber    = '%s'\n", serialNumber->getCStringNoCopy());
     InfoLog("fType            = '%s'\n", type->getCStringNoCopy());

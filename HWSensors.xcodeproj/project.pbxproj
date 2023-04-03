@@ -3131,7 +3131,7 @@
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/universal";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULE_NAME = org.slice.VoodooBatterySMC;
-				MODULE_VERSION = 1.6.3;
+				MODULE_VERSION = 1.6.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_CFLAGS = (
 					"-DINFO",
@@ -3143,7 +3143,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(MODULE_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.13;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = Debug;
@@ -3187,7 +3187,7 @@
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/universal";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULE_NAME = org.slice.VoodooBatterySMC;
-				MODULE_VERSION = 1.6.3;
+				MODULE_VERSION = 1.6.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_CFLAGS = (
 					"-DINFO",
@@ -3198,7 +3198,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(MODULE_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.13;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = "Release 10.6";
@@ -3242,11 +3242,11 @@
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/universal";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULE_NAME = org.slice.VoodooBatterySMC;
-				MODULE_VERSION = 1.6.3;
+				MODULE_VERSION = 1.6.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(MODULE_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.13;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = "Release 10.5";
@@ -3290,11 +3290,11 @@
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/universal";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULE_NAME = org.slice.VoodooBatterySMC;
-				MODULE_VERSION = 1.6.3;
+				MODULE_VERSION = 1.6.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(MODULE_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.13;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = "Release 10.4";

@@ -186,13 +186,20 @@
 #define CPU_MODEL_TIGERLAKE_C   0x8C  /* 11h generation Tiger Lake */
 #define CPU_MODEL_TIGERLAKE_D   0x8D  /* 11h generation Tiger Lake */
 #define CPU_MODEL_KABYLAKE1     0x8E  /* Kabylake Mobile */
-#define CPU_MODEL_ALDERLAKE     0x97  /* 12h generation Alder Lake */
+
 #define CPU_MODEL_KABYLAKE2     0x9E  /* Kabylake Dektop, CoffeeLake */
 #define CPU_MODEL_COMETLAKE_S   0x9F  /* desktop Comet Lake */
 #define CPU_MODEL_COMETLAKE_Y   0xA5  /* 10th generation Comet Lake Y */
 #define CPU_MODEL_COMETLAKE_U   0xA6  /* 10th generation Comet Lake Y */
 #define CPU_MODEL_ROCKETLAKE    0xA7  /* 11h Rocket Lake */
-#define CPU_MODEL_RAPTORLAKE    0xB7  /* 13h Raptor Lake */
+
+//from Clover
+#define CPU_MODEL_ALDERLAKE       0x97  /* 12h generation Alder Lake */
+#define CPU_MODEL_ALDERLAKE_ULT   0x9A  /* 12h generation Alder Lake, i5-12500h */
+#define CPU_MODEL_RAPTORLAKE      0xB7  /* 13h Raptor Lake */
+#define CPU_MODEL_RAPTORLAKE_B    0xBF  /* 13h Raptor Lake, i5-13400h */
+#define CPU_MODEL_METEORLAKE      0xAA  /* 14h Meteor Lake */
+
 
 
 typedef enum { eax, ebx, ecx, edx } cpuid_register_t;
@@ -330,6 +337,7 @@ extern "C" {
   i386_cpu_info_t  *cpuid_info(void);
   
   extern void cpuid_update_generic_info(void);
+
 #ifdef __cplusplus
 };
 #endif

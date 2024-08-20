@@ -3,7 +3,7 @@ Driver for emulation SMC device with hardware sensors support
 
 ## HWSensors
 ### This is a Mac OS X Package
-Working 10.6 to 14.x
+Working 10.6 to 15.x
 
 ### HWSensors branch based on FakeSMC-3.x
 

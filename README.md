@@ -14,7 +14,7 @@ Working 10.6 to 15.x
 - IntelMCHMonitor for chipset temperature monitoring, from 7th gen
   (Kabylake, Coffeelake, and up). Get also DIMM temperature
 - CPU sensors:
-    + IntelCPUMonitor, from Core Duo up to RaptorLake
+    + IntelCPUMonitor, from Core Duo up to ArrowLake
     + AmdCpuMonitor, FX... and Ryzen
 - GPUSensors
     + RadeonMonitor  for ATI/AMD Radeon card (temperature only), up to RX6900

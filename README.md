@@ -35,7 +35,7 @@ Working 10.6 to 15.x
 ## Compilation
 Take MacKernelSDK (https://github.com/joevt/MacKernelSDK) and copy it into the project. Or just make a symbol link
 ~~~~
-user FakeSMC3_with_plugins % ln -s ../joevt/MacKernelSDK MacKernelSDK
+ln -s ../joevt/MacKernelSDK MacKernelSDK
 ~~~~
 
 The xcodeproject already tuned to use it and tested with Xcode14.3.

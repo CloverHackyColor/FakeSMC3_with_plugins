@@ -647,6 +647,7 @@ void VoodooBattery::GetBatteryInfo(UInt8 battery, OSObject * acpi) {
                  Battery[battery].DesignCapacity);
       PowerUnitIsWatt = false;
     } else {
+      DebugLog("Battery reports mWh ");
       Battery[battery].DesignCapacity /= volt;
       Battery[battery].LastFullChargeCapacity /= volt;
       Battery[battery].DesignCapacityWarning /= volt;

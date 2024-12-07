@@ -19,7 +19,7 @@ i386_cpu_info_t  *cpuid_info(void) {
   return   &cpuid_cpu_info;
 }
 
-void cpuid_update_generic_info() {
+void cpuid_update_generic_info(void) {
   uint32_t cpuid_reg[4];
   uint32_t max_extid;
   char     str[128];
@@ -222,6 +222,9 @@ void cpuid_update_generic_info() {
     case CPU_MODEL_ROCKETLAKE:
     case CPU_MODEL_ALDERLAKE:
     case CPU_MODEL_RAPTORLAKE:
+      case CPU_MODEL_ALDERLAKE_ULT:
+      case CPU_MODEL_RAPTORLAKE_B:
+      case CPU_MODEL_METEORLAKE:
 
         msr = rdmsr64(MSR_CORE_THREAD_COUNT);
         info_p->core_count   = bitfield((uint32_t)msr, 31, 16);

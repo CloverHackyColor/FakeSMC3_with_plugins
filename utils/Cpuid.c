@@ -230,6 +230,13 @@ void cpuid_update_generic_info(void) {
         info_p->core_count   = bitfield((uint32_t)msr, 31, 16);
         info_p->thread_count = bitfield((uint32_t)msr, 15,  0);
         break;
+      case CPU_MODEL_ARROWLAKE:
+      case CPU_MODEL_ARROWLAKE_X:
+      case CPU_MODEL_ARROWLAKE_U:
+        msr = rdmsr64(MSR_CORE_THREAD_COUNT);
+        info_p->core_count   = bitfield((uint32_t)msr, 31, 16);
+        info_p->thread_count = info_p->core_count;
+        break;
       case CPU_MODEL_WESTMERE: // Intel Core i7 LGA1366 (32nm) 6 Core
       case CPU_MODEL_DALES:
       case CPU_MODEL_WESTMERE_EX:

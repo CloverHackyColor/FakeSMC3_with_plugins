@@ -361,7 +361,9 @@ IOService* IntelCPUMonitor::probe(IOService *provider, SInt32 *score)
         case CPU_MODEL_ALDERLAKE_ULT:
         case CPU_MODEL_RAPTORLAKE_B:
         case CPU_MODEL_METEORLAKE:
-
+        case CPU_MODEL_ARROWLAKE:
+        case CPU_MODEL_ARROWLAKE_X:
+        case CPU_MODEL_ARROWLAKE_U:
 
         {
           nehalemArch = true;

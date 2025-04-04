@@ -124,7 +124,7 @@ bool ATICard::getRadeonInfo() {
   RADEONCardInfo *devices = radeon_device_list;
   //rinfo = new RADEONCardInfo;
   //old devices
-  while (devices->device_id != NULL) {
+  while (devices->device_id != 0) {
     //IOLog("check %d/n", devices->device_id ); //Debug
     if ((devices->device_id & 0xffff) == devID ) {
       //      rinfo->device_id = devID;

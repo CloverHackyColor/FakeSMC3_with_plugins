@@ -82,7 +82,7 @@ const char * FakeSMCDevice::applesmc_get_key_by_index(uint32_t index, struct App
 		WarningLog("key by count %x is not found",index);
   }
   
-	s->status_1e=0x84;
+  s->status_1e=0xb8; //0x84;
 	s->status = 0x00;
 	
 	return 0;
@@ -691,7 +691,7 @@ UInt32 FakeSMCDevice::getCount() {
 
 void FakeSMCDevice::updateSharpKey() {
 	UInt32 count = keys->getCount();
-	char value[] = { count << 24, count << 16, count << 8, count };
+  char value[] = { static_cast<char>(count << 24), static_cast<char>(count << 16), static_cast<char>(count << 8), static_cast<char>(count) };
 	sharpKEY->setValueFromBuffer(value, 4);
 }
 

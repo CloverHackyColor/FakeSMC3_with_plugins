@@ -14,7 +14,7 @@ Working 10.6 to 15.x
 - IntelMCHMonitor for chipset temperature monitoring, from 7th gen
   (Kabylake, Coffeelake, and up). Get also DIMM temperature
 - CPU sensors:
-    + IntelCPUMonitor, from Core Duo up to RaptorLake
+    + IntelCPUMonitor, from Core Duo up to ArrowLake
     + AmdCpuMonitor, FX... and Ryzen
 - GPUSensors
     + RadeonMonitor  for ATI/AMD Radeon card (temperature only), up to RX6900
@@ -35,7 +35,7 @@ Working 10.6 to 15.x
 ## Compilation
 Take MacKernelSDK (https://github.com/joevt/MacKernelSDK) and copy it into the project. Or just make a symbol link
 ~~~~
-user FakeSMC3_with_plugins % ln -s ../joevt/MacKernelSDK MacKernelSDK
+ln -s ../joevt/MacKernelSDK MacKernelSDK
 ~~~~
 
 The xcodeproject already tuned to use it and tested with Xcode14.3.
